@@ -21,8 +21,8 @@
     <!-- ============================================================ NAV -->
     <header class="nav" data-nav>
       <div class="nav__inner">
-        <a class="nav__brand" href="#top" aria-label="Arturo, torna all'inizio">
-          <span class="brand-icon brand-icon--nav" aria-hidden="true">
+        <a class="nav__brand logo-host" href="#top" aria-label="Arturo, torna all'inizio">
+          <span class="brand-icon brand-icon--nav" data-logo aria-hidden="true">
             <img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" />
           </span>
           <span class="nav__wordmark">arturo</span>
@@ -105,7 +105,7 @@
               </div>
 
               <div class="m-ask">
-                <span class="m-ask__orb"><span class="brand-icon" style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span>
+                <span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span>
                 <span class="m-ask__text">Chiedi ad Arturo</span>
                 <span class="m-ask__plus"><img src="/src/assets/icons/plus-hero.svg" alt="" width="20" height="20" /></span>
               </div>
@@ -174,34 +174,34 @@
                 <div class="m-card m-topic">
                   <div class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></div>
                   <div class="m-topic__row">
-                    <span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img src="/src/assets/ring/r84.svg" alt="" /><b>84</b></span>
+                    <span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r84.svg" alt="" /><b>84</b></span>
                     <span class="m-topic__text"><span class="m-topic__title" style="color: var(--sky)">Fotovoltaico per l’azienda</span><span class="m-sub">3 fonti · selezionato</span></span>
                   </div>
                 </div>
                 <div class="m-card m-topic">
                   <div class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></div>
                   <div class="m-topic__row">
-                    <span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img src="/src/assets/ring/r78.svg" alt="" /><b>78</b></span>
+                    <span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r78.svg" alt="" /><b>78</b></span>
                     <span class="m-topic__text"><span class="m-topic__title" style="color: var(--sky-2)">Packaging sostenibile</span><span class="m-sub">4 fonti</span></span>
                   </div>
                 </div>
                 <div class="m-card m-topic">
                   <div class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></div>
                   <div class="m-topic__row">
-                    <span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc--71" src="/src/assets/ring/r71.svg" alt="" /><b>71</b></span>
+                    <span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc ring__arc--71" src="/src/assets/ring/r71.svg" alt="" /><b>71</b></span>
                     <span class="m-topic__text"><span class="m-topic__title" style="color: var(--mint)">Incentivi energia</span><span class="m-sub">2 fonti</span></span>
                   </div>
                 </div>
                 <div class="m-card m-topic">
                   <div class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></div>
                   <div class="m-topic__row">
-                    <span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc--66" src="/src/assets/ring/r66.svg" alt="" /><b>66</b></span>
+                    <span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc ring__arc--66" src="/src/assets/ring/r66.svg" alt="" /><b>66</b></span>
                     <span class="m-topic__text"><span class="m-topic__title" style="color: var(--peach)">Autoconsumo condiviso</span><span class="m-sub">4 fonti</span></span>
                   </div>
                 </div>
 
                 <div class="m-ask">
-                  <span class="m-ask__orb"><span class="brand-icon" style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span>
+                  <span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span>
                   <span class="m-ask__text">Cosa cerco oggi?</span>
                   <span class="m-ask__plus"><img src="/src/assets/icons/plus-oggi.svg" alt="" width="20" height="20" /></span>
                 </div>
@@ -264,17 +264,18 @@
                   <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
                 </div>
                 <div class="m-listen">
-                  <span class="brand-icon" style="--size: 120px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
+                  <span class="brand-icon" data-logo="listen" style="--size: 120px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
                   <span>Ti ascolto</span>
                 </div>
                 <span class="m-bubble m-bubble--user">Di cosa parliamo questa settimana?</span>
                 <div class="m-bubble m-bubble--bot">
+                  <span class="m-typing" aria-hidden="true"><i></i><i></i><i></i></span>
                   <span>Ho trovato 3 argomenti che valgono per il tuo settore. Il migliore è «Fotovoltaico per l’azienda» (84). Scrivo LinkedIn, Instagram e Newsletter?</span>
                   <span class="m-bubble__actions"><span class="is-primary">Sì, scrivi</span><span>Vedi il radar</span></span>
                 </div>
                 <span class="m-note"><img src="/src/assets/icons/user-round-cons.svg" alt="" width="16" height="16" />Giulia, la tua consulente, può intervenire in ogni momento</span>
                 <div class="m-ask">
-                  <span class="m-ask__orb"><span class="brand-icon" style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span>
+                  <span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span>
                   <span class="m-ask__text">Tap per parlare</span>
                   <span class="m-ask__plus"><img src="/src/assets/icons/plus-cons.svg" alt="" width="20" height="20" /></span>
                 </div>
@@ -302,22 +303,22 @@
                     <div class="m-card__top"><span>Voto dell’argomento</span><img src="/src/assets/icons/gauge-mosaic.svg" alt="" width="17" height="17" /></div>
                     <div class="gauge">
                       <span class="gauge__arc">
-                        <img style="left:0%;top:40.34%;width:5.85%;height:8.31%" src="/src/assets/gauge/seg-01.svg" alt="" />
-                        <img style="left:1.61%;top:29.67%;width:7.28%;height:9.01%" src="/src/assets/gauge/seg-02.svg" alt="" />
-                        <img style="left:5.62%;top:20.01%;width:8.37%;height:9.26%" src="/src/assets/gauge/seg-03.svg" alt="" />
-                        <img style="left:11.86%;top:11.86%;width:9.04%;height:9.04%" src="/src/assets/gauge/seg-04.svg" alt="" />
-                        <img style="left:20.01%;top:5.62%;width:9.26%;height:8.37%" src="/src/assets/gauge/seg-05.svg" alt="" />
-                        <img style="left:29.67%;top:1.61%;width:9.01%;height:7.28%" src="/src/assets/gauge/seg-06.svg" alt="" />
-                        <img style="left:40.34%;top:0%;width:8.31%;height:5.85%" src="/src/assets/gauge/seg-07.svg" alt="" />
-                        <img style="left:51.35%;top:0%;width:8.31%;height:5.85%" src="/src/assets/gauge/seg-08.svg" alt="" />
-                        <img style="left:61.32%;top:1.61%;width:9.01%;height:7.28%" src="/src/assets/gauge/seg-09.svg" alt="" />
-                        <img style="left:70.73%;top:5.62%;width:9.26%;height:8.37%" src="/src/assets/gauge/seg-10.svg" alt="" />
-                        <img style="left:79.1%;top:11.86%;width:9.04%;height:9.04%" src="/src/assets/gauge/seg-11.svg" alt="" />
-                        <img style="left:86.01%;top:20.01%;width:8.37%;height:9.26%" src="/src/assets/gauge/seg-12.svg" alt="" />
-                        <img style="left:91.11%;top:29.67%;width:7.28%;height:9.01%" src="/src/assets/gauge/seg-13.svg" alt="" />
-                        <img style="left:94.15%;top:40.34%;width:5.85%;height:8.31%" src="/src/assets/gauge/seg-14.svg" alt="" />
+                        <img style="--i:0;left:0%;top:40.34%;width:5.85%;height:8.31%" src="/src/assets/gauge/seg-01.svg" alt="" />
+                        <img style="--i:1;left:1.61%;top:29.67%;width:7.28%;height:9.01%" src="/src/assets/gauge/seg-02.svg" alt="" />
+                        <img style="--i:2;left:5.62%;top:20.01%;width:8.37%;height:9.26%" src="/src/assets/gauge/seg-03.svg" alt="" />
+                        <img style="--i:3;left:11.86%;top:11.86%;width:9.04%;height:9.04%" src="/src/assets/gauge/seg-04.svg" alt="" />
+                        <img style="--i:4;left:20.01%;top:5.62%;width:9.26%;height:8.37%" src="/src/assets/gauge/seg-05.svg" alt="" />
+                        <img style="--i:5;left:29.67%;top:1.61%;width:9.01%;height:7.28%" src="/src/assets/gauge/seg-06.svg" alt="" />
+                        <img style="--i:6;left:40.34%;top:0%;width:8.31%;height:5.85%" src="/src/assets/gauge/seg-07.svg" alt="" />
+                        <img style="--i:7;left:51.35%;top:0%;width:8.31%;height:5.85%" src="/src/assets/gauge/seg-08.svg" alt="" />
+                        <img style="--i:8;left:61.32%;top:1.61%;width:9.01%;height:7.28%" src="/src/assets/gauge/seg-09.svg" alt="" />
+                        <img style="--i:9;left:70.73%;top:5.62%;width:9.26%;height:8.37%" src="/src/assets/gauge/seg-10.svg" alt="" />
+                        <img style="--i:10;left:79.1%;top:11.86%;width:9.04%;height:9.04%" src="/src/assets/gauge/seg-11.svg" alt="" />
+                        <img style="--i:11;left:86.01%;top:20.01%;width:8.37%;height:9.26%" src="/src/assets/gauge/seg-12.svg" alt="" />
+                        <img style="--i:12;left:91.11%;top:29.67%;width:7.28%;height:9.01%" src="/src/assets/gauge/seg-13.svg" alt="" />
+                        <img style="--i:13;left:94.15%;top:40.34%;width:5.85%;height:8.31%" src="/src/assets/gauge/seg-14.svg" alt="" />
                       </span>
-                      <span class="gauge__value">84</span>
+                      <span class="gauge__value" data-count="84">84</span>
                       <span class="gauge__caption">Fotovoltaico per l’azienda</span>
                     </div>
                   </div>
@@ -374,10 +375,12 @@
         <div class="features__row features__row--3">
           <article class="tile tile--short" data-reveal>
             <div class="tile__visual tile__visual--ask" aria-hidden="true">
-              <span class="ask-orb" data-listening>
-                <img src="/src/assets/brand/arturo-sphere.svg" alt="" width="182" height="186" />
+              <span class="ask-orb">
+                <span class="ask-orb__halo ask-orb__halo--indigo"></span>
+                <span class="ask-orb__halo ask-orb__halo--cyan"></span>
+                <span class="brand-icon" data-logo="listen" data-logo-cycle style="--size: 138px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
               </span>
-              <span class="ask-orb__label">Ti ascolto</span>
+              <span class="ask-orb__label" data-logo-label>Ti ascolto</span>
             </div>
             <div class="tile__copy">
               <h3 class="tile__title">Chiedi ad Arturo</h3>
@@ -435,7 +438,7 @@
             <div class="geo__answer">
               <p>Conviene valutare l’esperienza con le startup, la chiarezza sui costi e la disponibilità nel tempo.</p>
               <span class="geo__source">
-                <span class="brand-icon" style="--size: 18px" aria-hidden="true"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
+                <span class="brand-icon" data-logo style="--size: 18px" aria-hidden="true"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
                 Fonte: il tuo sito
               </span>
             </div>
@@ -530,10 +533,10 @@
                   <p>14 argomenti trovati oggi · 3 sopra la soglia</p>
                 </div>
                 <ul class="app-topics">
-                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img src="/src/assets/ring/r84.svg" alt="" /><b>84</b></span><span><strong style="color: var(--sky)">Fotovoltaico per l’azienda</strong><small>3 fonti · selezionato</small></span></li>
-                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img src="/src/assets/ring/r78.svg" alt="" /><b>78</b></span><span><strong style="color: var(--sky-2)">Packaging sostenibile</strong><small>4 fonti</small></span></li>
-                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc--71" src="/src/assets/ring/r71.svg" alt="" /><b>71</b></span><span><strong style="color: var(--mint)">Incentivi energia</strong><small>2 fonti</small></span></li>
-                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc--66" src="/src/assets/ring/r66.svg" alt="" /><b>66</b></span><span><strong style="color: var(--peach)">Autoconsumo condiviso</strong><small>4 fonti</small></span></li>
+                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r84.svg" alt="" /><b>84</b></span><span><strong style="color: var(--sky)">Fotovoltaico per l’azienda</strong><small>3 fonti · selezionato</small></span></li>
+                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r78.svg" alt="" /><b>78</b></span><span><strong style="color: var(--sky-2)">Packaging sostenibile</strong><small>4 fonti</small></span></li>
+                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc ring__arc--71" src="/src/assets/ring/r71.svg" alt="" /><b>71</b></span><span><strong style="color: var(--mint)">Incentivi energia</strong><small>2 fonti</small></span></li>
+                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc ring__arc--66" src="/src/assets/ring/r66.svg" alt="" /><b>66</b></span><span><strong style="color: var(--peach)">Autoconsumo condiviso</strong><small>4 fonti</small></span></li>
                 </ul>
               </div>
 
@@ -573,7 +576,7 @@
 
               <form class="app-ask" data-ask>
                 <span class="app-ask__orb" aria-hidden="true">
-                  <span class="brand-icon brand-icon--app"><img src="/src/assets/brand/brand-icon-app.svg" alt="" width="45" height="47" /></span>
+                  <span class="brand-icon brand-icon--app" data-logo data-ask-logo><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
                 </span>
                 <label class="visually-hidden" for="ask-input">Chiedi ad Arturo</label>
                 <input
@@ -611,10 +614,10 @@
           <p class="section-lead">Un metodo semplice, che gira ogni giorno.</p>
         </header>
         <ul class="facts__grid">
-          <li class="fact" data-reveal><span class="fact__label">Ogni giorno</span><span class="fact__value" style="color: var(--sky)">4</span><span class="fact__text">passaggi: ascolta, scansiona, sceglie, scrive</span></li>
-          <li class="fact" data-reveal><span class="fact__label">Copertura</span><span class="fact__value" style="color: var(--sky-2)">6</span><span class="fact__text">canali, più quelli concordati</span></li>
-          <li class="fact" data-reveal><span class="fact__label">Persona dedicata</span><span class="fact__value" style="color: var(--ice)">1</span><span class="fact__text">consulente per setup e aggiornamenti</span></li>
-          <li class="fact" data-reveal><span class="fact__label">Per argomento</span><span class="fact__value" style="color: var(--mint)">0–100</span><span class="fact__text">un voto con motivo e angolo</span></li>
+          <li class="fact" data-reveal><span class="fact__label">Ogni giorno</span><span class="fact__value" style="color: var(--sky)" data-count="4">4</span><span class="fact__text">passaggi: ascolta, scansiona, sceglie, scrive</span></li>
+          <li class="fact" data-reveal><span class="fact__label">Copertura</span><span class="fact__value" style="color: var(--sky-2)" data-count="6">6</span><span class="fact__text">canali, più quelli concordati</span></li>
+          <li class="fact" data-reveal><span class="fact__label">Persona dedicata</span><span class="fact__value" style="color: var(--ice)" data-count="1">1</span><span class="fact__text">consulente per setup e aggiornamenti</span></li>
+          <li class="fact" data-reveal><span class="fact__label">Per argomento</span><span class="fact__value" style="color: var(--mint)" data-count="100" data-count-prefix="0–">0–100</span><span class="fact__text">un voto con motivo e angolo</span></li>
         </ul>
       </section>
 
@@ -685,14 +688,14 @@
           <p class="section-lead">Cosa cambia rispetto agli strumenti che usi oggi.</p>
         </header>
 
-        <div class="compare__scroller" tabindex="0" role="region" aria-labelledby="compare-title">
+        <div class="compare__scroller" data-reveal tabindex="0" role="region" aria-labelledby="compare-title">
           <table class="compare__table">
             <caption class="visually-hidden">Confronto tra Arturo, AI generiche, agenzia e fai da te</caption>
             <thead>
               <tr>
                 <th scope="col" class="compare__need">Cosa ti serve</th>
                 <th scope="col" class="compare__arturo">
-                  <span class="compare__logo"><span class="brand-icon" style="--size: 22px" aria-hidden="true"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>Arturo</span>
+                  <span class="compare__logo"><span class="brand-icon" data-logo style="--size: 22px" aria-hidden="true"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>Arturo</span>
                 </th>
                 <th scope="col">AI generiche<small>ChatGPT, Gemini…</small></th>
                 <th scope="col">Agenzia</th>
@@ -780,8 +783,8 @@
     <footer class="footer">
       <div class="footer__row">
         <div class="footer__brand">
-          <a class="footer__logo" href="#top" aria-label="Arturo, torna all'inizio">
-            <span class="brand-icon" style="--size: 28px" aria-hidden="true"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
+          <a class="footer__logo logo-host" href="#top" aria-label="Arturo, torna all'inizio">
+            <span class="brand-icon" data-logo style="--size: 28px" aria-hidden="true"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
             <span>arturo</span>
           </a>
           <p>L’agente AI per i contenuti, impostato da un consulente.</p>

@@ -800,6 +800,8 @@
   gap: 10px;
 }
 
+/* Same geometry as the Figma "Arturo · Sfera" (indigo + cyan halos around
+   the brand sphere), rebuilt around the animated logo. Box = 120px slot. */
 .ask-orb {
   position: relative;
   display: block;
@@ -807,19 +809,50 @@
   height: 120px;
 }
 
-.ask-orb img {
+.ask-orb__halo {
   position: absolute;
-  left: -26.68%;
-  top: -26.68%;
-  width: 151.69%;
-  height: 155.01%;
-  max-width: none;
+  border-radius: 50%;
+}
+
+.ask-orb__halo--indigo {
+  left: -9px;
+  top: -9px;
+  width: 136px;
+  height: 136px;
+  background: rgba(99, 102, 241, 0.8);
+  filter: blur(11.5px);
+}
+
+.ask-orb__halo--cyan {
+  left: 13px;
+  top: 22px;
+  width: 108px;
+  height: 108px;
+  background: rgba(25, 195, 230, 0.48);
+  filter: blur(12px);
+}
+
+.ask-orb .brand-icon {
+  position: absolute;
+  left: -6px;
+  top: -11px;
 }
 
 .ask-orb__label {
   color: var(--text-label);
   font-size: 13px;
   font-weight: 500;
+}
+
+.ask-orb__label.is-swapping {
+  animation: label-swap 0.45s var(--ease-out);
+}
+
+@keyframes label-swap {
+  from {
+    opacity: 0;
+    translate: 0 4px;
+  }
 }
 
 .tile__visual--approval {
@@ -1193,7 +1226,7 @@
   border: 1.5px solid transparent;
   background:
     linear-gradient(180deg, #13294d 0%, var(--card-to) 100%) padding-box,
-    linear-gradient(90deg, var(--indigo) 0%, #19c3e6 100%) border-box;
+    linear-gradient(var(--angle, 90deg), var(--indigo) 0%, #19c3e6 100%) border-box;
   box-shadow: 0 30px 80px -20px rgba(110, 92, 255, 0.35);
 }
 

@@ -1,4 +1,5 @@
 import { prefersReducedMotion } from './config';
+import { setLogoState, type LogoState } from './logo';
 
 type DraftStatus = 'pending' | 'approved';
 type ViewId = 'oggi' | 'radar' | 'approvare' | 'archivio' | 'profilo';
@@ -267,9 +268,40 @@ export function initPrototype(): void {
   });
 
   // ------------------------------------------------------------- ask Arturo
-  const setMood = (state: 'think' | 'happy' | null): void => {
-    if (state) mascot.dataset.state = state;
+  const askLogo = app.querySelector<HTMLElement>('[data-ask-logo]');
+  let typingFrame: number | undefined;
+
+  /** Sidebar mascot (sprite) and ask-bar logo share the same mood. */
+  const setMood = (state: LogoState): void => {
+    if (state === 'think' || state === 'happy') mascot.dataset.state = state;
+    else if (state === 'talk') mascot.dataset.state = 'listen';
     else delete mascot.dataset.state;
+    if (askLogo) setLogoState(askLogo, state);
+  };
+
+  askInput.addEventListener('focus', () => {
+    if (!askSend.disabled) setMood('listen');
+  });
+  askInput.addEventListener('blur', () => {
+    if (!askSend.disabled && askLogo?.querySelector('svg')?.dataset.state === 'listen') setMood('rest');
+  });
+
+  /** Types the answer out while the logo talks; instant with reduced motion. */
+  const typeOut = (text: string, done: () => void): void => {
+    if (prefersReducedMotion()) {
+      messageText.textContent = text;
+      done();
+      return;
+    }
+    const start = performance.now();
+    const perChar = Math.max(12, Math.min(24, 1600 / text.length));
+    const step = (now: number): void => {
+      const count = Math.min(text.length, Math.floor((now - start) / perChar));
+      messageText.textContent = text.slice(0, count);
+      if (count < text.length) typingFrame = requestAnimationFrame(step);
+      else done();
+    };
+    typingFrame = requestAnimationFrame(step);
   };
 
   askForm.addEventListener('submit', (event) => {
@@ -279,11 +311,13 @@ export function initPrototype(): void {
 
     window.clearTimeout(thinkingTimer);
     window.clearTimeout(moodTimer);
+    if (typingFrame) cancelAnimationFrame(typingFrame);
     if (current !== 'oggi') showView('oggi');
 
     askInput.value = '';
     askSend.disabled = true;
     message.classList.add('is-thinking');
+    // aria-busy holds back announcements until the full answer is in place.
     message.setAttribute('aria-busy', 'true');
     messageText.textContent = 'Ci penso';
     messageAction.hidden = true;
@@ -293,17 +327,19 @@ export function initPrototype(): void {
     thinkingTimer = window.setTimeout(() => {
       const answer = answerFor(question);
       message.classList.remove('is-thinking');
-      message.removeAttribute('aria-busy');
-      messageText.textContent = answer.text;
-      if (answer.action) {
-        messageAction.textContent = answer.action.label;
-        messageAction.dataset.viewTarget = answer.action.view;
-        messageAction.hidden = false;
-      }
-      askSend.disabled = false;
-      setMood('happy');
-      moodTimer = window.setTimeout(() => setMood(null), 2400);
-    }, prefersReducedMotion() ? 300 : 900);
+      setMood('talk');
+      typeOut(answer.text, () => {
+        message.removeAttribute('aria-busy');
+        if (answer.action) {
+          messageAction.textContent = answer.action.label;
+          messageAction.dataset.viewTarget = answer.action.view;
+          messageAction.hidden = false;
+        }
+        askSend.disabled = false;
+        setMood('happy');
+        moodTimer = window.setTimeout(() => setMood('rest'), 2400);
+      });
+    }, prefersReducedMotion() ? 300 : 1100);
   });
 
   render();

@@ -41,7 +41,8 @@ export function initReveal(): void {
 }
 
 export function initOffscreenPause(): void {
-  const loops = document.querySelectorAll<HTMLElement>('.today__stage, .channels, .demo');
+  // Every block except the hero, whose parallax follows the scroll position.
+  const loops = document.querySelectorAll<HTMLElement>('main > section:not(.hero), .footer');
   const observer = new IntersectionObserver((entries) => {
     for (const entry of entries) {
       entry.target.classList.toggle('is-offscreen', !entry.isIntersecting);

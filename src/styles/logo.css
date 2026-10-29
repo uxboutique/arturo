@@ -1,0 +1,320 @@
+/* Animated logo (see src/scripts/logo.ts for the state list).
+   Each part animates a different property so loops and state poses
+   compose instead of overriding each other:
+     scale     → blink (eyes), breathing (body), talking (mouth)
+     translate → gaze (eyes), hop (float)
+     rotate    → shell orbit, thinking tilt
+     transform → static pose of the current state */
+
+.brand-icon > svg.logo {
+  position: absolute;
+  left: -3.125%;
+  top: 0;
+  width: 103.125%;
+  height: 107.03%;
+  overflow: visible;
+}
+
+.logo * {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.logo__float,
+.logo__body,
+.logo__shell,
+.logo__waves,
+.logo__wave {
+  transform-box: view-box;
+  transform-origin: 27.5px 27.08px;
+}
+
+/* Parts hidden in the resting pose */
+.logo__wave,
+.logo__mouth,
+.logo__happy,
+.logo__dots circle,
+.logo__sparks path {
+  opacity: 0;
+}
+
+.logo__eyes,
+.logo__eye,
+.logo__smile,
+.logo__mouth,
+.logo__happy,
+.logo__dots circle,
+.logo__sparks path,
+.logo__shell,
+.logo__body {
+  transition:
+    opacity 0.25s ease,
+    transform 0.4s var(--ease-out),
+    translate 0.4s var(--ease-out);
+}
+
+/* ---------------------------------------------------------------- poses */
+.logo[data-state='listen'] .logo__eye {
+  transform: scaleY(1.12);
+}
+.logo[data-state='listen'] .logo__smile {
+  opacity: 0;
+}
+.logo[data-state='listen'] .logo__mouth {
+  opacity: 1;
+  transform: scale(0.75);
+}
+
+.logo[data-state='think'] .logo__eyes {
+  translate: -1.3px -1.9px;
+}
+.logo[data-state='think'] .logo__eye {
+  transform: scaleY(0.82);
+}
+.logo[data-state='think'] .logo__smile {
+  transform: translateX(1.2px) scale(0.75, 0.35);
+}
+
+.logo[data-state='talk'] .logo__smile {
+  opacity: 0;
+}
+.logo[data-state='talk'] .logo__mouth {
+  opacity: 1;
+}
+
+.logo[data-state='happy'] .logo__eye {
+  opacity: 0;
+}
+.logo[data-state='happy'] .logo__happy {
+  opacity: 1;
+}
+.logo[data-state='happy'] .logo__smile {
+  transform: scale(1.35, 1.6);
+}
+
+/* Hover/focus on a logo link: looks at you and smiles. */
+.logo-host:is(:hover, :focus-visible) .logo[data-state='rest'] .logo__eyes {
+  translate: 0.9px -1.1px;
+}
+.logo-host:is(:hover, :focus-visible) .logo[data-state='rest'] .logo__smile {
+  transform: scale(1.3, 1.5);
+}
+.logo-host:is(:hover, :focus-visible) .logo[data-state='rest'] .logo__shell {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* -------------------------------------------------------------- Riposo */
+  .logo__body {
+    animation: logo-breathe 4.8s var(--ease-in-out) infinite alternate;
+  }
+
+  .logo__eye {
+    animation: logo-blink 5.2s linear infinite;
+    animation-delay: var(--blink-delay, 0s);
+  }
+
+  .logo__shell {
+    animation: logo-orbit 16s linear infinite;
+  }
+
+  .logo__shine {
+    animation: logo-shine 6s var(--ease-in-out) infinite alternate;
+  }
+
+  @keyframes logo-breathe {
+    to {
+      scale: 1.03;
+    }
+  }
+
+  @keyframes logo-blink {
+    0%,
+    92%,
+    100% {
+      scale: 1 1;
+    }
+    94% {
+      scale: 1 0.12;
+    }
+    96% {
+      scale: 1 1;
+    }
+  }
+
+  @keyframes logo-orbit {
+    to {
+      rotate: 360deg;
+    }
+  }
+
+  @keyframes logo-shine {
+    from {
+      opacity: 0.8;
+      translate: 0 0;
+    }
+    to {
+      opacity: 1;
+      translate: 0.8px 0.4px;
+    }
+  }
+
+  /* Hover: a small hop */
+  .logo-host:hover .logo[data-state='rest'] .logo__float {
+    animation: logo-hop 0.6s var(--ease-out);
+  }
+
+  @keyframes logo-hop {
+    40% {
+      translate: 0 -2.4px;
+    }
+    70% {
+      translate: 0 0.6px;
+    }
+  }
+
+  /* ------------------------------------------------------------- Ascolto */
+  .logo[data-state='listen'] .logo__wave {
+    animation: logo-wave 2.4s var(--ease-out) infinite;
+  }
+  .logo[data-state='listen'] .logo__wave:nth-child(2) {
+    animation-delay: 0.8s;
+  }
+  .logo[data-state='listen'] .logo__wave:nth-child(3) {
+    animation-delay: 1.6s;
+  }
+  .logo[data-state='listen'] .logo__mouth {
+    animation: logo-listen-mouth 1.6s var(--ease-in-out) infinite alternate;
+  }
+
+  @keyframes logo-wave {
+    from {
+      opacity: 0.6;
+      scale: 1;
+      stroke-width: 1.2px;
+    }
+    to {
+      opacity: 0;
+      scale: 1.6;
+      stroke-width: 0.3px;
+    }
+  }
+
+  @keyframes logo-listen-mouth {
+    to {
+      scale: 1 0.7;
+    }
+  }
+
+  /* ------------------------------------------------------------ Pensiero */
+  .logo[data-state='think'] .logo__dots circle {
+    animation: logo-dot 1.2s var(--ease-in-out) infinite;
+  }
+  .logo[data-state='think'] .logo__dots circle:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .logo[data-state='think'] .logo__dots circle:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .logo[data-state='think'] .logo__body {
+    animation:
+      logo-breathe 4.8s var(--ease-in-out) infinite alternate,
+      logo-tilt 3s var(--ease-in-out) infinite alternate;
+  }
+
+  @keyframes logo-dot {
+    0%,
+    100% {
+      opacity: 0.2;
+      translate: 0 0;
+    }
+    40% {
+      opacity: 1;
+      translate: 0 -1px;
+    }
+  }
+
+  @keyframes logo-tilt {
+    from {
+      rotate: -5deg;
+    }
+    to {
+      rotate: 4deg;
+    }
+  }
+
+  /* --------------------------------------------------------------- Parla */
+  .logo[data-state='talk'] .logo__mouth {
+    animation: logo-talk 0.9s linear infinite;
+  }
+  .logo[data-state='talk'] .logo__float {
+    animation: logo-bob 1.8s var(--ease-in-out) infinite;
+  }
+
+  @keyframes logo-talk {
+    0%,
+    100% {
+      scale: 1 0.35;
+    }
+    20% {
+      scale: 1 1;
+    }
+    35% {
+      scale: 0.9 0.55;
+    }
+    55% {
+      scale: 1 0.9;
+    }
+    75% {
+      scale: 0.95 0.4;
+    }
+  }
+
+  @keyframes logo-bob {
+    50% {
+      translate: 0 -0.8px;
+    }
+  }
+
+  /* -------------------------------------------------------------- Felice */
+  .logo[data-state='happy'] .logo__float {
+    animation:
+      logo-hop 0.7s var(--ease-out),
+      logo-bob 2s var(--ease-in-out) 0.7s infinite;
+  }
+  .logo[data-state='happy'] .logo__sparks path {
+    animation: logo-spark 1.6s var(--ease-out) infinite;
+  }
+  .logo[data-state='happy'] .logo__sparks path:nth-child(2) {
+    animation-delay: 0.45s;
+  }
+  .logo[data-state='happy'] .logo__sparks path:nth-child(3) {
+    animation-delay: 0.9s;
+  }
+
+  @keyframes logo-spark {
+    0% {
+      opacity: 0;
+      scale: 0.2;
+      rotate: 0deg;
+    }
+    40% {
+      opacity: 1;
+      scale: 1;
+    }
+    100% {
+      opacity: 0;
+      scale: 0.4;
+      rotate: 90deg;
+    }
+  }
+}
+
+/* Without motion the states still read through their static poses;
+   the thinking dots and happy sparks show statically. */
+@media (prefers-reduced-motion: reduce) {
+  .logo[data-state='think'] .logo__dots circle,
+  .logo[data-state='happy'] .logo__sparks path {
+    opacity: 1;
+  }
+}

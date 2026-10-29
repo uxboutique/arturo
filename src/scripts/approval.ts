@@ -16,7 +16,14 @@ export function initApprovalToggle(): void {
       item.setAttribute('aria-checked', String(checked));
       item.tabIndex = checked ? 0 : -1;
     }
-    label.textContent = labels[radio.dataset.mode ?? 'manual'] ?? labels.manual!;
+    const next = labels[radio.dataset.mode ?? 'manual'] ?? labels.manual!;
+    if (label.textContent !== next) {
+      label.textContent = next;
+      const pill = label.closest<HTMLElement>('.status-pill');
+      pill?.classList.remove('is-bumped');
+      void pill?.offsetWidth;
+      pill?.classList.add('is-bumped');
+    }
     if (focus) radio.focus();
   };
 

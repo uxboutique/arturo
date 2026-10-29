@@ -41,4 +41,20 @@ src/scripts/*.ts           nav, reveal, dialog contatti, prototipo, toggle
 src/assets/                asset esportati da Figma
 ```
 
-Tutte le animazioni rispettano `prefers-reduced-motion`.
+## Logo animato
+
+Ogni `[data-logo]` diventa un SVG inline animabile (`src/scripts/logo.ts`, `src/styles/logo.css`).
+Stati, dai nomi della mascotte in Figma, impostabili con `data-logo="…"` o `setLogoState(el, stato)`:
+
+| Stato | Comportamento |
+| --- | --- |
+| `rest` (Riposo) | respira, sbatte le palpebre, il guscio orbita; al passaggio del mouse guarda e sorride |
+| `listen` (Ascolto) | onde sonore, occhi aperti, bocca a "o" |
+| `think` (Pensiero) | guarda in alto, tre puntini, si inclina |
+| `talk` (Parla) | la bocca si muove |
+| `happy` (Felice) | occhi a ^ ^, salto e scintille |
+
+La card "Chiedi ad Arturo" li mostra in sequenza; nel prototipo seguono la conversazione.
+
+Tutte le animazioni rispettano `prefers-reduced-motion` e si mettono in pausa fuori schermo.
+Lo scroll è sempre immediato (niente smooth scroll).

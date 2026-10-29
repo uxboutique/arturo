@@ -284,19 +284,7 @@
   }
 }
 
-/* Off-screen loops are paused by JS to save battery. */
-.is-offscreen .float-card,
-.is-offscreen .mascot,
-.is-offscreen .mascot__state,
-.is-offscreen .channels__track {
-  animation-play-state: paused !important;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
   *,
   *::before,
   *::after {
