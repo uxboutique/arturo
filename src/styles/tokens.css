@@ -1,0 +1,70 @@
+/* Design tokens extracted from the Figma frame
+   "Landing · Brand C · Sfera Istituzionale" (160:12863). */
+:root {
+  color-scheme: dark;
+
+  /* Surfaces */
+  --bg: #06101f; /* frame fill */
+  --surface-0: #050c18; /* device screens, primary button text */
+  --surface-1: #0a1528; /* brand profile, app sidebar */
+  --surface-2: #0e1a2e; /* cards inside mockups */
+  --surface-3: #13223a; /* device chrome, chips */
+  --surface-4: #1b2b47; /* secondary pills in app */
+  --surface-5: #243756; /* user bubbles, active segment */
+  --card-from: #0e1b30;
+  --card-to: #071226;
+  --card-gradient: linear-gradient(180deg, var(--card-from) 0%, var(--card-to) 100%);
+
+  /* Lines */
+  --line-1: rgba(255, 255, 255, 0.06);
+  --line-2: rgba(255, 255, 255, 0.08);
+  --line-3: rgba(255, 255, 255, 0.1);
+  --device-border: #6b6b70;
+
+  /* Text */
+  --text: #ffffff;
+  --text-2: #e5e5ea;
+  --text-3: #f2f2f7;
+  --text-muted: #a1a1aa;
+  --text-label: #9a9aa0;
+  --text-subtle: #8e8e93;
+  --text-faint: #636366;
+  --text-on-light: #5f5a6e;
+
+  /* Accents */
+  --sky: #7dd3fc;
+  --sky-2: #a9d8ff;
+  --mint: #b6f0cf;
+  --peach: #ffc9b0;
+  --ice: #e0f2fe;
+  --indigo: #4f46e5;
+  --indigo-soft: rgba(79, 70, 229, 0.12);
+  --success-soft: rgba(182, 240, 207, 0.12);
+  --danger: #f87171;
+
+  --ask-gradient: linear-gradient(90deg, #f3d9ec 0%, #e3dcf7 50%, #cbd6f7 100%);
+
+  /* Typography */
+  --font-sans: 'Inter Variable', 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Sora Variable', 'Sora', var(--font-sans);
+  --font-brand: 'Nunito', var(--font-sans);
+
+  /* Layout */
+  --content: 1200px;
+  --gutter: clamp(16px, 8.333vw, 120px);
+  --section-pad: clamp(88px, 11.1vw, 160px);
+
+  /* Radii */
+  --r-btn: 12px;
+  --r-card: 24px;
+  --r-pill: 999px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+  --ease-apple: cubic-bezier(0.28, 0.11, 0.32, 1); /* apple.com reveal curve */
+  --dur-fast: 160ms;
+  --dur-med: 260ms;
+
+  --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--sky);
+}

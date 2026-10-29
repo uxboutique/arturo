@@ -1,0 +1,851 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#06101f" />
+    <title>Arturo — L'agente AI per i contenuti, con un consulente dietro</title>
+    <meta
+      name="description"
+      content="Arturo trova gli argomenti, li vota e scrive le bozze per i tuoi canali, ogni giorno. Un consulente lo imposta sulla tua azienda, una volta sola."
+    />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/brand/brand-icon.svg" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Vai al contenuto</a>
+
+    <!-- ============================================================ NAV -->
+    <header class="nav" data-nav>
+      <div class="nav__inner">
+        <a class="nav__brand" href="#top" aria-label="Arturo, torna all'inizio">
+          <span class="brand-icon brand-icon--nav" aria-hidden="true">
+            <img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" />
+          </span>
+          <span class="nav__wordmark">arturo</span>
+        </a>
+
+        <nav class="nav__links" aria-label="Principale">
+          <a href="#come-funziona">Come funziona</a>
+          <a href="#consulente">Il consulente</a>
+          <a href="#piani">Piani</a>
+          <a href="#faq">Domande</a>
+        </nav>
+
+        <button class="btn btn--primary nav__cta" type="button" data-contact>Parla con un consulente</button>
+
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-nav-toggle
+        >
+          <span class="visually-hidden" data-nav-toggle-label>Apri il menu</span>
+          <span class="nav__toggle-bars" aria-hidden="true"><i></i><i></i></span>
+        </button>
+      </div>
+
+      <div class="nav__panel" id="mobile-menu" data-nav-panel hidden>
+        <nav aria-label="Principale (mobile)">
+          <a href="#come-funziona">Come funziona</a>
+          <a href="#consulente">Il consulente</a>
+          <a href="#piani">Piani</a>
+          <a href="#faq">Domande</a>
+        </nav>
+        <button class="btn btn--primary btn--block" type="button" data-contact>Parla con un consulente</button>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ============================================================ HERO -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero__glows" aria-hidden="true">
+          <img class="glow hero__glow hero__glow--1" src="/src/assets/glow/hero-1.svg" alt="" />
+          <img class="glow hero__glow hero__glow--2" src="/src/assets/glow/hero-2.svg" alt="" />
+          <img class="glow hero__glow hero__glow--3" src="/src/assets/glow/hero-3.svg" alt="" />
+        </div>
+
+        <div
+          class="phone phone--hero"
+          role="img"
+          aria-label="Anteprima dell'app Arturo, schermata Oggi: radar con 14 argomenti, 3 bozze da approvare, la consulente Giulia."
+        >
+          <div class="phone__body">
+            <div class="phone__screen">
+              <div class="m-head">
+                <span class="m-btn"><img src="/src/assets/icons/chevron-left-hero.svg" alt="" width="20" height="20" /></span>
+                <span class="m-title">Oggi</span>
+                <span class="m-btn"><img src="/src/assets/icons/ellipsis-hero.svg" alt="" width="20" height="20" /></span>
+              </div>
+
+              <div class="m-card">
+                <div class="m-card__top"><span>Radar</span><img src="/src/assets/icons/radar-hero.svg" alt="" width="17" height="17" /></div>
+                <span class="m-stat m-stat--sky">14 argomenti</span>
+                <span class="m-sub">3 sopra la soglia · oggi</span>
+                <span class="m-divider"></span>
+                <span class="bars"><i style="--h:29.9" class=on></i><i style="--h:19.1" class=on></i><i style="--h:32.7" class=on></i><i style="--h:12.7" class=on></i><i style="--h:34.0" class=on></i><i style="--h:10.0" class=on></i><i style="--h:33.5" class=on></i><i style="--h:16.5" class=on></i><i style="--h:31.3" class=on></i><i style="--h:22.5" class=on></i><i style="--h:27.5" class=on></i><i style="--h:27.5" class=on></i><i style="--h:22.5" class=on></i><i style="--h:31.3" class=on></i><i style="--h:16.5" class=on></i><i style="--h:33.5" class=on></i><i style="--h:9.9"></i><i style="--h:34.0"></i><i style="--h:12.8"></i><i style="--h:32.7"></i><i style="--h:19.1"></i><i style="--h:29.9"></i><i style="--h:24.8"></i><i style="--h:25.5"></i><i style="--h:29.3"></i><i style="--h:20.1"></i><i style="--h:32.4"></i><i style="--h:13.8"></i><i style="--h:33.9"></i><i style="--h:8.9"></i><i style="--h:33.7"></i><i style="--h:15.5"></i><i style="--h:31.7"></i><i style="--h:21.6"></i><i style="--h:28.2"></i><i style="--h:26.8"></i><i style="--h:23.4"></i><i style="--h:30.8"></i><i style="--h:17.5"></i><i style="--h:33.2"></i><i style="--h:11.0"></i><i style="--h:34.0"></i><i style="--h:11.7"></i><i style="--h:33.0"></i></span>
+              </div>
+
+              <div class="m-card">
+                <div class="m-card__top"><span>Da approvare</span><img src="/src/assets/icons/check-hero.svg" alt="" width="17" height="17" /></div>
+                <span class="m-stat m-stat--mint">3 bozze</span>
+                <span class="m-sub">La migliore vale 84</span>
+                <span class="m-divider"></span>
+                <span class="m-chips"><span>LinkedIn</span><span>Instagram</span><span>Newsletter</span></span>
+              </div>
+
+              <div class="m-card">
+                <div class="m-card__top"><span>Il tuo consulente</span><img src="/src/assets/icons/user-round-hero.svg" alt="" width="17" height="17" /></div>
+                <span class="m-stat m-stat--peach">Giulia</span>
+                <span class="m-sub">Ha aggiornato il profilo del brand · esempio</span>
+              </div>
+
+              <div class="m-ask">
+                <span class="m-ask__orb"><span class="brand-icon" style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span>
+                <span class="m-ask__text">Chiedi ad Arturo</span>
+                <span class="m-ask__plus"><img src="/src/assets/icons/plus-hero.svg" alt="" width="20" height="20" /></span>
+              </div>
+            </div>
+            <span class="phone__island"></span>
+          </div>
+        </div>
+
+        <div class="hero__fade" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <span class="app-icon" aria-hidden="true">
+            <img src="/src/assets/brand/mascot-render.webp" alt="" width="720" height="720" />
+          </span>
+          <h1 class="hero__title" id="hero-title">Il tuo agente per i contenuti. Con un consulente dietro.</h1>
+          <p class="hero__lead">Argomenti, voti e bozze per i tuoi canali, ogni giorno. Impostato sulla tua azienda, una volta sola.</p>
+          <div class="hero__actions">
+            <button class="btn btn--primary" type="button" data-contact>Parla con un consulente</button>
+            <a class="btn btn--secondary" href="#demo">
+              <img src="/src/assets/icons/play.svg" alt="" width="16" height="16" />
+              Guarda la demo
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ CANALI -->
+      <section class="channels" aria-label="Canali su cui Arturo pubblica" data-reveal>
+        <div class="channels__inner">
+          <div class="channels__marquee" data-marquee>
+            <div class="channels__track">
+              <img src="/src/assets/misc/platforms.png" alt="LinkedIn, ChatGPT, Facebook, Pinterest, Instagram, Meta, TikTok, Twitter/X, Google, Snapchat" width="1772" height="24" />
+              <img src="/src/assets/misc/platforms.png" alt="" width="1772" height="24" aria-hidden="true" />
+            </div>
+          </div>
+          <span class="channels__more">
+            <img src="/src/assets/icons/plus-large.svg" alt="" width="43" height="43" />
+            <span class="visually-hidden">e altri canali</span>
+          </span>
+        </div>
+      </section>
+
+      <!-- ============================================================ OGGI -->
+      <section class="today" id="come-funziona" aria-labelledby="today-title">
+        <header class="section-head" data-reveal>
+          <h2 class="section-title" id="today-title">La tua giornata, già pronta.</h2>
+          <p class="section-lead">Ogni mattina trovi il radar del settore, le bozze da approvare e la tua consulente.<br class="br-desktop" /> E per chiedere qualcosa ad Arturo basta scrivere.</p>
+        </header>
+
+        <div class="today__stage" data-reveal="scale">
+          <img class="glow today__glow" src="/src/assets/glow/oggi.svg" alt="" aria-hidden="true" />
+
+          <div
+            class="phone phone--today"
+            role="img"
+            aria-label="Schermata Radar: Fotovoltaico per l'azienda voto 84, Packaging sostenibile 78, Incentivi energia 71, Autoconsumo condiviso 66."
+          >
+            <div class="phone__body">
+              <div class="phone__screen">
+                <div class="m-head">
+                  <span class="m-btn"><img src="/src/assets/icons/chevron-left-oggi.svg" alt="" width="20" height="20" /></span>
+                  <span class="m-title">Radar</span>
+                  <span class="m-btn"><img src="/src/assets/icons/ellipsis-oggi.svg" alt="" width="20" height="20" /></span>
+                </div>
+
+                <div class="m-card m-topic">
+                  <div class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></div>
+                  <div class="m-topic__row">
+                    <span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img src="/src/assets/ring/r84.svg" alt="" /><b>84</b></span>
+                    <span class="m-topic__text"><span class="m-topic__title" style="color: var(--sky)">Fotovoltaico per l’azienda</span><span class="m-sub">3 fonti · selezionato</span></span>
+                  </div>
+                </div>
+                <div class="m-card m-topic">
+                  <div class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></div>
+                  <div class="m-topic__row">
+                    <span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img src="/src/assets/ring/r78.svg" alt="" /><b>78</b></span>
+                    <span class="m-topic__text"><span class="m-topic__title" style="color: var(--sky-2)">Packaging sostenibile</span><span class="m-sub">4 fonti</span></span>
+                  </div>
+                </div>
+                <div class="m-card m-topic">
+                  <div class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></div>
+                  <div class="m-topic__row">
+                    <span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc--71" src="/src/assets/ring/r71.svg" alt="" /><b>71</b></span>
+                    <span class="m-topic__text"><span class="m-topic__title" style="color: var(--mint)">Incentivi energia</span><span class="m-sub">2 fonti</span></span>
+                  </div>
+                </div>
+                <div class="m-card m-topic">
+                  <div class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></div>
+                  <div class="m-topic__row">
+                    <span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc--66" src="/src/assets/ring/r66.svg" alt="" /><b>66</b></span>
+                    <span class="m-topic__text"><span class="m-topic__title" style="color: var(--peach)">Autoconsumo condiviso</span><span class="m-sub">4 fonti</span></span>
+                  </div>
+                </div>
+
+                <div class="m-ask">
+                  <span class="m-ask__orb"><span class="brand-icon" style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span>
+                  <span class="m-ask__text">Cosa cerco oggi?</span>
+                  <span class="m-ask__plus"><img src="/src/assets/icons/plus-oggi.svg" alt="" width="20" height="20" /></span>
+                </div>
+              </div>
+              <span class="phone__island"></span>
+            </div>
+          </div>
+
+          <div class="float-card float-card--radar" aria-hidden="true">
+            <span class="float-card__label">Radar</span>
+            <span class="float-card__value" style="color: var(--sky)">14 argomenti</span>
+            <span class="float-card__sub">3 sopra la soglia</span>
+          </div>
+          <div class="float-card float-card--approve" aria-hidden="true">
+            <span class="float-card__label">Da approvare</span>
+            <span class="float-card__value" style="color: var(--mint)">3 bozze</span>
+            <span class="float-card__sub">La migliore vale 84</span>
+          </div>
+          <div class="float-card float-card--advisor" aria-hidden="true">
+            <span class="float-card__label">Il tuo consulente</span>
+            <span class="float-card__value" style="color: var(--ice)">Giulia</span>
+            <span class="float-card__sub">Ha aggiornato il profilo</span>
+          </div>
+
+          <div class="today__fade" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <!-- ============================================================ IL CONSULENTE -->
+      <section class="advisor" id="consulente" aria-labelledby="advisor-title">
+        <div class="advisor__copy" data-reveal>
+          <h2 class="advisor__title" id="advisor-title">Un consulente ti ascolta. L’agente fa il resto.</h2>
+          <p class="advisor__lead">Prima di tutto c’è una persona: imposta Arturo sulla tua azienda e lo aggiorna quando cambia qualcosa.</p>
+          <button class="btn btn--secondary" type="button" data-contact>Parla con un consulente</button>
+
+          <div class="profile" role="group" aria-labelledby="profile-title">
+            <p class="profile__title" id="profile-title">Profilo del brand</p>
+            <dl class="profile__list">
+              <div class="profile__row is-active"><dt><img src="/src/assets/misc/dot-1.svg" alt="" width="8" height="8" />Tono di voce</dt><dd>Formale ↔ Diretto · Tecnico ↔ Semplice</dd></div>
+              <div class="profile__row"><dt><img src="/src/assets/misc/dot-2.svg" alt="" width="8" height="8" />Parole da usare</dt><dd>impianto su misura, risparmio in bolletta</dd></div>
+              <div class="profile__row"><dt><img src="/src/assets/misc/dot-3.svg" alt="" width="8" height="8" />Parole da evitare</dt><dd>soluzione innovativa, a 360 gradi</dd></div>
+              <div class="profile__row"><dt><img src="/src/assets/misc/dot-4.svg" alt="" width="8" height="8" />Canali</dt><dd>LinkedIn, Instagram, Blog, Newsletter, Sito web</dd></div>
+              <div class="profile__row"><dt><img src="/src/assets/misc/dot-5.svg" alt="" width="8" height="8" />Aggiornamenti</dt><dd>quando cambiano prodotti e servizi</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <div class="advisor__visual" data-reveal="scale">
+          <img class="glow advisor__glow" src="/src/assets/glow/consulente.svg" alt="" aria-hidden="true" />
+          <div
+            class="phone phone--chat"
+            role="img"
+            aria-label="Chat con Arturo: alla domanda «Di cosa parliamo questa settimana?» Arturo propone tre argomenti e chiede se scrivere LinkedIn, Instagram e Newsletter. Giulia, la consulente, può intervenire in ogni momento."
+          >
+            <div class="phone__body">
+              <div class="phone__screen">
+                <div class="m-head">
+                  <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
+                  <span class="m-title">Arturo</span>
+                  <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
+                </div>
+                <div class="m-listen">
+                  <span class="brand-icon" style="--size: 120px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
+                  <span>Ti ascolto</span>
+                </div>
+                <span class="m-bubble m-bubble--user">Di cosa parliamo questa settimana?</span>
+                <div class="m-bubble m-bubble--bot">
+                  <span>Ho trovato 3 argomenti che valgono per il tuo settore. Il migliore è «Fotovoltaico per l’azienda» (84). Scrivo LinkedIn, Instagram e Newsletter?</span>
+                  <span class="m-bubble__actions"><span class="is-primary">Sì, scrivi</span><span>Vedi il radar</span></span>
+                </div>
+                <span class="m-note"><img src="/src/assets/icons/user-round-cons.svg" alt="" width="16" height="16" />Giulia, la tua consulente, può intervenire in ogni momento</span>
+                <div class="m-ask">
+                  <span class="m-ask__orb"><span class="brand-icon" style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span>
+                  <span class="m-ask__text">Tap per parlare</span>
+                  <span class="m-ask__plus"><img src="/src/assets/icons/plus-cons.svg" alt="" width="20" height="20" /></span>
+                </div>
+              </div>
+              <span class="phone__island"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================ MOSAICO FUNZIONI -->
+      <section class="features" aria-label="Funzioni di Arturo">
+        <div class="features__row features__row--2">
+          <article class="tile tile--tall" data-reveal>
+            <img class="glow tile__glow tile__glow--score" src="/src/assets/glow/mosaic-1.svg" alt="" aria-hidden="true" />
+            <div class="phone phone--tile" role="img" aria-label="Schermata Valutazione: argomento Fotovoltaico per l’azienda con voto 84; pubblico alto, concorrenza bassa, brand in linea.">
+              <div class="phone__body">
+                <div class="phone__screen">
+                  <div class="m-head">
+                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-mosaic.svg" alt="" width="20" height="20" /></span>
+                    <span class="m-title">Valutazione</span>
+                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-mosaic.svg" alt="" width="20" height="20" /></span>
+                  </div>
+                  <div class="m-card">
+                    <div class="m-card__top"><span>Voto dell’argomento</span><img src="/src/assets/icons/gauge-mosaic.svg" alt="" width="17" height="17" /></div>
+                    <div class="gauge">
+                      <span class="gauge__arc">
+                        <img style="left:0%;top:40.34%;width:5.85%;height:8.31%" src="/src/assets/gauge/seg-01.svg" alt="" />
+                        <img style="left:1.61%;top:29.67%;width:7.28%;height:9.01%" src="/src/assets/gauge/seg-02.svg" alt="" />
+                        <img style="left:5.62%;top:20.01%;width:8.37%;height:9.26%" src="/src/assets/gauge/seg-03.svg" alt="" />
+                        <img style="left:11.86%;top:11.86%;width:9.04%;height:9.04%" src="/src/assets/gauge/seg-04.svg" alt="" />
+                        <img style="left:20.01%;top:5.62%;width:9.26%;height:8.37%" src="/src/assets/gauge/seg-05.svg" alt="" />
+                        <img style="left:29.67%;top:1.61%;width:9.01%;height:7.28%" src="/src/assets/gauge/seg-06.svg" alt="" />
+                        <img style="left:40.34%;top:0%;width:8.31%;height:5.85%" src="/src/assets/gauge/seg-07.svg" alt="" />
+                        <img style="left:51.35%;top:0%;width:8.31%;height:5.85%" src="/src/assets/gauge/seg-08.svg" alt="" />
+                        <img style="left:61.32%;top:1.61%;width:9.01%;height:7.28%" src="/src/assets/gauge/seg-09.svg" alt="" />
+                        <img style="left:70.73%;top:5.62%;width:9.26%;height:8.37%" src="/src/assets/gauge/seg-10.svg" alt="" />
+                        <img style="left:79.1%;top:11.86%;width:9.04%;height:9.04%" src="/src/assets/gauge/seg-11.svg" alt="" />
+                        <img style="left:86.01%;top:20.01%;width:8.37%;height:9.26%" src="/src/assets/gauge/seg-12.svg" alt="" />
+                        <img style="left:91.11%;top:29.67%;width:7.28%;height:9.01%" src="/src/assets/gauge/seg-13.svg" alt="" />
+                        <img style="left:94.15%;top:40.34%;width:5.85%;height:8.31%" src="/src/assets/gauge/seg-14.svg" alt="" />
+                      </span>
+                      <span class="gauge__value">84</span>
+                      <span class="gauge__caption">Fotovoltaico per l’azienda</span>
+                    </div>
+                  </div>
+                  <div class="m-metrics">
+                    <span><small>Pubblico</small><b style="color: var(--sky)">Alto</b></span>
+                    <span><small>Concorrenza</small><b style="color: var(--mint)">Bassa</b></span>
+                    <span><small>Brand</small><b style="color: var(--peach)">In linea</b></span>
+                  </div>
+                  <div class="m-card">
+                    <div class="m-card__top"><span>Angolo proposto</span><img src="/src/assets/icons/sparkles.svg" alt="" width="17" height="17" /></div>
+                    <span class="m-angle">Le tre domande da farsi prima di chiedere un preventivo.</span>
+                    <span class="m-sub m-sub--sm">Esempio · criteri e scala da validare</span>
+                  </div>
+                </div>
+                <span class="phone__island"></span>
+              </div>
+            </div>
+            <div class="tile__fade" aria-hidden="true"></div>
+            <div class="tile__copy">
+              <h3 class="tile__title">Un voto e un perché</h3>
+              <p class="tile__text">Ogni argomento arriva con voto, motivazione e angolo proposto.</p>
+            </div>
+          </article>
+
+          <article class="tile tile--tall" data-reveal>
+            <img class="glow tile__glow tile__glow--draft" src="/src/assets/glow/mosaic-2.svg" alt="" aria-hidden="true" />
+            <div class="phone phone--tile" role="img" aria-label="Schermata Bozza: post LinkedIn sul fotovoltaico per le aziende, con approvazione manuale e i pulsanti Approva e Modifica.">
+              <div class="phone__body">
+                <div class="phone__screen">
+                  <div class="m-head">
+                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-mosaic.svg" alt="" width="20" height="20" /></span>
+                    <span class="m-title">Bozza</span>
+                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-mosaic.svg" alt="" width="20" height="20" /></span>
+                  </div>
+                  <div class="m-card">
+                    <div class="m-card__top"><span>LinkedIn</span><img src="/src/assets/icons/briefcase.svg" alt="" width="17" height="17" /></div>
+                    <span class="m-draft">Il fotovoltaico conviene alla tua azienda? Dipende da tre cose, e si controllano in un pomeriggio.<br /><br />1. Quanta energia consumi di giorno<br />2. Quanto spazio hai sul tetto<br />3. Quali incentivi puoi ottenere<br /><br />E tu, hai già guardato i tuoi consumi?</span>
+                    <span class="m-tags">#fotovoltaico #PMI</span>
+                  </div>
+                  <span class="m-seg"><span class="is-active">Manuale</span><span>Automatica</span></span>
+                  <span class="m-actions"><span class="is-primary">Approva</span><span>Modifica</span></span>
+                </div>
+                <span class="phone__island"></span>
+              </div>
+            </div>
+            <div class="tile__fade" aria-hidden="true"></div>
+            <div class="tile__copy">
+              <h3 class="tile__title">Un testo per ogni canale</h3>
+              <p class="tile__text">Stesso argomento, forma giusta per LinkedIn, Instagram, blog, newsletter e sito.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="features__row features__row--3">
+          <article class="tile tile--short" data-reveal>
+            <div class="tile__visual tile__visual--ask" aria-hidden="true">
+              <span class="ask-orb" data-listening>
+                <img src="/src/assets/brand/arturo-sphere.svg" alt="" width="182" height="186" />
+              </span>
+              <span class="ask-orb__label">Ti ascolto</span>
+            </div>
+            <div class="tile__copy">
+              <h3 class="tile__title">Chiedi ad Arturo</h3>
+              <p class="tile__text">«Di cosa parliamo questa settimana?» Arturo guarda il settore e ti propone gli argomenti.</p>
+            </div>
+          </article>
+
+          <article class="tile tile--short" data-reveal>
+            <div class="tile__visual tile__visual--approval" data-approval>
+              <div class="segmented" role="radiogroup" aria-label="Modalità di approvazione (esempio)">
+                <button type="button" role="radio" aria-checked="true" data-mode="manual">Manuale</button>
+                <button type="button" role="radio" aria-checked="false" tabindex="-1" data-mode="auto">Automatica</button>
+              </div>
+              <span class="status-pill" aria-live="polite">
+                <img src="/src/assets/icons/check-approved.svg" alt="" width="15" height="15" />
+                <span data-approval-label>Approvata</span>
+              </span>
+            </div>
+            <div class="tile__copy">
+              <h3 class="tile__title">Decidi tu</h3>
+              <p class="tile__text">Approvi ogni contenuto oppure scegli l’approvazione automatica.</p>
+            </div>
+          </article>
+
+          <article class="tile tile--short" data-reveal>
+            <div class="tile__visual tile__visual--channels">
+              <ul class="channel-chips" aria-label="Canali">
+                <li style="color: var(--sky-2)">LinkedIn</li>
+                <li style="color: var(--ice)">Instagram</li>
+                <li style="color: var(--mint)">Blog</li>
+                <li style="color: var(--sky)">Newsletter</li>
+                <li style="color: #fff">Sito web</li>
+                <li style="color: var(--text-subtle)">+ altri</li>
+              </ul>
+            </div>
+            <div class="tile__copy">
+              <h3 class="tile__title">Tutti i tuoi canali</h3>
+              <p class="tile__text">E gli altri che concordi con il consulente.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================================================ GEO -->
+      <section class="geo" id="geo" aria-labelledby="geo-title">
+        <header class="section-head" data-reveal>
+          <h2 class="section-title" id="geo-title">Scritto per Google. E per le AI.</h2>
+          <p class="section-lead geo__lead">Sempre più persone chiedono alle AI chi scegliere. Arturo scrive i contenuti chiari che le AI leggono e possono citare.</p>
+        </header>
+        <figure class="geo__card" data-scroll-scale>
+          <img class="glow geo__glow geo__glow--1" src="/src/assets/glow/geo-1.svg" alt="" aria-hidden="true" />
+          <img class="glow geo__glow geo__glow--2" src="/src/assets/glow/geo-2.svg" alt="" aria-hidden="true" />
+          <div class="geo__chat">
+            <p class="geo__question">Come si sceglie un commercialista per una startup?</p>
+            <div class="geo__answer">
+              <p>Conviene valutare l’esperienza con le startup, la chiarezza sui costi e la disponibilità nel tempo.</p>
+              <span class="geo__source">
+                <span class="brand-icon" style="--size: 18px" aria-hidden="true"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
+                Fonte: il tuo sito
+              </span>
+            </div>
+          </div>
+          <figcaption class="geo__note">Esempio di risposta AI, non un risultato garantito.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ============================================================ DEMO / PROTOTIPO -->
+      <section class="demo" id="demo" aria-labelledby="demo-title">
+        <header class="section-head" data-reveal>
+          <h2 class="section-title" id="demo-title">Prova Arturo. Proprio qui.</h2>
+          <p class="section-lead">Chiedi un argomento, approva le bozze, cambia vista. È un prototipo con dati d’esempio.</p>
+        </header>
+
+        <div class="app-frame" data-scroll-scale>
+          <div class="app" data-app>
+            <aside class="app__sidebar">
+              <img class="app__controls" src="/src/assets/misc/window-controls.svg" alt="" width="56" height="30" />
+              <div class="app__brand">
+                <span class="mascot" data-mascot aria-hidden="true">
+                  <span class="mascot__state mascot__state--rest"><img src="/src/assets/brand/mascot-render.webp" alt="" /></span>
+                  <span class="mascot__state mascot__state--listen"><img src="/src/assets/brand/mascot-states.webp" alt="" /></span>
+                  <span class="mascot__state mascot__state--think"><img src="/src/assets/brand/mascot-states.webp" alt="" /><i class="mascot__edge"></i></span>
+                  <span class="mascot__state mascot__state--happy"><img src="/src/assets/brand/mascot-states.webp" alt="" /></span>
+                </span>
+                <span class="app__wordmark">arturo</span>
+              </div>
+
+              <nav class="app__nav" aria-label="Viste del prototipo">
+                <button type="button" class="app__nav-item" aria-current="page" data-view-target="oggi">Oggi</button>
+                <button type="button" class="app__nav-item" data-view-target="radar">Radar <span class="app__count">14</span></button>
+                <button type="button" class="app__nav-item" data-view-target="approvare">Da approvare <span class="app__count" data-pending-count>3</span></button>
+                <button type="button" class="app__nav-item" data-view-target="archivio">Archivio</button>
+                <button type="button" class="app__nav-item" data-view-target="profilo">Profilo del brand</button>
+              </nav>
+
+              <div class="app__advisor">
+                <div class="app__advisor-head">
+                  <span class="app__label">Il tuo consulente</span>
+                  <span class="app__advisor-name">
+                    <span class="avatar" aria-hidden="true">G<img src="/src/assets/misc/online-dot.svg" alt="" /></span>
+                    Giulia
+                  </span>
+                </div>
+                <button type="button" class="app__pill-btn" data-contact>Scrivi a Giulia</button>
+              </div>
+            </aside>
+
+            <div class="app__main">
+              <!-- View: Oggi -->
+              <div class="app__view" data-view="oggi">
+                <div class="app__greeting">
+                  <h3>Buongiorno, Marco</h3>
+                  <p>Giovedì · ciclo di oggi completato</p>
+                </div>
+
+                <div class="app__stats">
+                  <div class="app-card app-stat">
+                    <div class="app-stat__top"><span>Radar</span><img src="/src/assets/icons/radar-app.svg" alt="" width="16" height="16" /></div>
+                    <span class="app-stat__value" style="color: var(--sky)">14 argomenti</span>
+                    <span class="app-stat__sub">3 sopra la soglia</span>
+                    <span class="bars bars--app" aria-hidden="true"><i style="--h:28.2" class=on></i><i style="--h:18.3" class=on></i><i style="--h:30.8" class=on></i><i style="--h:12.4" class=on></i><i style="--h:32.0" class=on></i><i style="--h:9.8" class=on></i><i style="--h:31.5" class=on></i><i style="--h:15.9" class=on></i><i style="--h:29.5" class=on></i><i style="--h:21.4" class=on></i><i style="--h:26.0" class=on></i><i style="--h:26.0" class=on></i><i style="--h:21.4" class=on></i><i style="--h:29.5" class=on></i><i style="--h:15.8"></i><i style="--h:31.5"></i><i style="--h:9.8"></i><i style="--h:32.0"></i><i style="--h:12.4"></i><i style="--h:30.8"></i><i style="--h:18.3"></i><i style="--h:28.2"></i><i style="--h:23.5"></i><i style="--h:24.2"></i><i style="--h:27.7"></i><i style="--h:19.1"></i><i style="--h:30.5"></i><i style="--h:13.3"></i><i style="--h:31.9"></i><i style="--h:8.8"></i><i style="--h:31.7"></i><i style="--h:14.9"></i><i style="--h:29.9"></i><i style="--h:20.6"></i><i style="--h:26.7"></i><i style="--h:25.4"></i><i style="--h:22.2"></i><i style="--h:29.0"></i><i style="--h:16.8"></i><i style="--h:31.3"></i></span>
+                  </div>
+                  <div class="app-card app-stat">
+                    <div class="app-stat__top"><span>Da approvare</span><img src="/src/assets/icons/check-app.svg" alt="" width="16" height="16" /></div>
+                    <span class="app-stat__value" style="color: var(--mint)" data-pending-label>3 bozze</span>
+                    <span class="app-stat__sub" data-pending-sub>La migliore vale 84 · LinkedIn</span>
+                  </div>
+                  <div class="app-card app-stat">
+                    <div class="app-stat__top"><span>Voto migliore</span><img src="/src/assets/icons/gauge-app.svg" alt="" width="16" height="16" /></div>
+                    <span class="app-stat__value" style="color: var(--sky-2)">84</span>
+                    <span class="app-stat__sub">Fotovoltaico per l’azienda</span>
+                  </div>
+                </div>
+
+                <div class="app-card app-message" aria-live="polite">
+                  <div class="app-message__body">
+                    <span class="app-message__from">Arturo</span>
+                    <p class="app-message__text" data-arturo-message>Ho scritto LinkedIn, Instagram e Newsletter su «Fotovoltaico per l’azienda». Le vuoi rivedere?</p>
+                  </div>
+                  <button type="button" class="chip-btn chip-btn--primary chip-btn--lg" data-view-target="approvare" data-message-action>Rivedi le bozze</button>
+                </div>
+
+                <div class="app__drafts" data-drafts-slot="oggi"></div>
+              </div>
+
+              <!-- View: Radar -->
+              <div class="app__view" data-view="radar" hidden>
+                <div class="app__greeting">
+                  <h3>Radar</h3>
+                  <p>14 argomenti trovati oggi · 3 sopra la soglia</p>
+                </div>
+                <ul class="app-topics">
+                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img src="/src/assets/ring/r84.svg" alt="" /><b>84</b></span><span><strong style="color: var(--sky)">Fotovoltaico per l’azienda</strong><small>3 fonti · selezionato</small></span></li>
+                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img src="/src/assets/ring/r78.svg" alt="" /><b>78</b></span><span><strong style="color: var(--sky-2)">Packaging sostenibile</strong><small>4 fonti</small></span></li>
+                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc--71" src="/src/assets/ring/r71.svg" alt="" /><b>71</b></span><span><strong style="color: var(--mint)">Incentivi energia</strong><small>2 fonti</small></span></li>
+                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc--66" src="/src/assets/ring/r66.svg" alt="" /><b>66</b></span><span><strong style="color: var(--peach)">Autoconsumo condiviso</strong><small>4 fonti</small></span></li>
+                </ul>
+              </div>
+
+              <!-- View: Da approvare -->
+              <div class="app__view" data-view="approvare" hidden>
+                <div class="app__greeting">
+                  <h3>Da approvare</h3>
+                  <p data-pending-summary>3 bozze su «Fotovoltaico per l’azienda»</p>
+                </div>
+                <div class="app__drafts app__drafts--stack" data-drafts-slot="approvare"></div>
+              </div>
+
+              <!-- View: Archivio -->
+              <div class="app__view" data-view="archivio" hidden>
+                <div class="app__greeting">
+                  <h3>Archivio</h3>
+                  <p>I contenuti che hai approvato.</p>
+                </div>
+                <ul class="app-archive" data-archive></ul>
+                <p class="app-empty" data-archive-empty>Ancora niente qui. Approva una bozza e la ritrovi in archivio.</p>
+              </div>
+
+              <!-- View: Profilo -->
+              <div class="app__view" data-view="profilo" hidden>
+                <div class="app__greeting">
+                  <h3>Profilo del brand</h3>
+                  <p>Impostato con Giulia · esempio</p>
+                </div>
+                <dl class="profile__list app-profile">
+                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-1.svg" alt="" width="8" height="8" />Tono di voce</dt><dd>Formale ↔ Diretto · Tecnico ↔ Semplice</dd></div>
+                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-2.svg" alt="" width="8" height="8" />Parole da usare</dt><dd>impianto su misura, risparmio in bolletta</dd></div>
+                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-3.svg" alt="" width="8" height="8" />Parole da evitare</dt><dd>soluzione innovativa, a 360 gradi</dd></div>
+                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-4.svg" alt="" width="8" height="8" />Canali</dt><dd>LinkedIn, Instagram, Blog, Newsletter, Sito web</dd></div>
+                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-5.svg" alt="" width="8" height="8" />Aggiornamenti</dt><dd>quando cambiano prodotti e servizi</dd></div>
+                </dl>
+              </div>
+
+              <form class="app-ask" data-ask>
+                <span class="app-ask__orb" aria-hidden="true">
+                  <span class="brand-icon brand-icon--app"><img src="/src/assets/brand/brand-icon-app.svg" alt="" width="45" height="47" /></span>
+                </span>
+                <label class="visually-hidden" for="ask-input">Chiedi ad Arturo</label>
+                <input
+                  id="ask-input"
+                  class="app-ask__input"
+                  type="text"
+                  name="q"
+                  autocomplete="off"
+                  maxlength="140"
+                  placeholder="Chiedi ad Arturo… «Di cosa parliamo questa settimana?»"
+                />
+                <button class="app-ask__send" type="submit">Invia</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <template id="draft-template">
+          <article class="app-card app-draft">
+            <p class="app-draft__channel"></p>
+            <p class="app-draft__text"></p>
+            <div class="app-draft__edit" hidden>
+              <label class="visually-hidden">Modifica bozza</label>
+              <textarea rows="3"></textarea>
+            </div>
+            <div class="app-draft__actions"></div>
+          </article>
+        </template>
+      </section>
+
+      <!-- ============================================================ PENSATO PER TE -->
+      <section class="facts" aria-labelledby="facts-title">
+        <header class="section-head" data-reveal>
+          <h2 class="section-title" id="facts-title">Pensato per lavorare con te.</h2>
+          <p class="section-lead">Un metodo semplice, che gira ogni giorno.</p>
+        </header>
+        <ul class="facts__grid">
+          <li class="fact" data-reveal><span class="fact__label">Ogni giorno</span><span class="fact__value" style="color: var(--sky)">4</span><span class="fact__text">passaggi: ascolta, scansiona, sceglie, scrive</span></li>
+          <li class="fact" data-reveal><span class="fact__label">Copertura</span><span class="fact__value" style="color: var(--sky-2)">6</span><span class="fact__text">canali, più quelli concordati</span></li>
+          <li class="fact" data-reveal><span class="fact__label">Persona dedicata</span><span class="fact__value" style="color: var(--ice)">1</span><span class="fact__text">consulente per setup e aggiornamenti</span></li>
+          <li class="fact" data-reveal><span class="fact__label">Per argomento</span><span class="fact__value" style="color: var(--mint)">0–100</span><span class="fact__text">un voto con motivo e angolo</span></li>
+        </ul>
+      </section>
+
+      <!-- ============================================================ PIANI -->
+      <section class="plans" id="piani" aria-labelledby="plans-title">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Piani</p>
+          <h2 class="section-title" id="plans-title">Scegli come lavorare con Arturo.</h2>
+          <p class="section-lead">Inizia gratis: una settimana di prova con il consulente. Poi scegli tu.</p>
+        </header>
+        <div class="plans__grid">
+          <article class="plan" data-reveal>
+            <div class="plan__head"><h3 class="plan__name">Prova gratuita</h3><span class="badge">1 settimana, senza impegno</span></div>
+            <p class="plan__tagline">Inizia qui</p>
+            <p class="plan__price"><strong>0 €</strong><span>/7 giorni</span></p>
+            <p class="plan__note">Nessuna carta richiesta · poi scegli il piano</p>
+            <hr class="plan__divider" />
+            <ul class="plan__features">
+              <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />Brief su brand, obiettivi e pubblico</li>
+              <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />Call conoscitiva con il consulente</li>
+              <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />Demo guidata di Arturo</li>
+              <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />Setup del Profilo del brand</li>
+              <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />1 settimana di prova completa</li>
+            </ul>
+            <button class="btn btn--secondary btn--block plan__cta" type="button" data-contact="Prova gratuita">Inizia la prova gratuita</button>
+          </article>
+
+          <article class="plan plan--featured" data-reveal>
+            <div class="plan__head"><h3 class="plan__name">Plus</h3><span class="badge badge--accent">Consigliato</span></div>
+            <p class="plan__tagline plan__tagline--accent">Arturo al lavoro ogni giorno</p>
+            <p class="plan__price"><strong>90 €</strong><span>/mese</span></p>
+            <p class="plan__note">Tutto della prova, più:</p>
+            <hr class="plan__divider" />
+            <ul class="plan__features">
+              <li><img src="/src/assets/icons/check-plan-plus.svg" alt="" width="16" height="16" />Radar quotidiano e argomenti con voto</li>
+              <li><img src="/src/assets/icons/check-plan-plus.svg" alt="" width="16" height="16" />Contenuti per LinkedIn, Instagram, blog, newsletter e sito</li>
+              <li><img src="/src/assets/icons/check-plan-plus.svg" alt="" width="16" height="16" />Testi ottimizzati per Google e AI (GEO)</li>
+              <li><img src="/src/assets/icons/check-plan-plus.svg" alt="" width="16" height="16" />Calendario editoriale e pubblicazione programmata</li>
+              <li><img src="/src/assets/icons/check-plan-plus.svg" alt="" width="16" height="16" />Chat e voce con Arturo illimitate</li>
+              <li><img src="/src/assets/icons/check-plan-plus.svg" alt="" width="16" height="16" />Check-in mensile con il consulente</li>
+              <li><img src="/src/assets/icons/check-plan-plus.svg" alt="" width="16" height="16" />Report mensile delle performance</li>
+            </ul>
+            <button class="btn btn--primary btn--block plan__cta" type="button" data-contact="Plus">Passa a Plus</button>
+          </article>
+
+          <article class="plan" data-reveal>
+            <div class="plan__head"><h3 class="plan__name">Enterprise</h3></div>
+            <p class="plan__tagline">Personalizzato</p>
+            <p class="plan__price"><strong>Custom</strong></p>
+            <p class="plan__note">Per organizzazioni con più brand o team</p>
+            <hr class="plan__divider" />
+            <ul class="plan__features">
+              <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />Più brand, sedi o linee di prodotto</li>
+              <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />Flussi di approvazione con più persone</li>
+              <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />Canali e formati su misura</li>
+              <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />Consulente dedicato</li>
+            </ul>
+            <button class="btn btn--secondary btn--block plan__cta" type="button" data-contact="Enterprise">Richiedi informazioni</button>
+          </article>
+        </div>
+      </section>
+
+      <!-- ============================================================ CONFRONTO -->
+      <section class="compare" aria-labelledby="compare-title">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">A confronto</p>
+          <h2 class="section-title" id="compare-title">Non è un’altra AI generica.</h2>
+          <p class="section-lead">Cosa cambia rispetto agli strumenti che usi oggi.</p>
+        </header>
+
+        <div class="compare__scroller" tabindex="0" role="region" aria-labelledby="compare-title">
+          <table class="compare__table">
+            <caption class="visually-hidden">Confronto tra Arturo, AI generiche, agenzia e fai da te</caption>
+            <thead>
+              <tr>
+                <th scope="col" class="compare__need">Cosa ti serve</th>
+                <th scope="col" class="compare__arturo">
+                  <span class="compare__logo"><span class="brand-icon" style="--size: 22px" aria-hidden="true"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>Arturo</span>
+                </th>
+                <th scope="col">AI generiche<small>ChatGPT, Gemini…</small></th>
+                <th scope="col">Agenzia</th>
+                <th scope="col">Fai da te</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Sceglie di cosa parlare per te</th><td class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td></tr>
+              <tr><th scope="row">Voto e motivo per ogni argomento</th><td class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td><td class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td></tr>
+              <tr><th scope="row">Conosce la tua voce (Profilo del brand)</th><td class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td></tr>
+              <tr><th scope="row">Un consulente che ti segue</th><td class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td><td class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td></tr>
+              <tr><th scope="row">Un testo diverso per ogni canale</th><td class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td></tr>
+              <tr><th scope="row">Scritto per Google e per le AI (GEO)</th><td class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td></tr>
+              <tr><th scope="row">Lavora ogni giorno, anche quando sei occupato</th><td class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td><td class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td></tr>
+              <tr><th scope="row">Approvi tu, a mano o in automatico</th><td class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="compare__footer">
+          <ul class="legend">
+            <li><img src="/src/assets/icons/legend-check.svg" alt="" width="14" height="14" />Sì</li>
+            <li><img src="/src/assets/icons/legend-minus.svg" alt="" width="14" height="14" />In parte / su richiesta</li>
+            <li><img src="/src/assets/icons/legend-x.svg" alt="" width="14" height="14" />No</li>
+          </ul>
+          <button class="btn btn--primary" type="button" data-contact>Parla con un consulente</button>
+        </div>
+        <p class="fine-print">Confronto qualitativo per categorie di strumenti, non misurazioni.</p>
+      </section>
+
+      <!-- ============================================================ LOGHI -->
+      <section class="logos" aria-labelledby="logos-title">
+        <h2 class="logos__title" id="logos-title" data-reveal>Scelto da</h2>
+        <ul class="logos__row" data-reveal>
+          <li>ux.boutique</li>
+          <li>ixway</li>
+          <li>PROJECT</li>
+          <li>DEMA Engineering</li>
+          <li>READVICE</li>
+          <li>EXREA</li>
+        </ul>
+      </section>
+
+      <!-- ============================================================ CTA FINALE -->
+      <section class="final-cta" aria-labelledby="final-title">
+        <div class="final-cta__glows" aria-hidden="true">
+          <img class="glow final-cta__glow final-cta__glow--1" src="/src/assets/glow/cta-1.svg" alt="" />
+          <img class="glow final-cta__glow final-cta__glow--2" src="/src/assets/glow/cta-2.svg" alt="" />
+          <img class="glow final-cta__glow final-cta__glow--3" src="/src/assets/glow/cta-3.svg" alt="" />
+        </div>
+        <div class="final-cta__mascot" aria-hidden="true">
+          <img src="/src/assets/brand/mascot-render.webp" alt="" width="720" height="720" loading="lazy" />
+        </div>
+        <div class="final-cta__content" data-reveal>
+          <h2 class="final-cta__title" id="final-title">Vuoi anche tu un agent?</h2>
+          <p class="final-cta__lead">Arturo lavora per te ogni giorno. Un consulente lo imposta sulla tua azienda, una volta sola.</p>
+          <div class="hero__actions">
+            <button class="btn btn--primary" type="button" data-contact>Parla con un consulente</button>
+            <a class="btn btn--secondary" href="#demo">Guarda la demo</a>
+          </div>
+          <p class="final-cta__note">Si parte con una conversazione. Nessun impegno.</p>
+        </div>
+      </section>
+
+      <!-- ============================================================ FAQ -->
+      <section class="faq" id="faq" aria-labelledby="faq-title">
+        <header class="section-head section-head--tight" data-reveal>
+          <h2 class="faq__title" id="faq-title">Domande frequenti</h2>
+          <p class="section-lead">Hai delle domande. Ecco le risposte.</p>
+        </header>
+        <div class="faq__grid">
+          <dl class="faq__col">
+            <div class="faq__item" data-reveal><dt>Cos’è Arturo?</dt><dd>Un agente AI che ogni giorno scansiona il tuo settore, sceglie gli argomenti migliori e scrive i contenuti per i tuoi canali. Prima, un consulente lo configura sulla tua azienda.</dd></div>
+            <div class="faq__item" data-reveal><dt>Chi è il consulente?</dt><dd>Un professionista del team con esperienza di comunicazione e contenuti. Non è un chatbot: mette a punto Arturo sul tuo modo di parlare.</dd></div>
+          </dl>
+          <dl class="faq__col">
+            <div class="faq__item" data-reveal><dt>Cos’è la GEO?</dt><dd>Generative Engine Optimization: scrivere contenuti pensati per essere letti, capiti e citati dalle AI, oltre che trovati su Google.</dd></div>
+            <div class="faq__item" data-reveal><dt>Posso controllare cosa esce?</dt><dd>Sì. Approvi tu ogni contenuto, oppure scegli l’approvazione automatica.</dd></div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================ FOOTER -->
+    <footer class="footer">
+      <div class="footer__row">
+        <div class="footer__brand">
+          <a class="footer__logo" href="#top" aria-label="Arturo, torna all'inizio">
+            <span class="brand-icon" style="--size: 28px" aria-hidden="true"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
+            <span>arturo</span>
+          </a>
+          <p>L’agente AI per i contenuti, impostato da un consulente.</p>
+        </div>
+        <nav class="footer__col" aria-labelledby="footer-product">
+          <h2 id="footer-product">Prodotto</h2>
+          <a href="#come-funziona">Come funziona</a>
+          <a href="#consulente">Il consulente</a>
+          <a href="#piani">Piani</a>
+          <a href="#demo">Demo</a>
+        </nav>
+        <nav class="footer__col" aria-labelledby="footer-resources">
+          <h2 id="footer-resources">Risorse</h2>
+          <a href="#faq">Domande</a>
+          <a href="#geo">GEO</a>
+          <button type="button" class="footer__link-btn" data-contact>Contatti</button>
+        </nav>
+        <div class="footer__col" role="group" aria-labelledby="footer-legal">
+          <h2 id="footer-legal">Legale</h2>
+          <span data-legal-link="privacy">Informativa privacy</span>
+          <span data-legal-link="cookie">Cookie policy</span>
+        </div>
+      </div>
+      <p class="footer__legal">Benefind Srl · Via Pratese, 199 – 50145 Firenze · P.IVA 06267240486</p>
+    </footer>
+
+    <!-- ============================================================ CONTACT DIALOG -->
+    <dialog class="dialog" id="contact-dialog" aria-labelledby="contact-title" data-contact-dialog>
+      <form class="dialog__card" method="dialog" novalidate data-contact-form>
+        <div class="dialog__head">
+          <h2 class="dialog__title" id="contact-title">Parla con un consulente</h2>
+          <button type="button" class="dialog__close" data-dialog-close aria-label="Chiudi">
+            <img src="/src/assets/icons/legend-x.svg" alt="" width="16" height="16" />
+          </button>
+        </div>
+        <p class="dialog__lead">Si parte con una conversazione. Nessun impegno. <span data-contact-plan-note hidden>Piano: <strong data-contact-plan></strong></span></p>
+
+        <div class="field">
+          <label for="cf-name">Nome e cognome</label>
+          <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-error" />
+          <p class="field__error" id="cf-name-error" hidden>Scrivi il tuo nome.</p>
+        </div>
+        <div class="field">
+          <label for="cf-email">Email di lavoro</label>
+          <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-error" />
+          <p class="field__error" id="cf-email-error" hidden>Inserisci un indirizzo email valido.</p>
+        </div>
+        <div class="field">
+          <label for="cf-company">Azienda <span class="field__optional">(facoltativo)</span></label>
+          <input id="cf-company" name="company" type="text" autocomplete="organization" />
+        </div>
+        <div class="field">
+          <label for="cf-message">Di cosa vuoi parlare? <span class="field__optional">(facoltativo)</span></label>
+          <textarea id="cf-message" name="message" rows="3"></textarea>
+        </div>
+        <input type="hidden" name="plan" value="" />
+
+        <p class="form-status" role="status" data-form-status hidden></p>
+
+        <div class="dialog__actions">
+          <button type="button" class="btn btn--secondary" data-dialog-close>Annulla</button>
+          <button type="submit" class="btn btn--primary" data-submit>Invia richiesta</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+</html>
