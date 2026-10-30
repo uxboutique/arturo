@@ -10,6 +10,7 @@ import './styles/demo.css';
 import './styles/motion.css';
 import './styles/logo.css';
 import './styles/animations.css';
+import './styles/mobile.css';
 
 import { initNav } from './scripts/nav';
 import { initReveal, initOffscreenPause } from './scripts/visibility';
@@ -19,6 +20,9 @@ import { initPrototype } from './scripts/prototype';
 import { initLegalLinks } from './scripts/legal';
 import { initLogos } from './scripts/logo';
 import { initSplitHeadings, initCounters } from './scripts/text';
+import { initCarousels } from './scripts/carousel';
+import { initProfile } from './scripts/profile';
+import { initMobileDemo } from './scripts/mdemo';
 
 initLogos();
 initSplitHeadings();
@@ -30,3 +34,6 @@ initContactDialog();
 initPrototype();
 initLegalLinks();
 initCounters();
+initCarousels();
+initProfile();
+initMobileDemo();

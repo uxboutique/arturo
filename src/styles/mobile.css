@@ -1,0 +1,300 @@
+/* Mobile-specific patterns: swipe carousels, the app demo built from the
+   Figma "Tool - App · Brand C" screens, and the stacked comparison table. */
+
+/* ============================================================ App demo */
+.mdemo {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .app-frame {
+    display: none;
+  }
+
+  .mdemo {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .mdemo__tabs {
+    display: flex;
+    gap: 6px;
+    margin-inline: -12px;
+    padding: 4px 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .mdemo__tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mdemo__tabs button {
+    flex: none;
+    min-height: 40px;
+    padding: 0 16px;
+    border: 1px solid var(--line-2);
+    border-radius: var(--r-pill);
+    background: var(--surface-1);
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 600;
+    transition:
+      background-color var(--dur-fast) ease,
+      color var(--dur-fast) ease,
+      border-color var(--dur-fast) ease;
+  }
+
+  .mdemo__tabs button[aria-selected='true'] {
+    border-color: #fff;
+    background: #fff;
+    color: var(--surface-0);
+  }
+
+  .mdemo__track {
+    display: flex;
+    margin-inline: -12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .mdemo__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mdemo__slide {
+    display: flex;
+    flex: 0 0 100%;
+    justify-content: center;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+
+  .phone--demo {
+    --k: 0.78;
+  }
+
+  .phone--demo .phone__body {
+    box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.7);
+  }
+
+  .mdemo__hint {
+    color: var(--text-faint);
+    font-size: 13px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .phone--demo {
+    --k: 0.7;
+  }
+}
+
+/* ============================================================ Carousels */
+.carousel-dots {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  [data-carousel] {
+    display: flex !important;
+    flex-direction: row;
+    gap: 12px;
+    margin-inline: calc(-1 * var(--gutter));
+    padding-inline: var(--gutter);
+    padding-block: 2px 4px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: var(--gutter);
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  [data-carousel]::-webkit-scrollbar {
+    display: none;
+  }
+
+  [data-carousel] > * {
+    flex: 0 0 min(78%, 300px);
+    scroll-snap-align: start;
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 14px;
+  }
+
+  .carousel-dots i {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.22);
+    transition:
+      width 0.3s var(--ease-out),
+      background-color 0.3s ease;
+  }
+
+  .carousel-dots i.is-active {
+    width: 18px;
+    background: var(--sky);
+  }
+
+  /* Facts: taller, centred number cards */
+  .facts__grid .fact {
+    min-height: 210px;
+    padding: 24px 22px;
+  }
+}
+
+/* ============================================================ Comparison table
+   Below 768px each row becomes a card: the need on top, then the four
+   options side by side, each labelled with its column name. */
+@media (max-width: 767px) {
+  .compare__scroller {
+    overflow: visible;
+    border: 0;
+    background: none;
+  }
+
+  .compare__table {
+    display: block;
+    min-width: 0;
+    padding: 0;
+  }
+
+  .compare__table thead {
+    display: none;
+  }
+
+  .compare__table tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .compare__table tbody tr {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    padding: 14px;
+    border: 1px solid var(--line-2);
+    border-radius: 18px;
+    background: var(--card-gradient);
+  }
+
+  .compare__table tbody tr:hover > * {
+    background-color: transparent;
+  }
+
+  .compare__table tbody th {
+    position: static;
+    grid-column: 1 / -1;
+    height: auto;
+    padding: 0 2px 6px;
+    border: 0;
+    background: none;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+
+  .compare__cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    height: auto;
+    padding: 10px 2px;
+    border: 0;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.025);
+  }
+
+  .compare__cell::before {
+    content: attr(data-col);
+    color: var(--text-subtle);
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .compare__table tbody .compare__arturo,
+  .compare__table tbody tr:last-child .compare__arturo,
+  .compare__table tbody tr:hover > .compare__arturo {
+    border-radius: 12px;
+    background: var(--indigo-soft);
+  }
+
+  .compare__table tbody .compare__arturo::before {
+    color: #fff;
+  }
+}
+
+/* ============================================================ Consulente
+   Phone first, then the swipeable profile cards right below it, so the
+   screen that changes is in view while you swipe. */
+@media (max-width: 767px) {
+  .advisor {
+    gap: 20px;
+  }
+
+  .advisor__copy {
+    display: contents;
+  }
+
+  .advisor__title {
+    order: 1;
+  }
+
+  .advisor__lead {
+    order: 2;
+  }
+
+  .advisor__copy > .btn {
+    order: 3;
+    align-self: flex-start;
+  }
+
+  .advisor__visual {
+    --k: 0.7;
+    order: 4;
+    height: 440px;
+    margin-top: 12px;
+    overflow: hidden;
+  }
+
+  .advisor__visual::after {
+    content: '';
+    position: absolute;
+    inset: auto 0 0;
+    height: 120px;
+    background: linear-gradient(180deg, rgba(6, 16, 31, 0) 0%, var(--bg) 92%);
+    pointer-events: none;
+  }
+
+  .profile {
+    order: 5;
+    margin-top: -36px;
+    position: relative;
+  }
+}
+
+/* ============================================================ Small fixes */
+@media (max-width: 480px) {
+  .plan__head {
+    flex-wrap: wrap;
+  }
+
+  .plan__name {
+    flex-basis: 100%;
+  }
+}

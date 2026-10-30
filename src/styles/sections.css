@@ -347,26 +347,22 @@
   }
 }
 
-/* ============================================================ CANALI */
+/* ============================================================ CANALI
+   Full-bleed marquee: the strip runs edge to edge, faded at both sides. */
 .channels {
-  padding: 32px var(--gutter) 36px;
+  padding: 32px 0 36px;
 }
 
 .channels__inner {
-  display: flex;
-  align-items: center;
-  gap: 82px;
-  width: min(100%, 1080px);
-  margin-inline: auto;
+  width: 100%;
 }
 
 .channels__marquee {
   position: relative;
-  flex: 0 1 778px;
   height: 40px;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 82%, transparent 100%);
-  mask-image: linear-gradient(90deg, transparent 0%, #000 12%, #000 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 9%, #000 91%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 9%, #000 91%, transparent 100%);
 }
 
 .channels__track {
@@ -386,22 +382,14 @@
   margin-right: 145px; /* spacing between platforms in the source strip */
 }
 
-.channels__more {
-  flex: none;
-}
-
-.channels__more img {
-  width: 43px;
-  height: 43px;
-}
-
 @media (max-width: 767px) {
-  .channels__inner {
-    gap: 16px;
+  .channels {
+    padding: 20px 0 24px;
   }
 
   .channels__marquee {
-    flex: 1 1 auto;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 14%, #000 86%, transparent 100%);
   }
 
   .channels__track img {
@@ -412,11 +400,6 @@
 
   .channels__track {
     top: 11px;
-  }
-
-  .channels__more img {
-    width: 32px;
-    height: 32px;
   }
 }
 
@@ -582,6 +565,11 @@
 }
 
 .profile__title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
   padding: 10px 18px 6px;
   color: var(--text-subtle);
   font-size: 12px;
@@ -589,21 +577,48 @@
   letter-spacing: 0.02em;
 }
 
+.profile__hint {
+  color: var(--text-faint);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.profile__list {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Rows of the brand profile. In the landing they are buttons that switch
+   the phone on the right; in the prototype they are plain dt/dd pairs. */
 .profile__row {
   display: flex;
   align-items: center;
   gap: 12px;
+  width: 100%;
   padding: 12px 18px;
   border-radius: 12px;
-  transition: background-color var(--dur-fast) ease;
+  text-align: left;
+  transition:
+    background-color var(--dur-fast) ease,
+    box-shadow var(--dur-fast) ease;
+}
+
+button.profile__row {
+  cursor: pointer;
 }
 
 .profile__row.is-active,
-.profile__row:hover {
+.profile__row:hover,
+.profile__row[aria-pressed='true'] {
   background: rgba(255, 255, 255, 0.06);
 }
 
-.profile__row dt {
+.profile__row[aria-pressed='true'] {
+  box-shadow: inset 2px 0 0 var(--sky);
+}
+
+.profile__row dt,
+.profile__key {
   display: flex;
   flex: none;
   align-items: center;
@@ -612,12 +627,17 @@
   font-weight: 600;
 }
 
-.profile__row dd {
+.profile__row dd,
+.profile__value {
   flex: 1;
   min-width: 0;
   color: var(--text-subtle);
   font-size: 14px;
   text-align: right;
+}
+
+.profile__row[aria-pressed='true'] .profile__value {
+  color: var(--text-2);
 }
 
 .advisor__visual {
@@ -686,6 +706,48 @@
   .profile__row dd {
     padding-left: 20px;
     text-align: left;
+  }
+
+  /* Brand profile: swipeable cards (scroll-snap carousel). */
+  .profile {
+    padding: 0;
+    border: 0;
+    background: none;
+  }
+
+  .profile__title {
+    padding: 0 0 10px;
+  }
+
+  .profile__list {
+    flex-direction: row;
+  }
+
+  .profile__item {
+    flex: 0 0 min(78%, 280px);
+  }
+
+  .profile__item .profile__row {
+    height: 100%;
+    min-height: 112px;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 18px;
+    border: 1px solid var(--line-2);
+    border-radius: 20px;
+    background: var(--surface-1);
+  }
+
+  .profile__item .profile__value {
+    padding-left: 20px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .profile__row[aria-pressed='true'] {
+    border-color: rgba(125, 211, 252, 0.45);
+    box-shadow: none;
   }
 }
 
@@ -1512,27 +1574,6 @@ tbody tr:last-child .compare__arturo {
   .compare {
     padding-top: 88px;
     gap: 28px;
-  }
-
-  .compare__table {
-    min-width: 600px;
-  }
-
-  .compare__table thead .compare__need {
-    width: 168px;
-  }
-
-  /* Keep the row labels visible while the value columns scroll. */
-  .compare__table tbody th,
-  .compare__table thead .compare__need {
-    position: sticky;
-    left: 0;
-    z-index: 1;
-    background: #0b182b;
-  }
-
-  .compare__table tbody th {
-    font-size: 14px;
   }
 
   .compare__footer {

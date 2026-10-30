@@ -893,3 +893,495 @@
     width: 100%;
   }
 }
+
+/* ------------------------------------------------------------ Phone panels
+   Extra mockup pieces used by the brand-profile screens and the mobile demo
+   ("Tool - App · Brand C"). Base units, scaled with the phone. */
+.m-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.m-panel.is-entering {
+  animation: panel-in 0.45s var(--ease-out);
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    translate: 0 14px;
+  }
+}
+
+/* Mockup controls that are real buttons in the mobile demo */
+.phone__screen button {
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+}
+
+.phone__screen button.m-card {
+  width: 100%;
+  cursor: pointer;
+  transition:
+    background-color var(--dur-fast) ease,
+    scale var(--dur-fast) ease;
+}
+
+.phone__screen button.m-card:active {
+  scale: 0.985;
+}
+
+.phone__screen button.m-card:hover {
+  background: #12213a;
+}
+
+.m-btn--ghost {
+  background: none;
+}
+
+.m-pill {
+  padding: 3px 9px;
+  border-radius: var(--r-pill);
+  background: rgba(125, 211, 252, 0.14);
+  color: var(--sky);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.m-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding-top: 6px;
+}
+
+.m-slider__ends {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-2);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.m-slider__track {
+  position: relative;
+  height: 8px;
+  border-radius: var(--r-pill);
+  background: var(--surface-4);
+}
+
+.m-slider__track::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--v);
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--indigo), var(--sky));
+}
+
+.m-slider__track i {
+  position: absolute;
+  top: 50%;
+  left: var(--v);
+  width: 22px;
+  height: 22px;
+  margin: -11px 0 0 -11px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.m-eg {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.m-eg small {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.m-eg--before {
+  color: var(--text-subtle);
+  text-decoration: line-through;
+  text-decoration-color: rgba(248, 113, 113, 0.6);
+}
+
+.m-eg--before small {
+  color: #fca5a5;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.m-eg--after {
+  color: #fff;
+}
+
+.m-eg--after small {
+  color: var(--mint);
+}
+
+.m-tagset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.m-tag {
+  padding: 8px 12px;
+  border-radius: var(--r-pill);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.m-tag--use {
+  background: var(--success-soft);
+  color: var(--mint);
+}
+
+.m-tag--avoid {
+  background: rgba(248, 113, 113, 0.12);
+  color: #fca5a5;
+  text-decoration: line-through;
+}
+
+.m-draft mark {
+  padding: 0 2px;
+  border-radius: 4px;
+  background: rgba(182, 240, 207, 0.16);
+  color: var(--mint);
+}
+
+.m-swap {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 0;
+  border-top: 1px solid var(--line-1);
+  font-size: 14px;
+}
+
+.m-swap s {
+  color: #fca5a5;
+}
+
+.m-swap i {
+  color: var(--text-subtle);
+  font-style: normal;
+}
+
+.m-swap b {
+  color: var(--mint);
+  font-weight: 600;
+}
+
+.m-card--list {
+  gap: 0;
+  padding-block: 8px;
+}
+
+.m-switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 0;
+}
+
+.m-switch-row + .m-switch-row {
+  border-top: 1px solid var(--line-1);
+}
+
+.m-switch-row > span:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.m-switch-row b {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.m-switch-row small {
+  color: var(--text-subtle);
+  font-size: 12px;
+}
+
+.m-switch {
+  position: relative;
+  flex: none;
+  width: 46px;
+  height: 28px;
+  border-radius: var(--r-pill);
+  background: var(--surface-4);
+}
+
+.m-switch::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  transition: translate 0.3s var(--ease-out);
+}
+
+.m-switch.is-on {
+  background: #34c27a;
+}
+
+.m-switch.is-on::after {
+  translate: 18px 0;
+}
+
+.m-update {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 0;
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.m-update + .m-update {
+  border-top: 1px solid var(--line-1);
+}
+
+.m-update > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.m-update small {
+  color: var(--text-subtle);
+  font-size: 12px;
+}
+
+.m-update__avatar {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd4b8 0%, #f58ca8 71.4%);
+  color: #29120f;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Upsell banner (Figma component "Banner · Upsell Plus") */
+.m-upsell {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  border-radius: 24px;
+  background: linear-gradient(90deg, #2b1f52 0%, #141a33 100%);
+}
+
+.m-upsell__text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  color: var(--text-label);
+  font-size: 13px;
+}
+
+.m-upsell__text b {
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.m-upsell__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--sky);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.m-badge {
+  padding: 3px 8px;
+  border-radius: var(--r-pill);
+  background: var(--sky);
+  color: #0d081f;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.m-cta {
+  flex: none;
+  padding: 10px 16px;
+  border-radius: var(--r-pill);
+  background: #fff;
+  color: var(--surface-0) !important;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.m-advisor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 24px;
+  background: var(--surface-2);
+}
+
+.m-advisor__text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.m-advisor__text small {
+  color: var(--text-subtle);
+  font-size: 12px;
+}
+
+.m-advisor__text small:first-child {
+  color: var(--text-label);
+  font-weight: 500;
+}
+
+.m-advisor__text b {
+  color: var(--ice);
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.avatar--lg {
+  width: 44px;
+  height: 44px;
+  font-size: 19px;
+}
+
+.avatar--lg img {
+  left: 32px;
+  top: 32px;
+  width: 14px;
+  height: 14px;
+}
+
+.m-pill-btn {
+  padding: 9px 16px;
+  border-radius: var(--r-pill);
+  background: var(--surface-4);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.m-seg--live button,
+.m-actions--live button,
+.m-bubble__actions button {
+  cursor: pointer;
+  transition:
+    background-color var(--dur-med) var(--ease-out),
+    color var(--dur-fast) ease;
+}
+
+.m-seg--live button {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: var(--r-pill);
+  color: var(--text-subtle);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.m-seg--live button[aria-checked='true'] {
+  background: var(--surface-5);
+  color: #fff;
+}
+
+.m-actions--live button {
+  flex: 1;
+  padding: 16px 0;
+  border-radius: var(--r-pill);
+  background: var(--surface-3);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.m-actions--live button.is-primary {
+  background: #fff;
+  color: var(--surface-0);
+}
+
+.m-actions--live button.is-done {
+  background: var(--success-soft);
+  color: var(--mint);
+}
+
+.m-bubble__actions button {
+  padding: 9px 14px;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.m-bubble__actions button.is-primary {
+  background: #fff;
+  color: var(--surface-0);
+}
+
+.m-status {
+  min-height: 18px;
+  color: var(--mint);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+button.m-ask--btn {
+  border: 0;
+  cursor: pointer;
+}
+
+.phone__screen :focus-visible {
+  outline: 3px solid var(--sky);
+  outline-offset: 2px;
+}
+
+.phone__screen button,
+.mdemo__tabs button,
+.profile__row {
+  -webkit-tap-highlight-color: transparent;
+}
