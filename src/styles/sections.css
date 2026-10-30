@@ -275,13 +275,23 @@
   background: linear-gradient(180deg, #13294d 0%, #071226 100%);
 }
 
-.app-icon img {
+/* Hero icon: the animated logo on the app-icon tile, with a soft halo. */
+.app-icon {
+  display: grid;
+  place-items: center;
+}
+
+.app-icon__halo {
   position: absolute;
-  left: -7.79%;
-  top: 13.3%;
-  width: 115.57%;
-  height: auto;
-  max-width: none;
+  inset: 18%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.75) 0%, rgba(25, 195, 230, 0.35) 55%, transparent 72%);
+  filter: blur(10px);
+}
+
+.app-icon .brand-icon {
+  position: relative;
+  margin-top: 2px;
 }
 
 .hero__title {
@@ -332,6 +342,10 @@
     width: 64px;
     height: 64px;
     border-radius: 16px;
+  }
+
+  .app-icon .brand-icon {
+    --size: 44px !important;
   }
 
   .hero__lead {

@@ -33,6 +33,8 @@
 .logo__wave,
 .logo__mouth,
 .logo__happy,
+.logo__closed,
+.logo__zzz path,
 .logo__dots circle,
 .logo__sparks path {
   opacity: 0;
@@ -43,6 +45,7 @@
 .logo__smile,
 .logo__mouth,
 .logo__happy,
+.logo__closed,
 .logo__dots circle,
 .logo__sparks path,
 .logo__shell,
@@ -90,6 +93,36 @@
 }
 .logo[data-state='happy'] .logo__smile {
   transform: scale(1.35, 1.6);
+}
+
+.logo[data-state='hello'] .logo__eye:nth-child(2),
+.logo[data-state='wink'] .logo__eye:nth-child(2) {
+  transform: scaleY(0.12);
+}
+.logo[data-state='hello'] .logo__smile,
+.logo[data-state='wink'] .logo__smile {
+  transform: scale(1.3, 1.5);
+}
+
+.logo[data-state='surprised'] .logo__eye {
+  transform: scale(1.12, 1.25);
+}
+.logo[data-state='surprised'] .logo__smile {
+  opacity: 0;
+}
+.logo[data-state='surprised'] .logo__mouth {
+  opacity: 1;
+  transform: scale(1.15, 1.35);
+}
+
+.logo[data-state='sleepy'] .logo__eye {
+  opacity: 0;
+}
+.logo[data-state='sleepy'] .logo__closed {
+  opacity: 1;
+}
+.logo[data-state='sleepy'] .logo__smile {
+  transform: scale(0.7, 0.5);
 }
 
 /* Hover/focus on a logo link: looks at you and smiles. */
@@ -308,13 +341,102 @@
       rotate: 90deg;
     }
   }
+
+  /* ------------------------------------------------------------- Saluto */
+  .logo[data-state='hello'] .logo__float {
+    animation:
+      logo-hop 0.7s var(--ease-out),
+      logo-sway 1.4s var(--ease-in-out) 0.7s 2;
+  }
+  .logo[data-state='hello'] .logo__sparks path {
+    animation: logo-spark 1.4s var(--ease-out) 2;
+  }
+  .logo[data-state='hello'] .logo__sparks path:nth-child(2) {
+    animation-delay: 0.35s;
+  }
+  .logo[data-state='hello'] .logo__sparks path:nth-child(3) {
+    animation-delay: 0.7s;
+  }
+
+  @keyframes logo-sway {
+    25% {
+      rotate: -7deg;
+    }
+    75% {
+      rotate: 7deg;
+    }
+  }
+
+  /* --------------------------------------------------------- Occhiolino */
+  .logo[data-state='wink'] .logo__float {
+    animation: logo-hop 0.6s var(--ease-out);
+  }
+
+  /* ----------------------------------------------------------- Sorpreso */
+  .logo[data-state='surprised'] .logo__float {
+    animation: logo-jolt 0.5s var(--ease-out);
+  }
+  .logo[data-state='surprised'] .logo__shell {
+    animation: logo-orbit 3s linear infinite;
+  }
+
+  @keyframes logo-jolt {
+    30% {
+      translate: 0 -3.2px;
+      scale: 1.06;
+    }
+    60% {
+      translate: 0 0.6px;
+      scale: 0.98;
+    }
+  }
+
+  /* ---------------------------------------------------------- Assonnato */
+  .logo[data-state='sleepy'] .logo__body {
+    animation: logo-breathe 3.2s var(--ease-in-out) infinite alternate;
+  }
+  .logo[data-state='sleepy'] .logo__float {
+    animation: logo-nod 3.2s var(--ease-in-out) infinite alternate;
+  }
+  .logo[data-state='sleepy'] .logo__zzz path {
+    animation: logo-z 2.4s var(--ease-out) infinite;
+  }
+  .logo[data-state='sleepy'] .logo__zzz path:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  .logo[data-state='sleepy'] .logo__zzz path:nth-child(3) {
+    animation-delay: 1.2s;
+  }
+
+  @keyframes logo-nod {
+    to {
+      rotate: 6deg;
+      translate: 0 0.8px;
+    }
+  }
+
+  @keyframes logo-z {
+    0% {
+      opacity: 0;
+      translate: -1px 2px;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      translate: 2px -3px;
+    }
+  }
 }
 
 /* Without motion the states still read through their static poses;
    the thinking dots and happy sparks show statically. */
 @media (prefers-reduced-motion: reduce) {
   .logo[data-state='think'] .logo__dots circle,
-  .logo[data-state='happy'] .logo__sparks path {
+  .logo[data-state='happy'] .logo__sparks path,
+  .logo[data-state='hello'] .logo__sparks path,
+  .logo[data-state='sleepy'] .logo__zzz path {
     opacity: 1;
   }
 }

@@ -14,6 +14,21 @@ export function initReveal(): void {
     return;
   }
 
+  /*
+   * What to watch for each target:
+   * - display: contents has no box, so it never intersects: watch its first
+   *   child instead (the advisor copy on mobile);
+   * - cards inside a swipe carousel can sit off screen sideways, clipped by
+   *   the carousel: watch the carousel and reveal all its cards together.
+   */
+  const groups = new Map<Element, HTMLElement[]>();
+  targets.forEach((el) => {
+    let watch: Element = el;
+    if (el.parentElement?.matches('[data-carousel]')) watch = el.parentElement;
+    else if (getComputedStyle(el).display === 'contents' && el.firstElementChild) watch = el.firstElementChild;
+    groups.set(watch, [...(groups.get(watch) ?? []), el]);
+  });
+
   const observer = new IntersectionObserver(
     (entries) => {
       const entering = entries
@@ -22,14 +37,16 @@ export function initReveal(): void {
           (a, b) =>
             a.boundingClientRect.top - b.boundingClientRect.top ||
             a.boundingClientRect.left - b.boundingClientRect.left,
-        );
+        )
+        .flatMap((entry) => {
+          observer.unobserve(entry.target);
+          return groups.get(entry.target) ?? [];
+        });
 
-      entering.forEach((entry, index) => {
-        const el = entry.target as HTMLElement;
+      entering.forEach((el, index) => {
         const step = Math.min(index, MAX_STAGGER_STEPS);
         el.style.setProperty('--reveal-delay', `${step * STAGGER_MS}ms`);
         el.classList.add('is-revealed');
-        observer.unobserve(el);
         // Drop the delay afterwards so later state changes are not lagged.
         el.addEventListener('transitionend', () => el.style.removeProperty('--reveal-delay'), { once: true });
       });
@@ -37,7 +54,7 @@ export function initReveal(): void {
     { rootMargin: '0px 0px -10% 0px', threshold: 0.12 },
   );
 
-  targets.forEach((el) => observer.observe(el));
+  groups.forEach((_, watch) => observer.observe(watch));
 }
 
 export function initOffscreenPause(): void {

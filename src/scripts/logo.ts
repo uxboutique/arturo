@@ -13,11 +13,35 @@ import { prefersReducedMotion } from './config';
  *   think  – Pensiero: looks up, three dots, slow tilt
  *   talk   – Parla: mouth moves
  *   happy  – Felice: ^ ^ eyes, a hop and sparkles
+ * Extra states:
+ *   hello     – Saluto: hop, wink and sparkles (hero entrance)
+ *   wink      – Occhiolino
+ *   surprised – Sorpreso: big eyes, "o" mouth, a jump
+ *   sleepy    – Assonnato: closed eyes, floating Zzz
  * plus a hover reaction on .logo-host links (looks at you and smiles).
  */
-export type LogoState = 'rest' | 'listen' | 'think' | 'talk' | 'happy';
+export type LogoState =
+  | 'rest'
+  | 'listen'
+  | 'think'
+  | 'talk'
+  | 'happy'
+  | 'hello'
+  | 'wink'
+  | 'surprised'
+  | 'sleepy';
 
-const STATES: readonly LogoState[] = ['rest', 'listen', 'think', 'talk', 'happy'];
+const STATES: readonly LogoState[] = [
+  'rest',
+  'listen',
+  'think',
+  'talk',
+  'happy',
+  'hello',
+  'wink',
+  'surprised',
+  'sleepy',
+];
 
 const DEFS = `
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
@@ -82,12 +106,16 @@ const LOGO = `
           <rect class="logo__eye" x="30.8333" y="20.8333" width="4.16667" height="8.33333" rx="2.08333" fill="white"/>
         </g>
         <path class="logo__happy" d="M21.9 26.2q1.85-2.9 3.7 0M31.05 26.2q1.85-2.9 3.7 0" stroke="white" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+        <path class="logo__closed" d="M21.9 25q1.85 2.3 3.7 0M31.05 25q1.85 2.3 3.7 0" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
         <path class="logo__smile" d="M24.1667 32.9167C26.3889 34.5833 28.6111 34.5833 30.8333 32.9167" stroke="white" stroke-width="1.25" stroke-linecap="round" fill="none"/>
         <ellipse class="logo__mouth" cx="27.5" cy="33.5" rx="2.1" ry="1.5" fill="white"/>
       </g>
     </g>
     <g class="logo__dots" fill="#BAE6FD">
       <circle cx="40.5" cy="9" r="1.35"/><circle cx="44.2" cy="6.6" r="1.35"/><circle cx="47.9" cy="4.2" r="1.35"/>
+    </g>
+    <g class="logo__zzz" fill="none" stroke="#BAE6FD" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M40 12h3l-3 3.4h3"/><path d="M44.5 6.5h2.4l-2.4 2.7h2.4"/><path d="M48.2 2h1.9l-1.9 2.1h1.9"/>
     </g>
     <g class="logo__sparks" fill="#E0F2FE">
       <path d="M46 8l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z"/>
@@ -135,33 +163,27 @@ export function initLogos(): void {
   initCycle();
 }
 
-/**
- * "Chiedi ad Arturo" tile: walks the logo through a short conversation so
- * every state is visible. Runs only while the tile is on screen.
- */
-function initCycle(): void {
-  const slot = document.querySelector<HTMLElement>('[data-logo-cycle]');
-  const label = document.querySelector<HTMLElement>('[data-logo-label]');
-  if (!slot || !label || prefersReducedMotion()) return;
+interface Step {
+  state: LogoState;
+  ms: number;
+  text?: string;
+}
 
-  const steps: { state: LogoState; text: string; ms: number }[] = [
-    { state: 'listen', text: 'Ti ascolto', ms: 3200 },
-    { state: 'think', text: 'Ci penso…', ms: 2400 },
-    { state: 'talk', text: 'Ti propongo 3 argomenti', ms: 2600 },
-    { state: 'happy', text: 'Fatto!', ms: 2000 },
-    { state: 'rest', text: 'Quando vuoi', ms: 2400 },
-  ];
-
+/** Plays a looping sequence of states on a slot, only while it is on screen. */
+function playSequence(slot: HTMLElement, steps: Step[], label?: HTMLElement | null, firstDelay?: number): void {
   let index = 0;
   let timer: number | undefined;
+  let paused = false;
 
   const show = (i: number): void => {
     const step = steps[i]!;
     setLogoState(slot, step.state);
-    label.classList.remove('is-swapping');
-    void label.offsetWidth;
-    label.classList.add('is-swapping');
-    label.textContent = step.text;
+    if (label && step.text !== undefined) {
+      label.classList.remove('is-swapping');
+      void label.offsetWidth;
+      label.classList.add('is-swapping');
+      label.textContent = step.text;
+    }
   };
 
   const tick = (): void => {
@@ -170,8 +192,75 @@ function initCycle(): void {
     timer = window.setTimeout(tick, steps[index]!.ms);
   };
 
+  show(0);
   new IntersectionObserver(([entry]) => {
     window.clearTimeout(timer);
-    if (entry?.isIntersecting) timer = window.setTimeout(tick, steps[index]!.ms);
+    if (entry?.isIntersecting && !paused) timer = window.setTimeout(tick, firstDelay ?? steps[index]!.ms);
+    firstDelay = undefined;
   }).observe(slot);
+
+  // Let a hover reaction take over without fighting the loop.
+  slot.addEventListener('logo:pause', () => {
+    paused = true;
+    window.clearTimeout(timer);
+  });
+  slot.addEventListener('logo:resume', () => {
+    paused = false;
+    window.clearTimeout(timer);
+    timer = window.setTimeout(tick, 1200);
+  });
+}
+
+/**
+ * "Chiedi ad Arturo" tile: walks the logo through a short conversation so
+ * every state is visible. Hero icon: greets, then cycles through all states;
+ * hovering it surprises Arturo. Both run only while on screen.
+ */
+function initCycle(): void {
+  if (prefersReducedMotion()) return;
+
+  const tile = document.querySelector<HTMLElement>('[data-logo-cycle]');
+  if (tile) {
+    playSequence(
+      tile,
+      [
+        { state: 'listen', text: 'Ti ascolto', ms: 3200 },
+        { state: 'think', text: 'Ci penso…', ms: 2400 },
+        { state: 'talk', text: 'Ti propongo 3 argomenti', ms: 2600 },
+        { state: 'happy', text: 'Fatto!', ms: 2000 },
+        { state: 'rest', text: 'Quando vuoi', ms: 2400 },
+      ],
+      document.querySelector<HTMLElement>('[data-logo-label]'),
+    );
+  }
+
+  const hero = document.querySelector<HTMLElement>('[data-logo-hero]');
+  if (hero) {
+    playSequence(
+      hero,
+      [
+        { state: 'hello', ms: 2600 },
+        { state: 'rest', ms: 3200 },
+        { state: 'listen', ms: 2800 },
+        { state: 'think', ms: 2400 },
+        { state: 'talk', ms: 2400 },
+        { state: 'happy', ms: 2200 },
+        { state: 'wink', ms: 1800 },
+        { state: 'rest', ms: 3000 },
+        { state: 'sleepy', ms: 3400 },
+      ],
+      null,
+      2600,
+    );
+    const host = hero.closest<HTMLElement>('.app-icon') ?? hero;
+    host.addEventListener('pointerenter', () => {
+      hero.dispatchEvent(new Event('logo:pause'));
+      setLogoState(hero, 'surprised');
+      window.setTimeout(() => setLogoState(hero, 'happy'), 700);
+    });
+    host.addEventListener('pointerleave', () => {
+      setLogoState(hero, 'rest');
+      hero.dispatchEvent(new Event('logo:resume'));
+    });
+  }
 }

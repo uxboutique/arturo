@@ -78,8 +78,15 @@
   }
 
   /* ------------------------------------------------------------ mascot renders */
-  .app-icon img {
-    animation: mascot-bob 6s var(--ease-in-out) infinite;
+  .app-icon__halo {
+    animation: halo-pulse 4.8s var(--ease-in-out) infinite alternate;
+  }
+
+  @keyframes halo-pulse {
+    to {
+      opacity: 0.6;
+      scale: 1.15;
+    }
   }
 
   .app-icon::after {
@@ -98,12 +105,6 @@
 
   .final-cta__mascot img {
     animation: cta-breathe 7s var(--ease-in-out) infinite;
-  }
-
-  @keyframes mascot-bob {
-    50% {
-      translate: 0 -4px;
-    }
   }
 
   @keyframes icon-sheen {

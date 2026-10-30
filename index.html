@@ -128,7 +128,8 @@
 
         <div class="hero__content">
           <span class="app-icon" aria-hidden="true">
-            <img src="/src/assets/brand/mascot-render.webp" alt="" width="720" height="720" />
+            <span class="app-icon__halo"></span>
+            <span class="brand-icon" data-logo="hello" data-logo-hero style="--size: 76px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
           </span>
           <h1 class="hero__title" id="hero-title">Il tuo agente per i contenuti. Con un consulente dietro.</h1>
           <p class="hero__lead">Argomenti, voti e bozze per i tuoi canali, ogni giorno. Impostato sulla tua azienda, una volta sola.</p>
@@ -914,6 +915,114 @@
               <tr role="row"><th role="rowheader" scope="row">Approvi tu, a mano o in automatico</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td></tr>
             </tbody>
           </table>
+        </div>
+
+
+        <div class="cmp-acc" data-reveal>
+            <details class="cmp-acc__item" name="confronto" open>
+              <summary>
+                <span class="cmp-acc__need">Sceglie di cosa parlare per te</span>
+                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
+                <span class="cmp-acc__chevron" aria-hidden="true"></span>
+              </summary>
+              <ul class="cmp-acc__list">
+                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
+              </ul>
+            </details>
+            <details class="cmp-acc__item" name="confronto">
+              <summary>
+                <span class="cmp-acc__need">Voto e motivo per ogni argomento</span>
+                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
+                <span class="cmp-acc__chevron" aria-hidden="true"></span>
+              </summary>
+              <ul class="cmp-acc__list">
+                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
+                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
+              </ul>
+            </details>
+            <details class="cmp-acc__item" name="confronto">
+              <summary>
+                <span class="cmp-acc__need">Conosce la tua voce (Profilo del brand)</span>
+                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
+                <span class="cmp-acc__chevron" aria-hidden="true"></span>
+              </summary>
+              <ul class="cmp-acc__list">
+                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+              </ul>
+            </details>
+            <details class="cmp-acc__item" name="confronto">
+              <summary>
+                <span class="cmp-acc__need">Un consulente che ti segue</span>
+                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
+                <span class="cmp-acc__chevron" aria-hidden="true"></span>
+              </summary>
+              <ul class="cmp-acc__list">
+                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
+                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
+              </ul>
+            </details>
+            <details class="cmp-acc__item" name="confronto">
+              <summary>
+                <span class="cmp-acc__need">Un testo diverso per ogni canale</span>
+                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
+                <span class="cmp-acc__chevron" aria-hidden="true"></span>
+              </summary>
+              <ul class="cmp-acc__list">
+                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+              </ul>
+            </details>
+            <details class="cmp-acc__item" name="confronto">
+              <summary>
+                <span class="cmp-acc__need">Scritto per Google e per le AI (GEO)</span>
+                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
+                <span class="cmp-acc__chevron" aria-hidden="true"></span>
+              </summary>
+              <ul class="cmp-acc__list">
+                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
+              </ul>
+            </details>
+            <details class="cmp-acc__item" name="confronto">
+              <summary>
+                <span class="cmp-acc__need">Lavora ogni giorno, anche quando sei occupato</span>
+                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
+                <span class="cmp-acc__chevron" aria-hidden="true"></span>
+              </summary>
+              <ul class="cmp-acc__list">
+                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
+                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
+              </ul>
+            </details>
+            <details class="cmp-acc__item" name="confronto">
+              <summary>
+                <span class="cmp-acc__need">Approvi tu, a mano o in automatico</span>
+                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
+                <span class="cmp-acc__chevron" aria-hidden="true"></span>
+              </summary>
+              <ul class="cmp-acc__list">
+                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+              </ul>
+            </details>
         </div>
 
         <div class="compare__footer">
