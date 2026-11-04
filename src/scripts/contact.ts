@@ -5,27 +5,64 @@ type Status = { tone: 'success' | 'error'; text: string };
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 
 /**
- * "Parla con un consulente" dialog. Every [data-contact] trigger opens it;
- * a non-empty data-contact value pre-selects the plan.
+ * "Parla con un consulente": every [data-contact] trigger leads to the
+ * contact section (#contatti). A non-empty data-contact value pre-selects
+ * the plan. On pages without the form (the tool page) it goes to the
+ * landing's form instead.
  *
  * Delivery is configured through env vars (see .env.example). No endpoint is
  * invented: without configuration the form says so instead of faking success.
  */
-export function initContactDialog(): void {
-  const dialog = document.querySelector<HTMLDialogElement>('[data-contact-dialog]');
-  const form = dialog?.querySelector<HTMLFormElement>('[data-contact-form]');
-  if (!dialog || !form) return;
+export function initContactForm(): void {
+  const form = document.querySelector<HTMLFormElement>('[data-contact-form]');
 
+  document.addEventListener('click', (event) => {
+    const trigger = (event.target as HTMLElement).closest<HTMLElement>('[data-contact]');
+    if (!trigger) return;
+    const plan = trigger.dataset.contact ?? '';
+    if (!form) {
+      event.preventDefault();
+      window.location.href = `../${plan ? `?piano=${encodeURIComponent(plan)}` : ''}#contatti`;
+      return;
+    }
+    event.preventDefault();
+    openForm(plan);
+  });
+
+  if (!form) return;
+
+  const section = form.closest<HTMLElement>('section') ?? form;
   const status = form.querySelector<HTMLElement>('[data-form-status]')!;
   const submit = form.querySelector<HTMLButtonElement>('[data-submit]')!;
   const planNote = form.querySelector<HTMLElement>('[data-contact-plan-note]')!;
   const planName = form.querySelector<HTMLElement>('[data-contact-plan]')!;
+  const unconfigured = form.querySelector<HTMLElement>('[data-contact-unconfigured]');
   const planInput = form.elements.namedItem('plan') as HTMLInputElement;
   const nameInput = form.elements.namedItem('name') as HTMLInputElement;
   const emailInput = form.elements.namedItem('email') as HTMLInputElement;
-
-  let opener: HTMLElement | null = null;
+  const submitLabel = submit.textContent ?? '';
   let submitting = false;
+
+  // Placeholder notice while no delivery is configured.
+  if (unconfigured) unconfigured.hidden = Boolean(config.contactEndpoint || config.contactEmail);
+
+  function setPlan(plan: string): void {
+    planInput.value = plan;
+    planName.textContent = plan;
+    planNote.hidden = plan === '';
+  }
+
+  function openForm(plan: string): void {
+    setPlan(plan);
+    if (location.hash !== '#contatti') history.pushState(null, '', '#contatti');
+    section.scrollIntoView({ block: 'start' });
+    section.querySelector('[data-reveal]')?.classList.add('is-revealed');
+    nameInput.focus({ preventScroll: true });
+  }
+
+  // Arriving from the tool page with ?piano=…
+  const fromQuery = new URLSearchParams(location.search).get('piano');
+  if (fromQuery) setPlan(fromQuery);
 
   const setStatus = (next: Status | null): void => {
     status.hidden = next === null;
@@ -46,54 +83,10 @@ export function initContactDialog(): void {
   const validate = (input: HTMLInputElement): boolean => {
     const value = input.value.trim();
     if (input === nameInput) return setFieldError(input, value ? null : 'Scrivi il tuo nome.');
-    if (input === emailInput) {
-      if (!value) return setFieldError(input, 'Scrivi la tua email.');
-      return setFieldError(input, EMAIL_RE.test(value) ? null : 'Inserisci un indirizzo email valido.');
-    }
-    return true;
+    if (!value) return setFieldError(input, 'Scrivi la tua email.');
+    return setFieldError(input, EMAIL_RE.test(value) ? null : 'Inserisci un indirizzo email valido.');
   };
 
-  const open = (trigger: HTMLElement): void => {
-    if (dialog.open) return;
-    opener = trigger;
-    const plan = trigger.dataset.contact ?? '';
-    planInput.value = plan;
-    planName.textContent = plan;
-    planNote.hidden = plan === '';
-    setStatus(null);
-    dialog.showModal();
-    nameInput.focus();
-  };
-
-  const close = (): void => {
-    if (dialog.open) dialog.close();
-  };
-
-  document.addEventListener('click', (event) => {
-    const trigger = (event.target as HTMLElement).closest<HTMLElement>('[data-contact]');
-    if (!trigger) return;
-    event.preventDefault();
-    open(trigger);
-  });
-
-  dialog.addEventListener('click', (event) => {
-    const target = event.target as HTMLElement;
-    // Backdrop clicks land on the <dialog> element itself.
-    if (target === dialog || target.closest('[data-dialog-close]')) close();
-  });
-
-  dialog.addEventListener('close', () => {
-    // Keep what was typed (accidental close), but clear transient states.
-    if (status.dataset.tone === 'success') {
-      form.reset();
-      [nameInput, emailInput].forEach((input) => setFieldError(input, null));
-    }
-    setStatus(null);
-    opener?.focus();
-    opener = null;
-  });
-
-  // Validate on blur once the user has interacted; clear errors while typing.
   for (const input of [nameInput, emailInput]) {
     input.addEventListener('blur', () => {
       if (input.value.trim() !== '' || input.getAttribute('aria-invalid') === 'true') validate(input);
@@ -128,23 +121,25 @@ export function initContactDialog(): void {
           body: JSON.stringify(data),
         });
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        setStatus({ tone: 'success', text: 'Grazie! Un consulente ti scriverà entro un giorno lavorativo.' });
+        form.reset();
+        setPlan('');
+        setStatus({ tone: 'success', text: 'Grazie! Ti ricontatta un consulente.' });
       } catch {
         setStatus({ tone: 'error', text: 'Invio non riuscito. Controlla la connessione e riprova.' });
       } finally {
         submitting = false;
         submit.removeAttribute('aria-busy');
-        submit.textContent = 'Invia richiesta';
+        submit.textContent = submitLabel;
       }
       return;
     }
 
     if (config.contactEmail) {
-      const subject = `Richiesta consulenza Arturo${data.plan ? ` · ${data.plan}` : ''}`;
+      const subject = `Richiesta preventivo Arturo${data.plan ? ` · ${data.plan}` : ''}`;
       const body = [
         `Nome: ${data.name}`,
         `Email: ${data.email}`,
-        data.company ? `Azienda: ${data.company}` : '',
+        data.phone ? `Cellulare: ${data.phone}` : '',
         data.message ? `\n${data.message}` : '',
       ]
         .filter(Boolean)

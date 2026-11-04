@@ -1,0 +1,255 @@
+        <div class="demo__intro" data-reveal>
+          <span class="demo__label">Prototipo interattivo - dati d’esempio</span>
+          <h3 class="demo__title">Chiedi ad Arturo. Guarda come ragiona.</h3>
+        </div>
+
+        <div class="app-frame" data-scroll-scale>
+          <div class="app" data-app>
+            <aside class="app__sidebar">
+              <img class="app__controls" src="/src/assets/misc/window-controls.svg" alt="" width="56" height="30" />
+              <div class="app__brand">
+                <span class="mascot" data-mascot aria-hidden="true">
+                  <span class="mascot__state mascot__state--rest"><img src="/src/assets/brand/mascot-render.webp" alt="" /></span>
+                  <span class="mascot__state mascot__state--listen"><img src="/src/assets/brand/mascot-states.webp" alt="" /></span>
+                  <span class="mascot__state mascot__state--think"><img src="/src/assets/brand/mascot-states.webp" alt="" /><i class="mascot__edge"></i></span>
+                  <span class="mascot__state mascot__state--happy"><img src="/src/assets/brand/mascot-states.webp" alt="" /></span>
+                </span>
+                <span class="app__wordmark">arturo</span>
+              </div>
+
+              <nav class="app__nav" aria-label="Viste del prototipo">
+                <button type="button" class="app__nav-item" aria-current="page" data-view-target="oggi">Oggi</button>
+                <button type="button" class="app__nav-item" data-view-target="radar">Radar <span class="app__count">14</span></button>
+                <button type="button" class="app__nav-item" data-view-target="approvare">Da approvare <span class="app__count" data-pending-count>3</span></button>
+                <button type="button" class="app__nav-item" data-view-target="profilo">Profilo del brand</button>
+              </nav>
+
+              <div class="app__advisor">
+                <div class="app__advisor-head">
+                  <span class="app__advisor-name">
+                    <span class="avatar" aria-hidden="true">G<img src="/src/assets/misc/online-dot.svg" alt="" /></span>
+                    Giulia
+                  </span>
+                  <span class="app__label">La tua consulente (esempio)</span>
+                  <span class="app__advisor-note">Ha aggiornato il tuo profilo de… <span class="ph" title="Testo da completare">testo da completare</span></span>
+                </div>
+                <button type="button" class="app__pill-btn" data-contact>Scrivi alla consulente</button>
+              </div>
+            </aside>
+
+            <div class="app__main">
+              <!-- View: Oggi -->
+              <div class="app__view" data-view="oggi">
+                <div class="app__greeting">
+                  <h3>Buongiorno, Marco</h3>
+                  <p>Giovedì · ciclo di oggi completato</p>
+                </div>
+
+                <div class="app__stats">
+                  <div class="app-card app-stat">
+                    <div class="app-stat__top"><span>Radar</span><img src="/src/assets/icons/radar-app.svg" alt="" width="16" height="16" /></div>
+                    <span class="app-stat__value" style="color: var(--sky)">14 argomenti</span>
+                    <span class="app-stat__sub">3 sopra la soglia</span>
+                    <span class="bars bars--app" aria-hidden="true"><i style="--h:28.2" class=on></i><i style="--h:18.3" class=on></i><i style="--h:30.8" class=on></i><i style="--h:12.4" class=on></i><i style="--h:32.0" class=on></i><i style="--h:9.8" class=on></i><i style="--h:31.5" class=on></i><i style="--h:15.9" class=on></i><i style="--h:29.5" class=on></i><i style="--h:21.4" class=on></i><i style="--h:26.0" class=on></i><i style="--h:26.0" class=on></i><i style="--h:21.4" class=on></i><i style="--h:29.5" class=on></i><i style="--h:15.8"></i><i style="--h:31.5"></i><i style="--h:9.8"></i><i style="--h:32.0"></i><i style="--h:12.4"></i><i style="--h:30.8"></i><i style="--h:18.3"></i><i style="--h:28.2"></i><i style="--h:23.5"></i><i style="--h:24.2"></i><i style="--h:27.7"></i><i style="--h:19.1"></i><i style="--h:30.5"></i><i style="--h:13.3"></i><i style="--h:31.9"></i><i style="--h:8.8"></i><i style="--h:31.7"></i><i style="--h:14.9"></i><i style="--h:29.9"></i><i style="--h:20.6"></i><i style="--h:26.7"></i><i style="--h:25.4"></i><i style="--h:22.2"></i><i style="--h:29.0"></i><i style="--h:16.8"></i><i style="--h:31.3"></i></span>
+                  </div>
+                  <div class="app-card app-stat">
+                    <div class="app-stat__top"><span>Da approvare</span><img src="/src/assets/icons/check-app.svg" alt="" width="16" height="16" /></div>
+                    <span class="app-stat__value" style="color: var(--mint)" data-pending-label>3 bozze</span>
+                    <span class="app-stat__sub" data-pending-sub>La migliore vale 84 · LinkedIn</span>
+                  </div>
+                  <div class="app-card app-stat">
+                    <div class="app-stat__top"><span>Voto migliore</span><img src="/src/assets/icons/gauge-app.svg" alt="" width="16" height="16" /></div>
+                    <span class="app-stat__value" style="color: var(--sky-2)">84</span>
+                    <span class="app-stat__sub">Fotovoltaico per l’azienda</span>
+                  </div>
+                </div>
+
+                <div class="app-card app-message" aria-live="polite">
+                  <div class="app-message__body">
+                    <span class="app-message__from">Arturo</span>
+                    <p class="app-message__text" data-arturo-message>Ho scritto LinkedIn, Instagram e Newsletter su «Fotovoltaico per l’azienda». Le vuoi rivedere?</p>
+                    <ul class="app-topics app-topics--answer" data-answer-topics hidden>
+                      <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r84.svg" alt="" /><b>84</b></span><span class="app-topic__text"><strong style="color: var(--sky)">Fotovoltaico per l’azienda: da dove partire</strong><small>3 fonti · interessa al tuo pubblico, pochi ne parlano</small></span><button type="button" class="chip-btn" data-view-target="approvare">Scrivi</button></li>
+                      <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r78.svg" alt="" /><b>78</b></span><span class="app-topic__text"><strong style="color: var(--sky-2)">Packaging sostenibile: come scegliere il fornitore</strong><small>4 fonti</small></span><button type="button" class="chip-btn" data-view-target="approvare">Scrivi</button></li>
+                      <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc ring__arc--71" src="/src/assets/ring/r71.svg" alt="" /><b>71</b></span><span class="app-topic__text"><strong style="color: var(--mint)">Incentivi energia: cosa è cambiato quest’anno</strong><small>2 fonti</small></span><button type="button" class="chip-btn" data-view-target="approvare">Scrivi</button></li>
+                    </ul>
+                  </div>
+                  <button type="button" class="chip-btn chip-btn--primary chip-btn--lg" data-view-target="approvare" data-message-action>Rivedi le bozze</button>
+                </div>
+
+                <div class="app__drafts" data-drafts-slot="oggi"></div>
+              </div>
+
+              <!-- View: Radar -->
+              <div class="app__view" data-view="radar" hidden>
+                <div class="app__greeting">
+                  <h3>Radar</h3>
+                  <p>Radar di oggi · 3 sopra la soglia</p>
+                </div>
+                <ul class="app-topics">
+                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r84.svg" alt="" /><b>84</b></span><span class="app-topic__text"><strong style="color: var(--sky)">Fotovoltaico per l’azienda: da dove partire</strong><small>3 fonti · interessa al tuo pubblico, pochi ne parlano</small></span><button type="button" class="chip-btn" data-view-target="approvare">Scrivi</button></li>
+                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r78.svg" alt="" /><b>78</b></span><span class="app-topic__text"><strong style="color: var(--sky-2)">Packaging sostenibile: come scegliere il fornitore</strong><small>4 fonti</small></span><button type="button" class="chip-btn" data-view-target="approvare">Scrivi</button></li>
+                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc ring__arc--71" src="/src/assets/ring/r71.svg" alt="" /><b>71</b></span><span class="app-topic__text"><strong style="color: var(--mint)">Incentivi energia: cosa è cambiato quest’anno</strong><small>2 fonti</small></span><button type="button" class="chip-btn" data-view-target="approvare">Scrivi</button></li>
+                </ul>
+              </div>
+
+              <!-- View: Da approvare -->
+              <div class="app__view" data-view="approvare" hidden>
+                <div class="app__greeting">
+                  <h3>Da approvare</h3>
+                  <p data-pending-summary>3 bozze su «Fotovoltaico per l’azienda»</p>
+                </div>
+                <div class="app__drafts app__drafts--stack" data-drafts-slot="approvare"></div>
+              </div>
+
+              <!-- View: Profilo -->
+              <div class="app__view" data-view="profilo" hidden>
+                <div class="app__greeting">
+                  <h3>Profilo del brand</h3>
+                  <p>Impostato dal consulente · esempio</p>
+                </div>
+                <dl class="profile__list app-profile">
+                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-1.svg" alt="" width="8" height="8" />Tono di voce</dt><dd>formale | diretto | tecnico | semplice</dd></div>
+                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-2.svg" alt="" width="8" height="8" />Parole da usare</dt><dd>risparmio in bolletta | impianto su misura | assistenza dedicata</dd></div>
+                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-3.svg" alt="" width="8" height="8" />Parole da evitare</dt><dd>soluzione innovativa | leader di settore | a 360 gradi</dd></div>
+                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-4.svg" alt="" width="8" height="8" />Canali</dt><dd>LinkedIn, Instagram, Blog, Newsletter, Sito web</dd></div>
+                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-5.svg" alt="" width="8" height="8" />Aggiornamenti</dt><dd>quando cambiano prodotti e servizi</dd></div>
+                </dl>
+              </div>
+
+              <div class="app-suggest" aria-label="Domande suggerite">
+                <button type="button" class="app-suggest__chip" data-suggest>Di cosa parliamo questa settimana?</button>
+                <button type="button" class="app-suggest__chip" data-suggest>Argomenti sul fotovoltaico</button>
+              </div>
+              <form class="app-ask" data-ask>
+                <span class="app-ask__orb" aria-hidden="true">
+                  <span class="brand-icon brand-icon--app" data-logo data-ask-logo><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
+                </span>
+                <label class="visually-hidden" for="ask-input">Chiedi ad Arturo</label>
+                <input
+                  id="ask-input"
+                  class="app-ask__input"
+                  type="text"
+                  name="q"
+                  autocomplete="off"
+                  maxlength="140"
+                  placeholder="Trova argomenti sul fotovoltaico per aziende"
+                />
+                <button class="app-ask__send" type="submit">Chiedi</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="mdemo" data-mdemo>
+          <div class="mdemo__tabs" role="tablist" aria-label="Schermate dell’app"><button type="button" role="tab" id="mdemo-tab-oggi" aria-controls="mdemo-oggi" aria-selected="true" tabindex="0" data-go="oggi">Oggi</button><button type="button" role="tab" id="mdemo-tab-radar" aria-controls="mdemo-radar" aria-selected="false" tabindex="-1" data-go="radar">Radar</button><button type="button" role="tab" id="mdemo-tab-valutazione" aria-controls="mdemo-valutazione" aria-selected="false" tabindex="-1" data-go="valutazione">Valutazione</button><button type="button" role="tab" id="mdemo-tab-bozza" aria-controls="mdemo-bozza" aria-selected="false" tabindex="-1" data-go="bozza">Bozza</button><button type="button" role="tab" id="mdemo-tab-chat" aria-controls="mdemo-chat" aria-selected="false" tabindex="-1" data-go="chat">Chat</button></div>
+          <div class="mdemo__track" data-mdemo-track>
+            <section class="mdemo__slide" id="mdemo-oggi" role="tabpanel" aria-labelledby="mdemo-tab-oggi" data-slide="oggi">
+              <div class="phone phone--demo">
+                <div class="phone__body">
+                  <div class="phone__screen">
+                    <h3 class="visually-hidden">Oggi</h3>
+                    <div class="m-head"><span class="m-btn m-btn--ghost"><img src="/src/assets/icons/chevron-left-oggi.svg" alt="" width="20" height="20" /></span><span class="m-title">Oggi</span><span class="m-btn"><img src="/src/assets/icons/ellipsis-oggi.svg" alt="" width="20" height="20" /></span></div>
+                    <div class="m-upsell"><span class="m-upsell__text"><span class="m-upsell__meta"><span class="m-badge">PLUS</span>Prova · 3 giorni rimasti</span><b>Continua con Plus</b><span>Calendario, pubblicazione programmata e report a 90 €/mese.</span></span><button type="button" class="m-cta" data-contact="Plus">Passa a Plus</button></div>
+                    <button type="button" class="m-card" data-go="radar"><span class="m-card__top"><span>Radar</span><img src="/src/assets/icons/radar-hero.svg" alt="" width="17" height="17" /></span><span class="m-stat m-stat--sky">14 argomenti</span><span class="m-sub">3 sopra la soglia · oggi</span><span class="m-divider"></span><span class="bars" aria-hidden="true"><i style="--h:29.9" class=on></i><i style="--h:19.1" class=on></i><i style="--h:32.7" class=on></i><i style="--h:12.7" class=on></i><i style="--h:34.0" class=on></i><i style="--h:10.0" class=on></i><i style="--h:33.5" class=on></i><i style="--h:16.5" class=on></i><i style="--h:31.3" class=on></i><i style="--h:22.5" class=on></i><i style="--h:27.5" class=on></i><i style="--h:27.5" class=on></i><i style="--h:22.5" class=on></i><i style="--h:31.3" class=on></i><i style="--h:16.5" class=on></i><i style="--h:33.5" class=on></i><i style="--h:9.9"></i><i style="--h:34.0"></i><i style="--h:12.8"></i><i style="--h:32.7"></i><i style="--h:19.1"></i><i style="--h:29.9"></i><i style="--h:24.8"></i><i style="--h:25.5"></i><i style="--h:29.3"></i><i style="--h:20.1"></i><i style="--h:32.4"></i><i style="--h:13.8"></i><i style="--h:33.9"></i><i style="--h:8.9"></i><i style="--h:33.7"></i><i style="--h:15.5"></i><i style="--h:31.7"></i><i style="--h:21.6"></i><i style="--h:28.2"></i><i style="--h:26.8"></i><i style="--h:23.4"></i><i style="--h:30.8"></i><i style="--h:17.5"></i><i style="--h:33.2"></i><i style="--h:11.0"></i><i style="--h:34.0"></i><i style="--h:11.7"></i><i style="--h:33.0"></i></span></button>
+                    <button type="button" class="m-card" data-go="bozza"><span class="m-card__top"><span>Da approvare</span><img src="/src/assets/icons/check-hero.svg" alt="" width="17" height="17" /></span><span class="m-stat m-stat--mint" data-mdemo-pending>3 bozze</span><span class="m-sub">La migliore vale 84</span><span class="m-chips"><span>LinkedIn</span><span>Instagram</span><span>Newsletter</span></span></button>
+                    <div class="m-advisor"><span class="avatar avatar--lg" aria-hidden="true">G<img src="/src/assets/misc/online-dot.svg" alt="" /></span><span class="m-advisor__text"><small>Il tuo consulente</small><b>Giulia</b><small>Online · risponde in ~1 ora</small></span><button type="button" class="m-pill-btn" data-contact>Scrivi</button></div>
+                    <button type="button" class="m-ask m-ask--btn" data-go="chat" aria-label="Chiedi ad Arturo: apri la chat"><span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span><span class="m-ask__text">Chiedi ad Arturo</span><span class="m-ask__plus"><img src="/src/assets/icons/plus-oggi.svg" alt="" width="20" height="20" /></span></button>
+                  </div>
+                  <span class="phone__island" aria-hidden="true"></span>
+                </div>
+              </div>
+            </section>
+            <section class="mdemo__slide" id="mdemo-radar" role="tabpanel" aria-labelledby="mdemo-tab-radar" data-slide="radar">
+              <div class="phone phone--demo">
+                <div class="phone__body">
+                  <div class="phone__screen">
+                    <h3 class="visually-hidden">Radar</h3>
+                    <div class="m-head"><button type="button" class="m-btn" data-go="oggi" aria-label="Indietro"><img src="/src/assets/icons/chevron-left-oggi.svg" alt="" width="20" height="20" /></button><span class="m-title">Radar</span><span class="m-btn"><img src="/src/assets/icons/ellipsis-oggi.svg" alt="" width="20" height="20" /></span></div>
+                    <button type="button" class="m-card m-topic" data-go="valutazione"><span class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></span><span class="m-topic__row"><span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r84.svg" alt="" /><b>84</b></span><span class="m-topic__text"><span class="m-topic__title m-topic__title--wrap" style="color: var(--sky)">Fotovoltaico per l’azienda: da dove partire</span><span class="m-sub">3 fonti · selezionato</span></span></span></button>
+                    <button type="button" class="m-card m-topic" data-go="valutazione"><span class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></span><span class="m-topic__row"><span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r78.svg" alt="" /><b>78</b></span><span class="m-topic__text"><span class="m-topic__title m-topic__title--wrap" style="color: var(--sky-2)">Packaging sostenibile: come scegliere il fornitore</span><span class="m-sub">4 fonti</span></span></span></button>
+                    <button type="button" class="m-card m-topic" data-go="valutazione"><span class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></span><span class="m-topic__row"><span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc ring__arc--71" src="/src/assets/ring/r71.svg" alt="" /><b>71</b></span><span class="m-topic__text"><span class="m-topic__title m-topic__title--wrap" style="color: var(--mint)">Incentivi energia: cosa è cambiato quest’anno</span><span class="m-sub">2 fonti</span></span></span></button>
+                    <button type="button" class="m-ask m-ask--btn" data-go="chat" aria-label="Chiedi ad Arturo: apri la chat"><span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span><span class="m-ask__text">Cosa cerco oggi?</span><span class="m-ask__plus"><img src="/src/assets/icons/plus-oggi.svg" alt="" width="20" height="20" /></span></button>
+                  </div>
+                  <span class="phone__island" aria-hidden="true"></span>
+                </div>
+              </div>
+            </section>
+            <section class="mdemo__slide" id="mdemo-valutazione" role="tabpanel" aria-labelledby="mdemo-tab-valutazione" data-slide="valutazione">
+              <div class="phone phone--demo">
+                <div class="phone__body">
+                  <div class="phone__screen">
+                    <h3 class="visually-hidden">Valutazione</h3>
+                    <div class="m-head"><button type="button" class="m-btn" data-go="radar" aria-label="Indietro"><img src="/src/assets/icons/chevron-left-oggi.svg" alt="" width="20" height="20" /></button><span class="m-title">Valutazione</span><span class="m-btn"><img src="/src/assets/icons/ellipsis-oggi.svg" alt="" width="20" height="20" /></span></div>
+                    <div class="m-card"><span class="m-card__top"><span>Voto dell’argomento</span><img src="/src/assets/icons/gauge-mosaic.svg" alt="" width="17" height="17" /></span><span class="gauge"><span class="gauge__arc">
+                        <img style="--i:0;left:0%;top:40.34%;width:5.85%;height:8.31%" src="/src/assets/gauge/seg-01.svg" alt="" />
+                        <img style="--i:1;left:1.61%;top:29.67%;width:7.28%;height:9.01%" src="/src/assets/gauge/seg-02.svg" alt="" />
+                        <img style="--i:2;left:5.62%;top:20.01%;width:8.37%;height:9.26%" src="/src/assets/gauge/seg-03.svg" alt="" />
+                        <img style="--i:3;left:11.86%;top:11.86%;width:9.04%;height:9.04%" src="/src/assets/gauge/seg-04.svg" alt="" />
+                        <img style="--i:4;left:20.01%;top:5.62%;width:9.26%;height:8.37%" src="/src/assets/gauge/seg-05.svg" alt="" />
+                        <img style="--i:5;left:29.67%;top:1.61%;width:9.01%;height:7.28%" src="/src/assets/gauge/seg-06.svg" alt="" />
+                        <img style="--i:6;left:40.34%;top:0%;width:8.31%;height:5.85%" src="/src/assets/gauge/seg-07.svg" alt="" />
+                        <img style="--i:7;left:51.35%;top:0%;width:8.31%;height:5.85%" src="/src/assets/gauge/seg-08.svg" alt="" />
+                        <img style="--i:8;left:61.32%;top:1.61%;width:9.01%;height:7.28%" src="/src/assets/gauge/seg-09.svg" alt="" />
+                        <img style="--i:9;left:70.73%;top:5.62%;width:9.26%;height:8.37%" src="/src/assets/gauge/seg-10.svg" alt="" />
+                        <img style="--i:10;left:79.1%;top:11.86%;width:9.04%;height:9.04%" src="/src/assets/gauge/seg-11.svg" alt="" />
+                        <img style="--i:11;left:86.01%;top:20.01%;width:8.37%;height:9.26%" src="/src/assets/gauge/seg-12.svg" alt="" />
+                        <img style="--i:12;left:91.11%;top:29.67%;width:7.28%;height:9.01%" src="/src/assets/gauge/seg-13.svg" alt="" />
+                        <img style="--i:13;left:94.15%;top:40.34%;width:5.85%;height:8.31%" src="/src/assets/gauge/seg-14.svg" alt="" />
+                      </span><span class="gauge__value">84</span><span class="gauge__caption">Voto 84 su 100</span></span></div>
+                    <div class="m-criteria"><span>Interesse del pubblico</span><span>Pochi ne parlano</span><span>In linea con il tuo brand</span></div>
+                    <button type="button" class="m-card" data-go="bozza"><span class="m-card__top"><span>Angolo proposto</span><img src="/src/assets/icons/sparkles.svg" alt="" width="17" height="17" /></span><span class="m-angle">Le tre domande da farsi prima di chiedere un preventivo.</span><span class="m-sub m-sub--sm">Esempio - criteri e scala del voto da validare</span></button>
+                    <div class="m-ask" aria-hidden="true"><span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span><span class="m-ask__text">Arturo sta valutando…</span><span class="m-ask__plus"><img src="/src/assets/icons/plus-oggi.svg" alt="" width="20" height="20" /></span></div>
+                  </div>
+                  <span class="phone__island" aria-hidden="true"></span>
+                </div>
+              </div>
+            </section>
+            <section class="mdemo__slide" id="mdemo-bozza" role="tabpanel" aria-labelledby="mdemo-tab-bozza" data-slide="bozza">
+              <div class="phone phone--demo">
+                <div class="phone__body">
+                  <div class="phone__screen">
+                    <h3 class="visually-hidden">Bozza</h3>
+                    <div class="m-head"><button type="button" class="m-btn" data-go="valutazione" aria-label="Indietro"><img src="/src/assets/icons/chevron-left-oggi.svg" alt="" width="20" height="20" /></button><span class="m-title">Bozza</span><span class="m-btn"><img src="/src/assets/icons/ellipsis-oggi.svg" alt="" width="20" height="20" /></span></div>
+                    <span class="m-seg m-seg--live" role="radiogroup" aria-label="Approvazione"><button type="button" role="radio" aria-checked="true" data-mode="manual">Manuale</button><button type="button" role="radio" aria-checked="false" data-mode="auto">Automatica</button></span>
+                    <div class="m-card"><span class="m-card__top"><span>LinkedIn</span><img src="/src/assets/icons/briefcase.svg" alt="" width="17" height="17" /></span><span class="m-draft" data-mdemo-draft>Il fotovoltaico conviene alla tua azienda? Dipende da tre cose, e si controllano in un pomeriggio.<br /><br />1. Quanta energia consumi di giorno<br />2. Quanto spazio hai sul tetto<br />3. Quali incentivi puoi ottenere<br /><br />E tu, hai già guardato i tuoi consumi?</span><span class="m-tags">#fotovoltaico #PMI</span></div>
+                    <div class="m-upsell m-upsell--compact"><span class="m-upsell__text"><b>Programma la pubblicazione</b><span>Scegli giorno e ora per ogni canale</span></span><button type="button" class="m-cta" data-contact="Plus">Passa a Plus</button></div>
+                    <span class="m-actions m-actions--live"><button type="button" class="is-primary" data-mdemo-approve>Approva</button><button type="button" data-mdemo-edit>Modifica</button></span>
+                    <p class="m-status" role="status" data-mdemo-status></p>
+                    <button type="button" class="m-ask m-ask--btn" data-go="chat" aria-label="Chiedi ad Arturo: apri la chat"><span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span><span class="m-ask__text">Rendila più breve…</span><span class="m-ask__plus"><img src="/src/assets/icons/plus-oggi.svg" alt="" width="20" height="20" /></span></button>
+                  </div>
+                  <span class="phone__island" aria-hidden="true"></span>
+                </div>
+              </div>
+            </section>
+            <section class="mdemo__slide" id="mdemo-chat" role="tabpanel" aria-labelledby="mdemo-tab-chat" data-slide="chat">
+              <div class="phone phone--demo">
+                <div class="phone__body">
+                  <div class="phone__screen">
+                    <h3 class="visually-hidden">Chat con Arturo</h3>
+                    <div class="m-head"><button type="button" class="m-btn" data-go="oggi" aria-label="Indietro"><img src="/src/assets/icons/chevron-left-oggi.svg" alt="" width="20" height="20" /></button><span class="m-title">Arturo</span><span class="m-btn"><img src="/src/assets/icons/ellipsis-oggi.svg" alt="" width="20" height="20" /></span></div>
+                    <div class="m-listen"><span class="brand-icon" data-logo="listen" style="--size: 120px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span><span>Ti ascolto</span></div>
+                    <span class="m-bubble m-bubble--user">Di cosa parliamo questa settimana?</span>
+                    <div class="m-bubble m-bubble--bot"><span>Ho trovato 3 argomenti che valgono. Il migliore ha un voto di 84.</span><span class="m-bubble__actions"><button type="button" class="is-primary" data-go="bozza">Sì, scrivi</button><button type="button" data-go="radar">Vedi il radar</button></span></div>
+                    <div class="m-ask" aria-hidden="true"><span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span><span class="m-ask__text">Tap per parlare</span><span class="m-ask__plus"><img src="/src/assets/icons/plus-oggi.svg" alt="" width="20" height="20" /></span></div>
+                  </div>
+                  <span class="phone__island" aria-hidden="true"></span>
+                </div>
+              </div>
+            </section>
+          </div>
+          <p class="mdemo__hint">Scorri o tocca le schede · dati d’esempio</p>
+        </div>
+
+        <template id="draft-template">
+          <article class="app-card app-draft">
+            <p class="app-draft__channel"></p>
+            <p class="app-draft__text"></p>
+            <div class="app-draft__edit" hidden>
+              <label class="visually-hidden">Modifica bozza</label>
+              <textarea rows="3"></textarea>
+            </div>
+            <div class="app-draft__actions"></div>
+          </article>
+        </template>

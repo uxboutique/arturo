@@ -4,22 +4,121 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#06101f" />
-    <title>Arturo — L'agente AI per i contenuti, con un consulente dietro</title>
+    <title>Arturo — Trova di cosa parlare. Lo scrive come parli tu.</title>
     <meta
       name="description"
-      content="Arturo trova gli argomenti, li vota e scrive le bozze per i tuoi canali, ogni giorno. Un consulente lo imposta sulla tua azienda, una volta sola."
+      content="Arturo è un agente AI per i contenuti. Un consulente lo imposta sulla tua azienda una volta sola; poi, ogni giorno, Arturo sceglie gli argomenti che contano nel tuo settore e prepara i testi per i tuoi canali. Tu approvi."
     />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="it_IT" />
-    <meta property="og:title" content="Arturo — Il tuo agente per i contenuti. Con un consulente dietro." />
-    <meta property="og:description" content="Argomenti, voti e bozze per i tuoi canali, ogni giorno. Impostato sulla tua azienda, una volta sola." />
+    <meta property="og:title" content="Arturo — Trova di cosa parlare. Lo scrive come parli tu." />
+    <meta property="og:description" content="Un consulente imposta Arturo sulla tua azienda una volta sola; poi, ogni giorno, Arturo sceglie gli argomenti e prepara i testi per i tuoi canali. Tu approvi." />
     <meta property="og:url" content="https://uxboutique.github.io/arturo/" />
     <meta property="og:image" content="https://uxboutique.github.io/arturo/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Benefind Srl",
+    "brand": {
+      "@type": "Brand",
+      "name": "Arturo"
+    },
+    "url": "https://uxboutique.github.io/arturo/",
+    "logo": "https://uxboutique.github.io/arturo/apple-touch-icon.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Pratese, 199",
+      "postalCode": "50145",
+      "addressLocality": "Firenze",
+      "addressCountry": "IT"
+    },
+    "vatID": "IT06267240486"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Arturo",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Agente AI per i contenuti: sceglie gli argomenti che contano nel tuo settore e prepara i testi per i tuoi canali. Un consulente lo imposta sulla tua azienda.",
+    "offers": {
+      "@type": "Offer",
+      "price": "90",
+      "priceCurrency": "EUR",
+      "description": "A partire da 90 € al mese, setup del consulente incluso."
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Cos’è esattamente Arturo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un agente AI che ogni giorno scansiona il web e le fonti del tuo settore, sceglie gli argomenti migliori e scrive i contenuti per i tuoi canali. Prima, un consulente lo configura sulla tua azienda."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Chi è il consulente?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un professionista del nostro team con esperienza reale di comunicazione e contenuti. Non è un chatbot: è chi mette a punto Arturo sul tuo modo di parlare."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cos’è la GEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generative Engine Optimization: scrivere contenuti pensati per essere letti, capiti e citati dalle AI, oltre che da Google."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso controllare cosa esce?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sì. Approvi tu ogni contenuto, oppure scegli l’approvazione automatica."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Su quali canali scrive?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LinkedIn, blog, newsletter, Instagram, sito web e altri canali che concordiamo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Cosa succede se cambiano i miei prodotti o servizi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lo dici al consulente, che aggiorna le impostazioni."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto costa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A partire da 90 € al mese, con il setup del consulente incluso. Il prezzo finale dipende dalle tue esigenze: lo definiamo insieme dopo la prima conversazione, con un preventivo su misura."
+        }
+      }
+    ]
+  }
+]
+    </script>
     <script>
       document.documentElement.classList.add('js');
     </script>
@@ -40,12 +139,12 @@
 
         <nav class="nav__links" aria-label="Principale">
           <a href="#come-funziona">Come funziona</a>
-          <a href="#consulente">Il consulente</a>
-          <a href="#piani">Piani</a>
+          <a href="#demo">Prova Arturo</a>
+          <a href="#confronto">Confronto</a>
           <a href="#faq">Domande</a>
         </nav>
 
-        <button class="btn btn--primary nav__cta" type="button" data-contact>Parla con un consulente</button>
+        <a class="btn btn--primary nav__cta" href="#contatti" data-contact>Parla con un consulente</a>
 
         <button
           class="nav__toggle"
@@ -62,11 +161,11 @@
       <div class="nav__panel" id="mobile-menu" data-nav-panel hidden>
         <nav aria-label="Principale (mobile)">
           <a href="#come-funziona">Come funziona</a>
-          <a href="#consulente">Il consulente</a>
-          <a href="#piani">Piani</a>
+          <a href="#demo">Prova Arturo</a>
+          <a href="#confronto">Confronto</a>
           <a href="#faq">Domande</a>
         </nav>
-        <button class="btn btn--primary btn--block" type="button" data-contact>Parla con un consulente</button>
+        <a class="btn btn--primary btn--block" href="#contatti" data-contact>Parla con un consulente</a>
       </div>
     </header>
 
@@ -74,9 +173,9 @@
       <!-- ============================================================ HERO -->
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="hero__glows" aria-hidden="true">
-          <img class="glow hero__glow hero__glow--1" src="/src/assets/glow/hero-1.svg" alt="" />
-          <img class="glow hero__glow hero__glow--2" src="/src/assets/glow/hero-2.svg" alt="" />
-          <img class="glow hero__glow hero__glow--3" src="/src/assets/glow/hero-3.svg" alt="" />
+          <img class="glow hero__glow hero__glow--1" src="/src/assets/glow/hero-1.webp" alt="" />
+          <img class="glow hero__glow hero__glow--2" src="/src/assets/glow/hero-2.webp" alt="" />
+          <img class="glow hero__glow hero__glow--3" src="/src/assets/glow/hero-3.webp" alt="" />
         </div>
 
         <div
@@ -127,19 +226,29 @@
         <div class="hero__fade" aria-hidden="true"></div>
 
         <div class="hero__content">
-          <span class="app-icon" aria-hidden="true">
-            <span class="app-icon__halo"></span>
-            <span class="brand-icon" data-logo="hello" data-logo-hero style="--size: 76px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
-          </span>
-          <h1 class="hero__title" id="hero-title">Il tuo agente per i contenuti. Con un consulente dietro.</h1>
-          <p class="hero__lead">Argomenti, voti e bozze per i tuoi canali, ogni giorno. Impostato sulla tua azienda, una volta sola.</p>
+          <div class="hero__badge">
+            <span class="app-icon" aria-hidden="true">
+              <span class="app-icon__halo"></span>
+              <span class="brand-icon" data-logo="hello" data-logo-hero style="--size: 76px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
+            </span>
+            <p class="hero__pill">Ho trovato 3 argomenti per oggi.</p>
+          </div>
+          <h1 class="hero__title" id="hero-title">Trova di cosa parlare. Lo scrive come parli tu.</h1>
+          <p class="hero__lead">Arturo è un agente AI per i contenuti. Un consulente lo imposta sulla tua azienda una volta sola; poi, ogni giorno, Arturo sceglie gli argomenti che contano nel tuo settore e prepara i testi per i tuoi canali, pensati per farti trovare su Google e per poter essere citati dalle AI. Tu approvi.</p>
           <div class="hero__actions">
-            <button class="btn btn--primary" type="button" data-contact>Parla con un consulente</button>
+            <a class="btn btn--primary" href="#contatti" data-contact>Parla con un consulente</a>
             <a class="btn btn--secondary" href="#demo">
               <img src="/src/assets/icons/play.svg" alt="" width="16" height="16" />
-              Guarda la demo
+              Prova la demo
             </a>
           </div>
+          <ul class="hero__assurances">
+            <li><img src="/src/assets/icons/check-approved.svg" alt="" width="15" height="15" /><span><b>Un consulente:</b> ti ascolta una volta sola</span></li>
+            <li><img src="/src/assets/icons/check-approved.svg" alt="" width="15" height="15" /><span><b>Approvi tu:</b> a mano o in automatico</span></li>
+          </ul>
+          <ul class="hero__chips" aria-label="Canali">
+            <li>LinkedIn</li><li>Instagram</li><li>Blog</li><li>Newsletter</li><li>Sito web</li><li>Altri canali concordati</li>
+          </ul>
         </div>
       </section>
 
@@ -155,16 +264,209 @@
           </div>
         </div>
       </section>
+      <!-- ============================================================ PROBLEMI -->
+      <section class="problems" aria-labelledby="problems-title">
+        <header class="section-head" data-reveal>
+          <p class="eyebrow">Ti suona familiare?</p>
+          <h2 class="section-title" id="problems-title">Le cose che pensi e non dici.</h2>
+        </header>
+        <ul class="problems__grid">
+          <li class="problem" data-reveal><p class="problem__quote">«Dovremmo postare di più. Ma quando?»</p><p class="problem__text">Lo dici da mesi. Poi arriva la settimana piena.</p></li>
+          <li class="problem" data-reveal><p class="problem__quote">«Di cosa parlo questa settimana? Idee zero.»</p><p class="problem__text">Trovare l’argomento costa più tempo che scriverlo.</p></li>
+          <li class="problem" data-reveal><p class="problem__quote">«ChatGPT mi scrive testi uguali a tutti.»</p><p class="problem__text">Poi li riscrivi a mano, quasi da capo, ogni volta.</p></li>
+          <li class="problem" data-reveal><p class="problem__quote">«Chiedo a un’AI di noi: non c’è traccia.»</p><p class="problem__text">Molti chiedono alle AI chi scegliere: ci sei?</p></li>
+        </ul>
+      </section>
+
+
+      <!-- ============================================================ IL CONSULENTE -->
+      <section class="advisor" id="consulente" aria-labelledby="advisor-title">
+        <div class="advisor__copy" data-reveal>
+          <h2 class="advisor__title" id="advisor-title">Un consulente ti ascolta. L’agente fa il resto.</h2>
+          <div class="advisor__cols">
+            <div class="advisor__col">
+              <h3>Il consulente, con te</h3>
+              <ul class="checklist">
+                <li>Ti ascolta e capisce chi sei e a chi parli</li>
+                <li>Definisce il tono di voce del tuo brand</li>
+                <li>Stabilisce le parole da usare e quelle da evitare</li>
+              </ul>
+            </div>
+            <div class="advisor__col">
+              <h3>Arturo, ogni giorno</h3>
+              <ul class="checklist">
+                <li>Scansiona il web e le fonti del tuo settore</li>
+                <li>Dà un voto agli argomenti e spiega perché</li>
+                <li>Scrive un testo diverso per ogni canale</li>
+              </ul>
+            </div>
+          </div>
+          <p class="advisor__lead">Il consulente conosce il tuo brand e lo mette a punto una volta sola, Arturo lavora ogni giorno senza fermarsi. Il risultato sono contenuti costanti, sempre coerenti, che suonano come te.</p>
+          <a class="btn btn--secondary" href="#contatti" data-contact>Parla con un consulente</a>
+
+          <div class="profile" role="group" aria-labelledby="profile-title">
+            <p class="profile__title" id="profile-title">Profilo del tuo brand <span class="profile__hint">impostato dal consulente</span></p>
+            <ul class="profile__list" data-carousel>
+              <li class="profile__item"><button type="button" class="profile__row" aria-pressed="false" aria-controls="advisor-phone" data-profile="tono"><span class="profile__key"><img src="/src/assets/misc/dot-1.svg" alt="" width="8" height="8" />Tono di voce</span><span class="profile__value">formale | diretto | tecnico | semplice</span></button></li>
+              <li class="profile__item"><button type="button" class="profile__row" aria-pressed="false" aria-controls="advisor-phone" data-profile="usare"><span class="profile__key"><img src="/src/assets/misc/dot-2.svg" alt="" width="8" height="8" />Parole da usare</span><span class="profile__value">risparmio in bolletta | impianto su misura | assistenza dedicata</span></button></li>
+              <li class="profile__item"><button type="button" class="profile__row" aria-pressed="false" aria-controls="advisor-phone" data-profile="evitare"><span class="profile__key"><img src="/src/assets/misc/dot-3.svg" alt="" width="8" height="8" />Parole da evitare</span><span class="profile__value">soluzione innovativa | leader di settore | a 360 gradi</span></button></li>
+              <li class="profile__item"><button type="button" class="profile__row" aria-pressed="false" aria-controls="advisor-phone" data-profile="canali"><span class="profile__key"><img src="/src/assets/misc/dot-4.svg" alt="" width="8" height="8" />Canali</span><span class="profile__value">LinkedIn, blog, newsletter, Instagram, sito web e altri canali che concordiamo</span></button></li>
+              <li class="profile__item"><button type="button" class="profile__row" aria-pressed="false" aria-controls="advisor-phone" data-profile="aggiornamenti"><span class="profile__key"><img src="/src/assets/misc/dot-5.svg" alt="" width="8" height="8" />Aggiornamenti</span><span class="profile__value">cambiano prodotti o servizi? Lo dici al consulente</span></button></li>
+            </ul>
+            <p class="profile__tap">Tocca una voce per vederla nell’app.</p>
+            <p class="visually-hidden" aria-live="polite" data-profile-status></p>
+          </div>
+        </div>
+
+        <div class="advisor__visual" data-reveal="scale">
+          <img class="glow advisor__glow" src="/src/assets/glow/consulente.webp" alt="" aria-hidden="true" />
+          <div
+            class="phone phone--chat"
+            id="advisor-phone"
+            data-profile-phone
+            role="img"
+            aria-label="Chat con Arturo: alla domanda «Di cosa parliamo questa settimana?» Arturo propone tre argomenti e chiede se scrivere LinkedIn, Instagram e Newsletter. Giulia, la consulente, può intervenire in ogni momento."
+          >
+            <div class="phone__body">
+              <div class="phone__screen">
+                <div class="m-panel" data-panel="chat" data-ask="Tap per parlare" data-label="Chat con Arturo: alla domanda «Di cosa parliamo questa settimana?» Arturo propone tre argomenti e chiede se scrivere LinkedIn, Instagram e Newsletter. Giulia, la consulente, può intervenire in ogni momento.">
+                  <div class="m-head">
+                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
+                    <span class="m-title">Arturo</span>
+                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
+                  </div>
+                  <div class="m-listen">
+                    <span class="brand-icon" data-logo="listen" style="--size: 120px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
+                    <span>Ti ascolto</span>
+                  </div>
+                  <span class="m-bubble m-bubble--user">Di cosa parliamo questa settimana?</span>
+                  <div class="m-bubble m-bubble--bot">
+                    <span class="m-typing" aria-hidden="true"><i></i><i></i><i></i></span>
+                    <span>Ho trovato 3 argomenti che valgono per il tuo settore. Il migliore è «Fotovoltaico per l’azienda» (84). Scrivo LinkedIn, Instagram e Newsletter?</span>
+                    <span class="m-bubble__actions"><span class="is-primary">Sì, scrivi</span><span>Vedi il radar</span></span>
+                  </div>
+                  <span class="m-note"><img src="/src/assets/icons/user-round-cons.svg" alt="" width="16" height="16" />Giulia, la tua consulente, può intervenire in ogni momento</span>
+                </div>
+
+                <div class="m-panel" data-panel="tono" data-ask="Rendilo più diretto…" data-label="Profilo del brand, tono di voce: formale, diretto, tecnico, semplice, con un esempio di frase prima e dopo." hidden>
+                  <div class="m-head">
+                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
+                    <span class="m-title">Tono di voce</span>
+                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
+                  </div>
+                  <div class="m-card">
+                    <span class="m-card__top"><span>Come parli</span><span class="m-pill">Impostato con Giulia</span></span>
+                    <span class="m-slider" style="--v: 72%"><span class="m-slider__ends"><span>Formale</span><span>Diretto</span></span><span class="m-slider__track"><i></i></span></span>
+                    <span class="m-slider" style="--v: 78%"><span class="m-slider__ends"><span>Tecnico</span><span>Semplice</span></span><span class="m-slider__track"><i></i></span></span>
+                  </div>
+                  <div class="m-card">
+                    <span class="m-card__top"><span>Esempio</span></span>
+                    <span class="m-eg m-eg--before"><small>Prima</small>La nostra soluzione innovativa garantisce un’efficienza energetica a 360 gradi.</span>
+                    <span class="m-eg m-eg--after"><small>Con il tuo tono</small>Un impianto su misura ti fa risparmiare in bolletta. Ti mostriamo quanto.</span>
+                  </div>
+                </div>
+
+                <div class="m-panel" data-panel="usare" data-ask="Aggiungi una parola…" data-label="Profilo del brand, parole da usare: risparmio in bolletta, impianto su misura, assistenza dedicata, evidenziate in una bozza d’esempio." hidden>
+                  <div class="m-head">
+                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
+                    <span class="m-title">Parole da usare</span>
+                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
+                  </div>
+                  <div class="m-card">
+                    <span class="m-card__top"><span>Le tue parole</span><span>3</span></span>
+                    <span class="m-tagset"><span class="m-tag m-tag--use">risparmio in bolletta</span><span class="m-tag m-tag--use">impianto su misura</span><span class="m-tag m-tag--use">assistenza dedicata</span></span>
+                  </div>
+                  <div class="m-card">
+                    <span class="m-card__top"><span>In una bozza · LinkedIn</span><img src="/src/assets/icons/briefcase.svg" alt="" width="17" height="17" /></span>
+                    <span class="m-draft">Con un <mark>impianto su misura</mark> e un’<mark>assistenza dedicata</mark>, il <mark>risparmio in bolletta</mark> si vede dal primo mese.</span>
+                    <span class="m-sub m-sub--sm">Esempio</span>
+                  </div>
+                </div>
+
+                <div class="m-panel" data-panel="evitare" data-ask="Aggiungi da evitare…" data-label="Profilo del brand, parole da evitare: soluzione innovativa, leader di settore, a 360 gradi. Arturo le sostituisce con le tue parole." hidden>
+                  <div class="m-head">
+                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
+                    <span class="m-title">Parole da evitare</span>
+                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
+                  </div>
+                  <div class="m-card">
+                    <span class="m-card__top"><span>Mai nei tuoi testi</span><span>3</span></span>
+                    <span class="m-tagset"><span class="m-tag m-tag--avoid">soluzione innovativa</span><span class="m-tag m-tag--avoid">leader di settore</span><span class="m-tag m-tag--avoid">a 360 gradi</span></span>
+                  </div>
+                  <div class="m-card">
+                    <span class="m-card__top"><span>Arturo le sostituisce</span><img src="/src/assets/icons/sparkles.svg" alt="" width="17" height="17" /></span>
+                    <span class="m-swap"><s>soluzione innovativa</s><i aria-hidden="true">→</i><b>impianto su misura</b></span>
+                    <span class="m-swap"><s>a 360 gradi</s><i aria-hidden="true">→</i><b>assistenza dedicata</b></span>
+                    <span class="m-sub m-sub--sm">Esempio</span>
+                  </div>
+                </div>
+
+                <div class="m-panel" data-panel="canali" data-ask="Aggiungi un canale…" data-label="Profilo del brand, canali: LinkedIn, Instagram, blog, newsletter, sito web e altri canali concordati con il consulente." hidden>
+                  <div class="m-head">
+                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
+                    <span class="m-title">Canali</span>
+                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
+                  </div>
+                  <div class="m-card m-card--list">
+                    <span class="m-switch-row"><span><b>LinkedIn</b><small>Post con gancio, elenco e domanda finale</small></span><span class="m-switch is-on"></span></span>
+                    <span class="m-switch-row"><span><b>Instagram</b><small>Caroselli brevi, un’idea per slide</small></span><span class="m-switch is-on"></span></span>
+                    <span class="m-switch-row"><span><b>Blog</b><small>Articoli strutturati per Google e AI</small></span><span class="m-switch is-on"></span></span>
+                    <span class="m-switch-row"><span><b>Newsletter</b><small>Oggetto, anteprima e testo</small></span><span class="m-switch is-on"></span></span>
+                    <span class="m-switch-row"><span><b>Sito web</b><small>Pagine e approfondimenti</small></span><span class="m-switch is-on"></span></span>
+                  </div>
+                  <span class="m-note"><img src="/src/assets/icons/user-round-cons.svg" alt="" width="16" height="16" />Altri canali: quelli che concordi con il consulente</span>
+                </div>
+
+                <div class="m-panel" data-panel="aggiornamenti" data-ask="Segnala una novità…" data-label="Profilo del brand, aggiornamenti: se cambiano prodotti o servizi lo dici al consulente, che aggiorna le impostazioni." hidden>
+                  <div class="m-head">
+                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
+                    <span class="m-title">Aggiornamenti</span>
+                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
+                  </div>
+                  <div class="m-card">
+                    <span class="m-card__top"><span>Cambiano prodotti o servizi?</span><img src="/src/assets/icons/user-round-cons.svg" alt="" width="17" height="17" /></span>
+                    <span class="m-angle">Lo dici al consulente, che aggiorna le impostazioni.</span>
+                  </div>
+                  <div class="m-card m-card--list">
+                    <span class="m-update"><span class="m-update__avatar">G</span><span><small>Oggi · Giulia</small>Ha aggiornato il profilo del brand</span></span>
+                  </div>
+                  <span class="m-sub m-sub--sm">Esempio</span>
+                </div>
+
+                <div class="m-ask">
+                  <span class="m-ask__orb"><span class="brand-icon" data-logo data-profile-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span>
+                  <span class="m-ask__text" data-ask-text>Tap per parlare</span>
+                  <span class="m-ask__plus"><img src="/src/assets/icons/plus-cons.svg" alt="" width="20" height="20" /></span>
+                </div>
+              </div>
+              <span class="phone__island"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ============================================================ QUATTRO PASSAGGI -->
+      <section class="steps" id="come-funziona" aria-labelledby="steps-title">
+        <header class="section-head" data-reveal>
+          <h2 class="section-title" id="steps-title">Quattro passaggi. Il primo lo fai con una persona.</h2>
+        </header>
+        <ol class="steps__grid" data-carousel>
+          <li class="step" data-reveal><span class="step__num" style="color: var(--peach)">1</span><h3 class="step__title">Ti ascolta</h3><p class="step__text">Un consulente ti fa poche domande su azienda e clienti e imposta Arturo per te.</p></li>
+          <li class="step" data-reveal><span class="step__num" style="color: var(--sky)">2</span><h3 class="step__title">Scansiona</h3><p class="step__text">Ogni giorno Arturo cerca novità e tendenze del tuo settore, sul web e nelle fonti che contano.</p></li>
+          <li class="step" data-reveal><span class="step__num" style="color: var(--sky-2)">3</span><h3 class="step__title">Sceglie</h3><p class="step__text">Dà un voto a ogni argomento, spiega perché vale e da che angolo prenderlo.</p></li>
+          <li class="step" data-reveal><span class="step__num" style="color: var(--mint)">4</span><h3 class="step__title">Scrive</h3><p class="step__text">Prepara il testo per il canale giusto, nel tuo tono. Approvi tu, a mano o in automatico.</p></li>
+        </ol>
+      </section>
+
 
       <!-- ============================================================ OGGI -->
-      <section class="today" id="come-funziona" aria-labelledby="today-title">
+      <section class="today" id="giornata" aria-labelledby="today-title">
         <header class="section-head" data-reveal>
           <h2 class="section-title" id="today-title">La tua giornata, già pronta.</h2>
           <p class="section-lead">Ogni mattina trovi il radar del settore, le bozze da approvare e la tua consulente.<br class="br-desktop" /> E per chiedere qualcosa ad Arturo basta scrivere.</p>
         </header>
 
         <div class="today__stage" data-reveal="scale">
-          <img class="glow today__glow" src="/src/assets/glow/oggi.svg" alt="" aria-hidden="true" />
+          <img class="glow today__glow" src="/src/assets/glow/oggi.webp" alt="" aria-hidden="true" />
 
           <div
             class="phone phone--today"
@@ -238,160 +540,26 @@
         </div>
       </section>
 
-      <!-- ============================================================ IL CONSULENTE -->
-      <section class="advisor" id="consulente" aria-labelledby="advisor-title">
-        <div class="advisor__copy" data-reveal>
-          <h2 class="advisor__title" id="advisor-title">Un consulente ti ascolta. L’agente fa il resto.</h2>
-          <p class="advisor__lead">Prima di tutto c’è una persona: imposta Arturo sulla tua azienda e lo aggiorna quando cambia qualcosa.</p>
-          <button class="btn btn--secondary" type="button" data-contact>Parla con un consulente</button>
+      <!-- ============================================================ DEMO / PROTOTIPO -->
+      <section class="demo" id="demo" aria-labelledby="demo-title">
+        <header class="section-head" data-reveal>
+          <h2 class="section-title" id="demo-title">Un esempio, dall’inizio alla fine</h2>
+          <p class="section-lead">Come un argomento diventa un contenuto pronto da approvare.</p>
+        </header>
 
-          <div class="profile" role="group" aria-labelledby="profile-title">
-            <p class="profile__title" id="profile-title">Profilo del brand <span class="profile__hint">Tocca una voce per vederla nell’app</span></p>
-            <ul class="profile__list" data-carousel>
-              <li class="profile__item"><button type="button" class="profile__row" aria-pressed="false" aria-controls="advisor-phone" data-profile="tono"><span class="profile__key"><img src="/src/assets/misc/dot-1.svg" alt="" width="8" height="8" />Tono di voce</span><span class="profile__value">Formale ↔ Diretto · Tecnico ↔ Semplice</span></button></li>
-              <li class="profile__item"><button type="button" class="profile__row" aria-pressed="false" aria-controls="advisor-phone" data-profile="usare"><span class="profile__key"><img src="/src/assets/misc/dot-2.svg" alt="" width="8" height="8" />Parole da usare</span><span class="profile__value">impianto su misura, risparmio in bolletta</span></button></li>
-              <li class="profile__item"><button type="button" class="profile__row" aria-pressed="false" aria-controls="advisor-phone" data-profile="evitare"><span class="profile__key"><img src="/src/assets/misc/dot-3.svg" alt="" width="8" height="8" />Parole da evitare</span><span class="profile__value">soluzione innovativa, a 360 gradi</span></button></li>
-              <li class="profile__item"><button type="button" class="profile__row" aria-pressed="false" aria-controls="advisor-phone" data-profile="canali"><span class="profile__key"><img src="/src/assets/misc/dot-4.svg" alt="" width="8" height="8" />Canali</span><span class="profile__value">LinkedIn, Instagram, Blog, Newsletter, Sito web</span></button></li>
-              <li class="profile__item"><button type="button" class="profile__row" aria-pressed="false" aria-controls="advisor-phone" data-profile="aggiornamenti"><span class="profile__key"><img src="/src/assets/misc/dot-5.svg" alt="" width="8" height="8" />Aggiornamenti</span><span class="profile__value">quando cambiano prodotti e servizi</span></button></li>
-            </ul>
-            <p class="visually-hidden" aria-live="polite" data-profile-status></p>
-          </div>
-        </div>
-
-        <div class="advisor__visual" data-reveal="scale">
-          <img class="glow advisor__glow" src="/src/assets/glow/consulente.svg" alt="" aria-hidden="true" />
-          <div
-            class="phone phone--chat"
-            id="advisor-phone"
-            data-profile-phone
-            role="img"
-            aria-label="Chat con Arturo: alla domanda «Di cosa parliamo questa settimana?» Arturo propone tre argomenti e chiede se scrivere LinkedIn, Instagram e Newsletter. Giulia, la consulente, può intervenire in ogni momento."
-          >
-            <div class="phone__body">
-              <div class="phone__screen">
-                <div class="m-panel" data-panel="chat" data-ask="Tap per parlare" data-label="Chat con Arturo: alla domanda «Di cosa parliamo questa settimana?» Arturo propone tre argomenti e chiede se scrivere LinkedIn, Instagram e Newsletter. Giulia, la consulente, può intervenire in ogni momento.">
-                  <div class="m-head">
-                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
-                    <span class="m-title">Arturo</span>
-                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
-                  </div>
-                  <div class="m-listen">
-                    <span class="brand-icon" data-logo="listen" style="--size: 120px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
-                    <span>Ti ascolto</span>
-                  </div>
-                  <span class="m-bubble m-bubble--user">Di cosa parliamo questa settimana?</span>
-                  <div class="m-bubble m-bubble--bot">
-                    <span class="m-typing" aria-hidden="true"><i></i><i></i><i></i></span>
-                    <span>Ho trovato 3 argomenti che valgono per il tuo settore. Il migliore è «Fotovoltaico per l’azienda» (84). Scrivo LinkedIn, Instagram e Newsletter?</span>
-                    <span class="m-bubble__actions"><span class="is-primary">Sì, scrivi</span><span>Vedi il radar</span></span>
-                  </div>
-                  <span class="m-note"><img src="/src/assets/icons/user-round-cons.svg" alt="" width="16" height="16" />Giulia, la tua consulente, può intervenire in ogni momento</span>
-                </div>
-
-                <div class="m-panel" data-panel="tono" data-ask="Rendilo più diretto…" data-label="Profilo del brand, tono di voce: più diretto che formale, più semplice che tecnico, con un esempio di frase prima e dopo." hidden>
-                  <div class="m-head">
-                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
-                    <span class="m-title">Tono di voce</span>
-                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
-                  </div>
-                  <div class="m-card">
-                    <span class="m-card__top"><span>Come parli</span><span class="m-pill">Impostato con Giulia</span></span>
-                    <span class="m-slider" style="--v: 72%"><span class="m-slider__ends"><span>Formale</span><span>Diretto</span></span><span class="m-slider__track"><i></i></span></span>
-                    <span class="m-slider" style="--v: 78%"><span class="m-slider__ends"><span>Tecnico</span><span>Semplice</span></span><span class="m-slider__track"><i></i></span></span>
-                  </div>
-                  <div class="m-card">
-                    <span class="m-card__top"><span>Esempio</span></span>
-                    <span class="m-eg m-eg--before"><small>Prima</small>La nostra soluzione innovativa garantisce un’efficienza energetica a 360 gradi.</span>
-                    <span class="m-eg m-eg--after"><small>Con il tuo tono</small>Un impianto su misura ti fa risparmiare in bolletta. Ti mostriamo quanto.</span>
-                  </div>
-                </div>
-
-                <div class="m-panel" data-panel="usare" data-ask="Aggiungi una parola…" data-label="Profilo del brand, parole da usare: impianto su misura, risparmio in bolletta, autoconsumo, sopralluogo gratuito, evidenziate in una bozza." hidden>
-                  <div class="m-head">
-                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
-                    <span class="m-title">Parole da usare</span>
-                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
-                  </div>
-                  <div class="m-card">
-                    <span class="m-card__top"><span>Le tue parole</span><span>4</span></span>
-                    <span class="m-tagset"><span class="m-tag m-tag--use">impianto su misura</span><span class="m-tag m-tag--use">risparmio in bolletta</span><span class="m-tag m-tag--use">autoconsumo</span><span class="m-tag m-tag--use">sopralluogo gratuito</span></span>
-                  </div>
-                  <div class="m-card">
-                    <span class="m-card__top"><span>In una bozza · LinkedIn</span><img src="/src/assets/icons/briefcase.svg" alt="" width="17" height="17" /></span>
-                    <span class="m-draft">Con un <mark>impianto su misura</mark> l’energia del tetto copre i consumi di giorno: più <mark>autoconsumo</mark>, più <mark>risparmio in bolletta</mark>. Si parte da un <mark>sopralluogo gratuito</mark>.</span>
-                  </div>
-                </div>
-
-                <div class="m-panel" data-panel="evitare" data-ask="Aggiungi da evitare…" data-label="Profilo del brand, parole da evitare: soluzione innovativa, a 360 gradi, leader di settore, all’avanguardia. Arturo le sostituisce con parole concrete." hidden>
-                  <div class="m-head">
-                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
-                    <span class="m-title">Parole da evitare</span>
-                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
-                  </div>
-                  <div class="m-card">
-                    <span class="m-card__top"><span>Mai nei tuoi testi</span><span>4</span></span>
-                    <span class="m-tagset"><span class="m-tag m-tag--avoid">soluzione innovativa</span><span class="m-tag m-tag--avoid">a 360 gradi</span><span class="m-tag m-tag--avoid">leader di settore</span><span class="m-tag m-tag--avoid">all’avanguardia</span></span>
-                  </div>
-                  <div class="m-card">
-                    <span class="m-card__top"><span>Arturo le sostituisce</span><img src="/src/assets/icons/sparkles.svg" alt="" width="17" height="17" /></span>
-                    <span class="m-swap"><s>soluzione innovativa</s><i aria-hidden="true">→</i><b>impianto su misura</b></span>
-                    <span class="m-swap"><s>a 360 gradi</s><i aria-hidden="true">→</i><b>dal sopralluogo al collaudo</b></span>
-                    <span class="m-swap"><s>leader di settore</s><i aria-hidden="true">→</i><b>120 impianti in Toscana</b></span>
-                  </div>
-                </div>
-
-                <div class="m-panel" data-panel="canali" data-ask="Aggiungi un canale…" data-label="Profilo del brand, canali attivi: LinkedIn 3 post a settimana, Instagram 2, blog 1, newsletter 1 al mese, sito web." hidden>
-                  <div class="m-head">
-                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
-                    <span class="m-title">Canali</span>
-                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
-                  </div>
-                  <div class="m-card m-card--list">
-                    <span class="m-switch-row"><span><b>LinkedIn</b><small>3 post a settimana</small></span><span class="m-switch is-on"></span></span>
-                    <span class="m-switch-row"><span><b>Instagram</b><small>2 caroselli a settimana</small></span><span class="m-switch is-on"></span></span>
-                    <span class="m-switch-row"><span><b>Blog</b><small>1 articolo a settimana</small></span><span class="m-switch is-on"></span></span>
-                    <span class="m-switch-row"><span><b>Newsletter</b><small>1 al mese</small></span><span class="m-switch is-on"></span></span>
-                    <span class="m-switch-row"><span><b>Sito web</b><small>pagine servizi e FAQ</small></span><span class="m-switch is-on"></span></span>
-                  </div>
-                  <span class="m-note"><img src="/src/assets/icons/user-round-cons.svg" alt="" width="16" height="16" />Altri canali? Li concordi con Giulia</span>
-                </div>
-
-                <div class="m-panel" data-panel="aggiornamenti" data-ask="Segnala una novità…" data-label="Profilo del brand, aggiornamenti: Giulia ha aggiunto il servizio manutenzione impianti, il listino 2026 e un tono più diretto su LinkedIn. Prossimo check-in il 14 novembre." hidden>
-                  <div class="m-head">
-                    <span class="m-btn"><img src="/src/assets/icons/chevron-left-cons.svg" alt="" width="20" height="20" /></span>
-                    <span class="m-title">Aggiornamenti</span>
-                    <span class="m-btn"><img src="/src/assets/icons/ellipsis-cons.svg" alt="" width="20" height="20" /></span>
-                  </div>
-                  <div class="m-card m-card--list">
-                    <span class="m-update"><span class="m-update__avatar">G</span><span><small>Oggi · Giulia</small>Aggiunto il servizio «Manutenzione impianti»</span></span>
-                    <span class="m-update"><span class="m-update__avatar">G</span><span><small>12 ott · Giulia</small>Nuovo listino 2026 nei prezzi citati</span></span>
-                    <span class="m-update"><span class="m-update__avatar">G</span><span><small>28 set · Giulia</small>Tono più diretto su LinkedIn</span></span>
-                  </div>
-                  <div class="m-card">
-                    <span class="m-card__top"><span>Prossimo check-in</span><img src="/src/assets/icons/user-round-cons.svg" alt="" width="17" height="17" /></span>
-                    <span class="m-stat m-stat--peach">14 novembre</span>
-                    <span class="m-sub">Con Giulia · 30 minuti, in video</span>
-                  </div>
-                </div>
-
-                <div class="m-ask">
-                  <span class="m-ask__orb"><span class="brand-icon" data-logo data-profile-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span>
-                  <span class="m-ask__text" data-ask-text>Tap per parlare</span>
-                  <span class="m-ask__plus"><img src="/src/assets/icons/plus-cons.svg" alt="" width="20" height="20" /></span>
-                </div>
-              </div>
-              <span class="phone__island"></span>
-            </div>
-          </div>
-        </div>
+<!--#include partials/demo.html -->
+        <p class="demo__more"><a href="./app/">Apri la demo a schermo intero</a></p>
       </section>
 
       <!-- ============================================================ MOSAICO FUNZIONI -->
-      <section class="features" aria-label="Funzioni di Arturo">
+      <section class="features" aria-labelledby="features-title">
+        <header class="section-head" data-reveal>
+          <h2 class="section-title" id="features-title">Quello che ti arriva, ogni giorno.</h2>
+        </header>
         <div class="features__row features__row--2">
           <article class="tile tile--tall" data-reveal>
-            <img class="glow tile__glow tile__glow--score" src="/src/assets/glow/mosaic-1.svg" alt="" aria-hidden="true" />
-            <div class="phone phone--tile" role="img" aria-label="Schermata Valutazione: argomento Fotovoltaico per l’azienda con voto 84; pubblico alto, concorrenza bassa, brand in linea.">
+            <img class="glow tile__glow tile__glow--score" src="/src/assets/glow/mosaic-1.webp" alt="" aria-hidden="true" />
+            <div class="phone phone--tile" role="img" aria-label="Valutazione: Fotovoltaico per l’azienda, da dove partire. Voto 84 su 100: interesse del pubblico, pochi ne parlano, in linea con il tuo brand.">
               <div class="phone__body">
                 <div class="phone__screen">
                   <div class="m-head">
@@ -419,18 +587,14 @@
                         <img style="--i:13;left:94.15%;top:40.34%;width:5.85%;height:8.31%" src="/src/assets/gauge/seg-14.svg" alt="" />
                       </span>
                       <span class="gauge__value" data-count="84">84</span>
-                      <span class="gauge__caption">Fotovoltaico per l’azienda</span>
+                      <span class="gauge__caption">Fotovoltaico per l’azienda: da dove partire</span>
                     </div>
                   </div>
-                  <div class="m-metrics">
-                    <span><small>Pubblico</small><b style="color: var(--sky)">Alto</b></span>
-                    <span><small>Concorrenza</small><b style="color: var(--mint)">Bassa</b></span>
-                    <span><small>Brand</small><b style="color: var(--peach)">In linea</b></span>
-                  </div>
+                  <div class="m-criteria"><span>Interesse del pubblico</span><span>Pochi ne parlano</span><span>In linea con il tuo brand</span></div>
                   <div class="m-card">
                     <div class="m-card__top"><span>Angolo proposto</span><img src="/src/assets/icons/sparkles.svg" alt="" width="17" height="17" /></div>
                     <span class="m-angle">Le tre domande da farsi prima di chiedere un preventivo.</span>
-                    <span class="m-sub m-sub--sm">Esempio · criteri e scala da validare</span>
+                    <span class="m-sub m-sub--sm">Esempio - criteri e scala del voto da validare</span>
                   </div>
                 </div>
                 <span class="phone__island"></span>
@@ -438,14 +602,14 @@
             </div>
             <div class="tile__fade" aria-hidden="true"></div>
             <div class="tile__copy">
-              <h3 class="tile__title">Un voto e un perché</h3>
-              <p class="tile__text">Ogni argomento arriva con voto, motivazione e angolo proposto.</p>
+              <h3 class="tile__title">Argomenti con un voto e un perché.</h3>
+              <p class="tile__text">Non solo idee: per ognuna vedi quanto vale, perché interessa al tuo pubblico e da che angolo raccontarla.</p>
             </div>
           </article>
 
           <article class="tile tile--tall" data-reveal>
-            <img class="glow tile__glow tile__glow--draft" src="/src/assets/glow/mosaic-2.svg" alt="" aria-hidden="true" />
-            <div class="phone phone--tile" role="img" aria-label="Schermata Bozza: post LinkedIn sul fotovoltaico per le aziende, con approvazione manuale e i pulsanti Approva e Modifica.">
+            <img class="glow tile__glow tile__glow--draft" src="/src/assets/glow/mosaic-2.webp" alt="" aria-hidden="true" />
+            <div class="phone phone--tile" role="img" aria-label="Lo stesso argomento in tre forme: post LinkedIn, carosello Instagram e oggetto della newsletter.">
               <div class="phone__body">
                 <div class="phone__screen">
                   <div class="m-head">
@@ -455,19 +619,24 @@
                   </div>
                   <div class="m-card">
                     <div class="m-card__top"><span>LinkedIn</span><img src="/src/assets/icons/briefcase.svg" alt="" width="17" height="17" /></div>
-                    <span class="m-draft">Il fotovoltaico conviene alla tua azienda? Dipende da tre cose, e si controllano in un pomeriggio.<br /><br />1. Quanta energia consumi di giorno<br />2. Quanto spazio hai sul tetto<br />3. Quali incentivi puoi ottenere<br /><br />E tu, hai già guardato i tuoi consumi?</span>
-                    <span class="m-tags">#fotovoltaico #PMI</span>
+                    <span class="m-draft">Il fotovoltaico conviene alla tua azienda? Dipende da tre cose, e si controllano in un pomeriggio.</span>
                   </div>
-                  <span class="m-seg"><span class="is-active">Manuale</span><span>Automatica</span></span>
-                  <span class="m-actions"><span class="is-primary">Approva</span><span>Modifica</span></span>
+                  <div class="m-card">
+                    <div class="m-card__top"><span>Instagram</span></div>
+                    <span class="m-draft">Carosello: le tre domande prima del preventivo.</span>
+                  </div>
+                  <div class="m-card">
+                    <div class="m-card__top"><span>Newsletter</span></div>
+                    <span class="m-draft">Oggetto: prima del preventivo, cosa controllare sui tuoi consumi.</span>
+                  </div>
                 </div>
                 <span class="phone__island"></span>
               </div>
             </div>
             <div class="tile__fade" aria-hidden="true"></div>
             <div class="tile__copy">
-              <h3 class="tile__title">Un testo per ogni canale</h3>
-              <p class="tile__text">Stesso argomento, forma giusta per LinkedIn, Instagram, blog, newsletter e sito.</p>
+              <h3 class="tile__title">Un testo diverso per ogni canale.</h3>
+              <p class="tile__text">Stesso argomento, forma giusta per ognuno: non lo stesso testo accorciato.</p>
             </div>
           </article>
         </div>
@@ -506,33 +675,32 @@
           </article>
 
           <article class="tile tile--short" data-reveal>
-            <div class="tile__visual tile__visual--channels">
-              <ul class="channel-chips" aria-label="Canali">
-                <li style="color: var(--sky-2)">LinkedIn</li>
-                <li style="color: var(--ice)">Instagram</li>
-                <li style="color: var(--mint)">Blog</li>
-                <li style="color: var(--sky)">Newsletter</li>
-                <li style="color: #fff">Sito web</li>
-                <li style="color: var(--text-subtle)">+ altri</li>
-              </ul>
+            <div class="tile__visual tile__visual--geo" aria-hidden="true">
+              <span class="geo-mini__q">Chi mi consigli per il fotovoltaico in azienda?</span>
+              <span class="geo__source">
+                <span class="brand-icon" data-logo style="--size: 18px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
+                Fonte: il tuo sito
+              </span>
             </div>
             <div class="tile__copy">
-              <h3 class="tile__title">Tutti i tuoi canali</h3>
-              <p class="tile__text">E gli altri che concordi con il consulente.</p>
+              <h3 class="tile__title">Scritto per Google e per le AI.</h3>
+              <p class="tile__text">Contenuti chiari che le AI leggono e possono citare, e che Google ritrova.</p>
             </div>
           </article>
         </div>
+        <p class="features__soon"><span class="badge">In arrivo</span> Grafiche e contenuti visivi</p>
       </section>
 
       <!-- ============================================================ GEO -->
       <section class="geo" id="geo" aria-labelledby="geo-title">
         <header class="section-head" data-reveal>
-          <h2 class="section-title" id="geo-title">Scritto per Google. E per le AI.</h2>
-          <p class="section-lead geo__lead">Sempre più persone chiedono alle AI chi scegliere. Arturo scrive i contenuti chiari che le AI leggono e possono citare.</p>
+          <p class="eyebrow">GEO</p>
+          <h2 class="section-title" id="geo-title">Non basta più farsi trovare su Google.</h2>
+          <p class="section-lead geo__lead">Sempre più persone chiedono alle AI chi scegliere. Le AI rispondono usando i contenuti chiari e ben fatti che trovano in rete. La GEO (Generative Engine Optimization) è scrivere proprio quei contenuti: così le AI possono citarti, e ti trovano anche su Google.</p>
         </header>
         <figure class="geo__card" data-scroll-scale>
-          <img class="glow geo__glow geo__glow--1" src="/src/assets/glow/geo-1.svg" alt="" aria-hidden="true" />
-          <img class="glow geo__glow geo__glow--2" src="/src/assets/glow/geo-2.svg" alt="" aria-hidden="true" />
+          <img class="glow geo__glow geo__glow--1" src="/src/assets/glow/geo-1.webp" alt="" aria-hidden="true" />
+          <img class="glow geo__glow geo__glow--2" src="/src/assets/glow/geo-2.webp" alt="" aria-hidden="true" />
           <div class="geo__chat">
             <p class="geo__question">Come si sceglie un commercialista per una startup?</p>
             <div class="geo__answer">
@@ -545,282 +713,6 @@
           </div>
           <figcaption class="geo__note">Esempio di risposta AI, non un risultato garantito.</figcaption>
         </figure>
-      </section>
-
-      <!-- ============================================================ DEMO / PROTOTIPO -->
-      <section class="demo" id="demo" aria-labelledby="demo-title">
-        <header class="section-head" data-reveal>
-          <h2 class="section-title" id="demo-title">Prova Arturo. Proprio qui.</h2>
-          <p class="section-lead">Chiedi un argomento, approva le bozze, cambia vista. È un prototipo con dati d’esempio.</p>
-        </header>
-
-        <div class="app-frame" data-scroll-scale>
-          <div class="app" data-app>
-            <aside class="app__sidebar">
-              <img class="app__controls" src="/src/assets/misc/window-controls.svg" alt="" width="56" height="30" />
-              <div class="app__brand">
-                <span class="mascot" data-mascot aria-hidden="true">
-                  <span class="mascot__state mascot__state--rest"><img src="/src/assets/brand/mascot-render.webp" alt="" /></span>
-                  <span class="mascot__state mascot__state--listen"><img src="/src/assets/brand/mascot-states.webp" alt="" /></span>
-                  <span class="mascot__state mascot__state--think"><img src="/src/assets/brand/mascot-states.webp" alt="" /><i class="mascot__edge"></i></span>
-                  <span class="mascot__state mascot__state--happy"><img src="/src/assets/brand/mascot-states.webp" alt="" /></span>
-                </span>
-                <span class="app__wordmark">arturo</span>
-              </div>
-
-              <nav class="app__nav" aria-label="Viste del prototipo">
-                <button type="button" class="app__nav-item" aria-current="page" data-view-target="oggi">Oggi</button>
-                <button type="button" class="app__nav-item" data-view-target="radar">Radar <span class="app__count">14</span></button>
-                <button type="button" class="app__nav-item" data-view-target="approvare">Da approvare <span class="app__count" data-pending-count>3</span></button>
-                <button type="button" class="app__nav-item" data-view-target="archivio">Archivio</button>
-                <button type="button" class="app__nav-item" data-view-target="profilo">Profilo del brand</button>
-              </nav>
-
-              <div class="app__advisor">
-                <div class="app__advisor-head">
-                  <span class="app__label">Il tuo consulente</span>
-                  <span class="app__advisor-name">
-                    <span class="avatar" aria-hidden="true">G<img src="/src/assets/misc/online-dot.svg" alt="" /></span>
-                    Giulia
-                  </span>
-                </div>
-                <button type="button" class="app__pill-btn" data-contact>Scrivi a Giulia</button>
-              </div>
-            </aside>
-
-            <div class="app__main">
-              <!-- View: Oggi -->
-              <div class="app__view" data-view="oggi">
-                <div class="app__greeting">
-                  <h3>Buongiorno, Marco</h3>
-                  <p>Giovedì · ciclo di oggi completato</p>
-                </div>
-
-                <div class="app__stats">
-                  <div class="app-card app-stat">
-                    <div class="app-stat__top"><span>Radar</span><img src="/src/assets/icons/radar-app.svg" alt="" width="16" height="16" /></div>
-                    <span class="app-stat__value" style="color: var(--sky)">14 argomenti</span>
-                    <span class="app-stat__sub">3 sopra la soglia</span>
-                    <span class="bars bars--app" aria-hidden="true"><i style="--h:28.2" class=on></i><i style="--h:18.3" class=on></i><i style="--h:30.8" class=on></i><i style="--h:12.4" class=on></i><i style="--h:32.0" class=on></i><i style="--h:9.8" class=on></i><i style="--h:31.5" class=on></i><i style="--h:15.9" class=on></i><i style="--h:29.5" class=on></i><i style="--h:21.4" class=on></i><i style="--h:26.0" class=on></i><i style="--h:26.0" class=on></i><i style="--h:21.4" class=on></i><i style="--h:29.5" class=on></i><i style="--h:15.8"></i><i style="--h:31.5"></i><i style="--h:9.8"></i><i style="--h:32.0"></i><i style="--h:12.4"></i><i style="--h:30.8"></i><i style="--h:18.3"></i><i style="--h:28.2"></i><i style="--h:23.5"></i><i style="--h:24.2"></i><i style="--h:27.7"></i><i style="--h:19.1"></i><i style="--h:30.5"></i><i style="--h:13.3"></i><i style="--h:31.9"></i><i style="--h:8.8"></i><i style="--h:31.7"></i><i style="--h:14.9"></i><i style="--h:29.9"></i><i style="--h:20.6"></i><i style="--h:26.7"></i><i style="--h:25.4"></i><i style="--h:22.2"></i><i style="--h:29.0"></i><i style="--h:16.8"></i><i style="--h:31.3"></i></span>
-                  </div>
-                  <div class="app-card app-stat">
-                    <div class="app-stat__top"><span>Da approvare</span><img src="/src/assets/icons/check-app.svg" alt="" width="16" height="16" /></div>
-                    <span class="app-stat__value" style="color: var(--mint)" data-pending-label>3 bozze</span>
-                    <span class="app-stat__sub" data-pending-sub>La migliore vale 84 · LinkedIn</span>
-                  </div>
-                  <div class="app-card app-stat">
-                    <div class="app-stat__top"><span>Voto migliore</span><img src="/src/assets/icons/gauge-app.svg" alt="" width="16" height="16" /></div>
-                    <span class="app-stat__value" style="color: var(--sky-2)">84</span>
-                    <span class="app-stat__sub">Fotovoltaico per l’azienda</span>
-                  </div>
-                </div>
-
-                <div class="app-card app-message" aria-live="polite">
-                  <div class="app-message__body">
-                    <span class="app-message__from">Arturo</span>
-                    <p class="app-message__text" data-arturo-message>Ho scritto LinkedIn, Instagram e Newsletter su «Fotovoltaico per l’azienda». Le vuoi rivedere?</p>
-                  </div>
-                  <button type="button" class="chip-btn chip-btn--primary chip-btn--lg" data-view-target="approvare" data-message-action>Rivedi le bozze</button>
-                </div>
-
-                <div class="app__drafts" data-drafts-slot="oggi"></div>
-              </div>
-
-              <!-- View: Radar -->
-              <div class="app__view" data-view="radar" hidden>
-                <div class="app__greeting">
-                  <h3>Radar</h3>
-                  <p>14 argomenti trovati oggi · 3 sopra la soglia</p>
-                </div>
-                <ul class="app-topics">
-                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r84.svg" alt="" /><b>84</b></span><span><strong style="color: var(--sky)">Fotovoltaico per l’azienda</strong><small>3 fonti · selezionato</small></span></li>
-                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r78.svg" alt="" /><b>78</b></span><span><strong style="color: var(--sky-2)">Packaging sostenibile</strong><small>4 fonti</small></span></li>
-                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc ring__arc--71" src="/src/assets/ring/r71.svg" alt="" /><b>71</b></span><span><strong style="color: var(--mint)">Incentivi energia</strong><small>2 fonti</small></span></li>
-                  <li class="app-card app-topic"><span class="ring ring--app"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc ring__arc--66" src="/src/assets/ring/r66.svg" alt="" /><b>66</b></span><span><strong style="color: var(--peach)">Autoconsumo condiviso</strong><small>4 fonti</small></span></li>
-                </ul>
-              </div>
-
-              <!-- View: Da approvare -->
-              <div class="app__view" data-view="approvare" hidden>
-                <div class="app__greeting">
-                  <h3>Da approvare</h3>
-                  <p data-pending-summary>3 bozze su «Fotovoltaico per l’azienda»</p>
-                </div>
-                <div class="app__drafts app__drafts--stack" data-drafts-slot="approvare"></div>
-              </div>
-
-              <!-- View: Archivio -->
-              <div class="app__view" data-view="archivio" hidden>
-                <div class="app__greeting">
-                  <h3>Archivio</h3>
-                  <p>I contenuti che hai approvato.</p>
-                </div>
-                <ul class="app-archive" data-archive></ul>
-                <p class="app-empty" data-archive-empty>Ancora niente qui. Approva una bozza e la ritrovi in archivio.</p>
-              </div>
-
-              <!-- View: Profilo -->
-              <div class="app__view" data-view="profilo" hidden>
-                <div class="app__greeting">
-                  <h3>Profilo del brand</h3>
-                  <p>Impostato con Giulia · esempio</p>
-                </div>
-                <dl class="profile__list app-profile">
-                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-1.svg" alt="" width="8" height="8" />Tono di voce</dt><dd>Formale ↔ Diretto · Tecnico ↔ Semplice</dd></div>
-                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-2.svg" alt="" width="8" height="8" />Parole da usare</dt><dd>impianto su misura, risparmio in bolletta</dd></div>
-                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-3.svg" alt="" width="8" height="8" />Parole da evitare</dt><dd>soluzione innovativa, a 360 gradi</dd></div>
-                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-4.svg" alt="" width="8" height="8" />Canali</dt><dd>LinkedIn, Instagram, Blog, Newsletter, Sito web</dd></div>
-                  <div class="profile__row"><dt><img src="/src/assets/misc/dot-5.svg" alt="" width="8" height="8" />Aggiornamenti</dt><dd>quando cambiano prodotti e servizi</dd></div>
-                </dl>
-              </div>
-
-              <form class="app-ask" data-ask>
-                <span class="app-ask__orb" aria-hidden="true">
-                  <span class="brand-icon brand-icon--app" data-logo data-ask-logo><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
-                </span>
-                <label class="visually-hidden" for="ask-input">Chiedi ad Arturo</label>
-                <input
-                  id="ask-input"
-                  class="app-ask__input"
-                  type="text"
-                  name="q"
-                  autocomplete="off"
-                  maxlength="140"
-                  placeholder="Chiedi ad Arturo… «Di cosa parliamo questa settimana?»"
-                />
-                <button class="app-ask__send" type="submit">Invia</button>
-              </form>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="mdemo" data-mdemo>
-          <div class="mdemo__tabs" role="tablist" aria-label="Schermate dell’app"><button type="button" role="tab" id="mdemo-tab-oggi" aria-controls="mdemo-oggi" aria-selected="true" tabindex="0" data-go="oggi">Oggi</button><button type="button" role="tab" id="mdemo-tab-radar" aria-controls="mdemo-radar" aria-selected="false" tabindex="-1" data-go="radar">Radar</button><button type="button" role="tab" id="mdemo-tab-valutazione" aria-controls="mdemo-valutazione" aria-selected="false" tabindex="-1" data-go="valutazione">Valutazione</button><button type="button" role="tab" id="mdemo-tab-bozza" aria-controls="mdemo-bozza" aria-selected="false" tabindex="-1" data-go="bozza">Bozza</button><button type="button" role="tab" id="mdemo-tab-chat" aria-controls="mdemo-chat" aria-selected="false" tabindex="-1" data-go="chat">Chat</button></div>
-          <div class="mdemo__track" data-mdemo-track>
-            <section class="mdemo__slide" id="mdemo-oggi" role="tabpanel" aria-labelledby="mdemo-tab-oggi" data-slide="oggi">
-              <div class="phone phone--demo">
-                <div class="phone__body">
-                  <div class="phone__screen">
-                    <h3 class="visually-hidden">Oggi</h3>
-                    <div class="m-head"><span class="m-btn m-btn--ghost"><img src="/src/assets/icons/chevron-left-oggi.svg" alt="" width="20" height="20" /></span><span class="m-title">Oggi</span><span class="m-btn"><img src="/src/assets/icons/ellipsis-oggi.svg" alt="" width="20" height="20" /></span></div>
-                    <div class="m-upsell"><span class="m-upsell__text"><span class="m-upsell__meta"><span class="m-badge">PLUS</span>Prova · 3 giorni rimasti</span><b>Continua con Plus</b><span>Calendario, pubblicazione programmata e report a 90 €/mese.</span></span><button type="button" class="m-cta" data-contact="Plus">Passa a Plus</button></div>
-                    <button type="button" class="m-card" data-go="radar"><span class="m-card__top"><span>Radar</span><img src="/src/assets/icons/radar-hero.svg" alt="" width="17" height="17" /></span><span class="m-stat m-stat--sky">14 argomenti</span><span class="m-sub">3 sopra la soglia · oggi</span><span class="m-divider"></span><span class="bars" aria-hidden="true"><i style="--h:29.9" class=on></i><i style="--h:19.1" class=on></i><i style="--h:32.7" class=on></i><i style="--h:12.7" class=on></i><i style="--h:34.0" class=on></i><i style="--h:10.0" class=on></i><i style="--h:33.5" class=on></i><i style="--h:16.5" class=on></i><i style="--h:31.3" class=on></i><i style="--h:22.5" class=on></i><i style="--h:27.5" class=on></i><i style="--h:27.5" class=on></i><i style="--h:22.5" class=on></i><i style="--h:31.3" class=on></i><i style="--h:16.5" class=on></i><i style="--h:33.5" class=on></i><i style="--h:9.9"></i><i style="--h:34.0"></i><i style="--h:12.8"></i><i style="--h:32.7"></i><i style="--h:19.1"></i><i style="--h:29.9"></i><i style="--h:24.8"></i><i style="--h:25.5"></i><i style="--h:29.3"></i><i style="--h:20.1"></i><i style="--h:32.4"></i><i style="--h:13.8"></i><i style="--h:33.9"></i><i style="--h:8.9"></i><i style="--h:33.7"></i><i style="--h:15.5"></i><i style="--h:31.7"></i><i style="--h:21.6"></i><i style="--h:28.2"></i><i style="--h:26.8"></i><i style="--h:23.4"></i><i style="--h:30.8"></i><i style="--h:17.5"></i><i style="--h:33.2"></i><i style="--h:11.0"></i><i style="--h:34.0"></i><i style="--h:11.7"></i><i style="--h:33.0"></i></span></button>
-                    <button type="button" class="m-card" data-go="bozza"><span class="m-card__top"><span>Da approvare</span><img src="/src/assets/icons/check-hero.svg" alt="" width="17" height="17" /></span><span class="m-stat m-stat--mint" data-mdemo-pending>3 bozze</span><span class="m-sub">La migliore vale 84</span><span class="m-chips"><span>LinkedIn</span><span>Instagram</span><span>Newsletter</span></span></button>
-                    <div class="m-advisor"><span class="avatar avatar--lg" aria-hidden="true">G<img src="/src/assets/misc/online-dot.svg" alt="" /></span><span class="m-advisor__text"><small>Il tuo consulente</small><b>Giulia</b><small>Online · risponde in ~1 ora</small></span><button type="button" class="m-pill-btn" data-contact>Scrivi</button></div>
-                    <button type="button" class="m-ask m-ask--btn" data-go="chat" aria-label="Chiedi ad Arturo: apri la chat"><span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span><span class="m-ask__text">Chiedi ad Arturo</span><span class="m-ask__plus"><img src="/src/assets/icons/plus-oggi.svg" alt="" width="20" height="20" /></span></button>
-                  </div>
-                  <span class="phone__island" aria-hidden="true"></span>
-                </div>
-              </div>
-            </section>
-            <section class="mdemo__slide" id="mdemo-radar" role="tabpanel" aria-labelledby="mdemo-tab-radar" data-slide="radar">
-              <div class="phone phone--demo">
-                <div class="phone__body">
-                  <div class="phone__screen">
-                    <h3 class="visually-hidden">Radar</h3>
-                    <div class="m-head"><button type="button" class="m-btn" data-go="oggi" aria-label="Indietro"><img src="/src/assets/icons/chevron-left-oggi.svg" alt="" width="20" height="20" /></button><span class="m-title">Radar</span><span class="m-btn"><img src="/src/assets/icons/ellipsis-oggi.svg" alt="" width="20" height="20" /></span></div>
-                    <button type="button" class="m-card m-topic" data-go="valutazione"><span class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></span><span class="m-topic__row"><span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r84.svg" alt="" /><b>84</b></span><span class="m-topic__text"><span class="m-topic__title" style="color: var(--sky)">Fotovoltaico per l’azienda</span><span class="m-sub">3 fonti · selezionato</span></span></span></button>
-                    <button type="button" class="m-card m-topic" data-go="valutazione"><span class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></span><span class="m-topic__row"><span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc" src="/src/assets/ring/r78.svg" alt="" /><b>78</b></span><span class="m-topic__text"><span class="m-topic__title" style="color: var(--sky-2)">Packaging sostenibile</span><span class="m-sub">4 fonti</span></span></span></button>
-                    <button type="button" class="m-card m-topic" data-go="valutazione"><span class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></span><span class="m-topic__row"><span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc ring__arc--71" src="/src/assets/ring/r71.svg" alt="" /><b>71</b></span><span class="m-topic__text"><span class="m-topic__title" style="color: var(--mint)">Incentivi energia</span><span class="m-sub">2 fonti</span></span></span></button>
-                    <button type="button" class="m-card m-topic" data-go="valutazione"><span class="m-card__top"><span>Argomento</span><img src="/src/assets/icons/arrow-up-right.svg" alt="" width="17" height="17" /></span><span class="m-topic__row"><span class="ring"><img src="/src/assets/ring/track.svg" alt="" /><img class="ring__arc ring__arc--66" src="/src/assets/ring/r66.svg" alt="" /><b>66</b></span><span class="m-topic__text"><span class="m-topic__title" style="color: var(--peach)">Autoconsumo condiviso</span><span class="m-sub">4 fonti</span></span></span></button>
-                    <button type="button" class="m-ask m-ask--btn" data-go="chat" aria-label="Chiedi ad Arturo: apri la chat"><span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span><span class="m-ask__text">Cosa cerco oggi?</span><span class="m-ask__plus"><img src="/src/assets/icons/plus-oggi.svg" alt="" width="20" height="20" /></span></button>
-                  </div>
-                  <span class="phone__island" aria-hidden="true"></span>
-                </div>
-              </div>
-            </section>
-            <section class="mdemo__slide" id="mdemo-valutazione" role="tabpanel" aria-labelledby="mdemo-tab-valutazione" data-slide="valutazione">
-              <div class="phone phone--demo">
-                <div class="phone__body">
-                  <div class="phone__screen">
-                    <h3 class="visually-hidden">Valutazione</h3>
-                    <div class="m-head"><button type="button" class="m-btn" data-go="radar" aria-label="Indietro"><img src="/src/assets/icons/chevron-left-oggi.svg" alt="" width="20" height="20" /></button><span class="m-title">Valutazione</span><span class="m-btn"><img src="/src/assets/icons/ellipsis-oggi.svg" alt="" width="20" height="20" /></span></div>
-                    <div class="m-card"><span class="m-card__top"><span>Voto dell’argomento</span><img src="/src/assets/icons/gauge-mosaic.svg" alt="" width="17" height="17" /></span><span class="gauge"><span class="gauge__arc">
-                        <img style="--i:0;left:0%;top:40.34%;width:5.85%;height:8.31%" src="/src/assets/gauge/seg-01.svg" alt="" />
-                        <img style="--i:1;left:1.61%;top:29.67%;width:7.28%;height:9.01%" src="/src/assets/gauge/seg-02.svg" alt="" />
-                        <img style="--i:2;left:5.62%;top:20.01%;width:8.37%;height:9.26%" src="/src/assets/gauge/seg-03.svg" alt="" />
-                        <img style="--i:3;left:11.86%;top:11.86%;width:9.04%;height:9.04%" src="/src/assets/gauge/seg-04.svg" alt="" />
-                        <img style="--i:4;left:20.01%;top:5.62%;width:9.26%;height:8.37%" src="/src/assets/gauge/seg-05.svg" alt="" />
-                        <img style="--i:5;left:29.67%;top:1.61%;width:9.01%;height:7.28%" src="/src/assets/gauge/seg-06.svg" alt="" />
-                        <img style="--i:6;left:40.34%;top:0%;width:8.31%;height:5.85%" src="/src/assets/gauge/seg-07.svg" alt="" />
-                        <img style="--i:7;left:51.35%;top:0%;width:8.31%;height:5.85%" src="/src/assets/gauge/seg-08.svg" alt="" />
-                        <img style="--i:8;left:61.32%;top:1.61%;width:9.01%;height:7.28%" src="/src/assets/gauge/seg-09.svg" alt="" />
-                        <img style="--i:9;left:70.73%;top:5.62%;width:9.26%;height:8.37%" src="/src/assets/gauge/seg-10.svg" alt="" />
-                        <img style="--i:10;left:79.1%;top:11.86%;width:9.04%;height:9.04%" src="/src/assets/gauge/seg-11.svg" alt="" />
-                        <img style="--i:11;left:86.01%;top:20.01%;width:8.37%;height:9.26%" src="/src/assets/gauge/seg-12.svg" alt="" />
-                        <img style="--i:12;left:91.11%;top:29.67%;width:7.28%;height:9.01%" src="/src/assets/gauge/seg-13.svg" alt="" />
-                        <img style="--i:13;left:94.15%;top:40.34%;width:5.85%;height:8.31%" src="/src/assets/gauge/seg-14.svg" alt="" />
-                      </span><span class="gauge__value">84</span><span class="gauge__caption">Fotovoltaico per l’azienda</span></span></div>
-                    <div class="m-metrics"><span><small>Pubblico</small><b style="color: var(--sky)">Alto</b></span><span><small>Concorrenza</small><b style="color: var(--mint)">Bassa</b></span><span><small>Brand</small><b style="color: var(--peach)">In linea</b></span></div>
-                    <button type="button" class="m-card" data-go="bozza"><span class="m-card__top"><span>Angolo proposto</span><img src="/src/assets/icons/sparkles.svg" alt="" width="17" height="17" /></span><span class="m-angle">Le tre domande da farsi prima di chiedere un preventivo.</span><span class="m-sub m-sub--sm">Esempio · criteri e scala da validare</span></button>
-                    <div class="m-ask" aria-hidden="true"><span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span><span class="m-ask__text">Arturo sta valutando…</span><span class="m-ask__plus"><img src="/src/assets/icons/plus-oggi.svg" alt="" width="20" height="20" /></span></div>
-                  </div>
-                  <span class="phone__island" aria-hidden="true"></span>
-                </div>
-              </div>
-            </section>
-            <section class="mdemo__slide" id="mdemo-bozza" role="tabpanel" aria-labelledby="mdemo-tab-bozza" data-slide="bozza">
-              <div class="phone phone--demo">
-                <div class="phone__body">
-                  <div class="phone__screen">
-                    <h3 class="visually-hidden">Bozza</h3>
-                    <div class="m-head"><button type="button" class="m-btn" data-go="valutazione" aria-label="Indietro"><img src="/src/assets/icons/chevron-left-oggi.svg" alt="" width="20" height="20" /></button><span class="m-title">Bozza</span><span class="m-btn"><img src="/src/assets/icons/ellipsis-oggi.svg" alt="" width="20" height="20" /></span></div>
-                    <span class="m-seg m-seg--live" role="radiogroup" aria-label="Approvazione"><button type="button" role="radio" aria-checked="true" data-mode="manual">Manuale</button><button type="button" role="radio" aria-checked="false" data-mode="auto">Automatica</button></span>
-                    <div class="m-card"><span class="m-card__top"><span>LinkedIn</span><img src="/src/assets/icons/briefcase.svg" alt="" width="17" height="17" /></span><span class="m-draft" data-mdemo-draft>Il fotovoltaico conviene alla tua azienda? Dipende da tre cose, e si controllano in un pomeriggio.<br /><br />1. Quanta energia consumi di giorno<br />2. Quanto spazio hai sul tetto<br />3. Quali incentivi puoi ottenere<br /><br />E tu, hai già guardato i tuoi consumi?</span><span class="m-tags">#fotovoltaico #PMI</span></div>
-                    <div class="m-upsell m-upsell--compact"><span class="m-upsell__text"><b>Programma la pubblicazione</b><span>Scegli giorno e ora per ogni canale</span></span><button type="button" class="m-cta" data-contact="Plus">Passa a Plus</button></div>
-                    <span class="m-actions m-actions--live"><button type="button" class="is-primary" data-mdemo-approve>Approva</button><button type="button" data-mdemo-edit>Modifica</button></span>
-                    <p class="m-status" role="status" data-mdemo-status></p>
-                    <button type="button" class="m-ask m-ask--btn" data-go="chat" aria-label="Chiedi ad Arturo: apri la chat"><span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span><span class="m-ask__text">Rendila più breve…</span><span class="m-ask__plus"><img src="/src/assets/icons/plus-oggi.svg" alt="" width="20" height="20" /></span></button>
-                  </div>
-                  <span class="phone__island" aria-hidden="true"></span>
-                </div>
-              </div>
-            </section>
-            <section class="mdemo__slide" id="mdemo-chat" role="tabpanel" aria-labelledby="mdemo-tab-chat" data-slide="chat">
-              <div class="phone phone--demo">
-                <div class="phone__body">
-                  <div class="phone__screen">
-                    <h3 class="visually-hidden">Chat con Arturo</h3>
-                    <div class="m-head"><button type="button" class="m-btn" data-go="oggi" aria-label="Indietro"><img src="/src/assets/icons/chevron-left-oggi.svg" alt="" width="20" height="20" /></button><span class="m-title">Arturo</span><span class="m-btn"><img src="/src/assets/icons/ellipsis-oggi.svg" alt="" width="20" height="20" /></span></div>
-                    <div class="m-listen"><span class="brand-icon" data-logo="listen" style="--size: 120px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span><span>Ti ascolto</span></div>
-                    <span class="m-bubble m-bubble--user">Di cosa parliamo questa settimana?</span>
-                    <div class="m-bubble m-bubble--bot"><span>Ho trovato 3 argomenti che valgono per il tuo settore. Il migliore è «Fotovoltaico per l’azienda» (84). Scrivo LinkedIn, Instagram e Newsletter?</span><span class="m-bubble__actions"><button type="button" class="is-primary" data-go="bozza">Sì, scrivi</button><button type="button" data-go="radar">Vedi il radar</button></span></div>
-                    <div class="m-ask" aria-hidden="true"><span class="m-ask__orb"><span class="brand-icon" data-logo style="--size: 30px"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span></span><span class="m-ask__text">Tap per parlare</span><span class="m-ask__plus"><img src="/src/assets/icons/plus-oggi.svg" alt="" width="20" height="20" /></span></div>
-                  </div>
-                  <span class="phone__island" aria-hidden="true"></span>
-                </div>
-              </div>
-            </section>
-          </div>
-          <p class="mdemo__hint">Scorri o tocca le schede · dati d’esempio</p>
-        </div>
-
-        <template id="draft-template">
-          <article class="app-card app-draft">
-            <p class="app-draft__channel"></p>
-            <p class="app-draft__text"></p>
-            <div class="app-draft__edit" hidden>
-              <label class="visually-hidden">Modifica bozza</label>
-              <textarea rows="3"></textarea>
-            </div>
-            <div class="app-draft__actions"></div>
-          </article>
-        </template>
-      </section>
-
-      <!-- ============================================================ PENSATO PER TE -->
-      <section class="facts" aria-labelledby="facts-title">
-        <header class="section-head" data-reveal>
-          <h2 class="section-title" id="facts-title">Pensato per lavorare con te.</h2>
-          <p class="section-lead">Un metodo semplice, che gira ogni giorno.</p>
-        </header>
-        <ul class="facts__grid" data-carousel>
-          <li class="fact" data-reveal><span class="fact__label">Ogni giorno</span><span class="fact__value" style="color: var(--sky)" data-count="4">4</span><span class="fact__text">passaggi: ascolta, scansiona, sceglie, scrive</span></li>
-          <li class="fact" data-reveal><span class="fact__label">Copertura</span><span class="fact__value" style="color: var(--sky-2)" data-count="6">6</span><span class="fact__text">canali, più quelli concordati</span></li>
-          <li class="fact" data-reveal><span class="fact__label">Persona dedicata</span><span class="fact__value" style="color: var(--ice)" data-count="1">1</span><span class="fact__text">consulente per setup e aggiornamenti</span></li>
-          <li class="fact" data-reveal><span class="fact__label">Per argomento</span><span class="fact__value" style="color: var(--mint)" data-count="100" data-count-prefix="0–">0–100</span><span class="fact__text">un voto con motivo e angolo</span></li>
-        </ul>
       </section>
 
       <!-- ============================================================ PIANI -->
@@ -844,7 +736,7 @@
               <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />Setup del Profilo del brand</li>
               <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />1 settimana di prova completa</li>
             </ul>
-            <button class="btn btn--secondary btn--block plan__cta" type="button" data-contact="Prova gratuita">Inizia la prova gratuita</button>
+            <a class="btn btn--secondary btn--block plan__cta" href="#contatti" data-contact="Prova gratuita">Inizia la prova gratuita</a>
           </article>
 
           <article class="plan plan--featured" data-reveal>
@@ -862,7 +754,7 @@
               <li><img src="/src/assets/icons/check-plan-plus.svg" alt="" width="16" height="16" />Check-in mensile con il consulente</li>
               <li><img src="/src/assets/icons/check-plan-plus.svg" alt="" width="16" height="16" />Report mensile delle performance</li>
             </ul>
-            <button class="btn btn--primary btn--block plan__cta" type="button" data-contact="Plus">Passa a Plus</button>
+            <a class="btn btn--primary btn--block plan__cta" href="#contatti" data-contact="Plus">Passa a Plus</a>
           </article>
 
           <article class="plan" data-reveal>
@@ -877,13 +769,12 @@
               <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />Canali e formati su misura</li>
               <li><img src="/src/assets/icons/check-plan.svg" alt="" width="16" height="16" />Consulente dedicato</li>
             </ul>
-            <button class="btn btn--secondary btn--block plan__cta" type="button" data-contact="Enterprise">Richiedi informazioni</button>
+            <a class="btn btn--secondary btn--block plan__cta" href="#contatti" data-contact="Enterprise">Richiedi informazioni</a>
           </article>
         </div>
       </section>
-
       <!-- ============================================================ CONFRONTO -->
-      <section class="compare" aria-labelledby="compare-title">
+      <section class="compare" id="confronto" aria-labelledby="compare-title">
         <header class="section-head" data-reveal>
           <p class="eyebrow">A confronto</p>
           <h2 class="section-title" id="compare-title">Non è un’altra AI generica.</h2>
@@ -899,35 +790,33 @@
                 <th role="columnheader" scope="col" class="compare__arturo">
                   <span class="compare__logo"><span class="brand-icon" data-logo style="--size: 22px" aria-hidden="true"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>Arturo</span>
                 </th>
-                <th role="columnheader" scope="col">AI generiche<small>ChatGPT, Gemini…</small></th>
+                <th role="columnheader" scope="col">AI generiche</th>
                 <th role="columnheader" scope="col">Agenzia</th>
                 <th role="columnheader" scope="col">Fai da te</th>
               </tr>
             </thead>
             <tbody role="rowgroup">
-              <tr role="row"><th role="rowheader" scope="row">Sceglie di cosa parlare per te</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td></tr>
-              <tr role="row"><th role="rowheader" scope="row">Voto e motivo per ogni argomento</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td></tr>
-              <tr role="row"><th role="rowheader" scope="row">Conosce la tua voce (Profilo del brand)</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td></tr>
-              <tr role="row"><th role="rowheader" scope="row">Un consulente che ti segue</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td></tr>
-              <tr role="row"><th role="rowheader" scope="row">Un testo diverso per ogni canale</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td></tr>
-              <tr role="row"><th role="rowheader" scope="row">Scritto per Google e per le AI (GEO)</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td></tr>
-              <tr role="row"><th role="rowheader" scope="row">Lavora ogni giorno, anche quando sei occupato</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="mark mark--no"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /><span class="visually-hidden">No</span></span></td></tr>
-              <tr role="row"><th role="rowheader" scope="row">Approvi tu, a mano o in automatico</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="mark mark--partial"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /><span class="visually-hidden">In parte</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /><span class="visually-hidden">Sì</span></span></td></tr>
+              <tr role="row"><th role="rowheader" scope="row">Sceglie di cosa parlare</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="cmp-val cmp-val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="cmp-val cmp-val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Se glielo chiedi</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="cmp-val cmp-val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Sì</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="cmp-val cmp-val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">No</span></span></td></tr>
+              <tr role="row"><th role="rowheader" scope="row">Voto e motivo per ogni argomento</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="cmp-val cmp-val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="cmp-val cmp-val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">No</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="cmp-val cmp-val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">In parte</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="cmp-val cmp-val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">No</span></span></td></tr>
+              <tr role="row"><th role="rowheader" scope="row">Un consulente che ti segue</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="cmp-val cmp-val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="cmp-val cmp-val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">No</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="cmp-val cmp-val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Sì</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="cmp-val cmp-val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">No</span></span></td></tr>
+              <tr role="row"><th role="rowheader" scope="row">Ti spieghi una volta sola</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="cmp-val cmp-val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="cmp-val cmp-val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Ogni volta</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="cmp-val cmp-val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Dopo varie revisioni</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="cmp-val cmp-val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Sì</span></span></td></tr>
+              <tr role="row"><th role="rowheader" scope="row">Un testo per ogni canale</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="cmp-val cmp-val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="cmp-val cmp-val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Su richiesta</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="cmp-val cmp-val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Sì</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="cmp-val cmp-val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Se hai tempo</span></span></td></tr>
+              <tr role="row"><th role="rowheader" scope="row">Scritto per Google e per le AI</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="cmp-val cmp-val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="cmp-val cmp-val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">In parte</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="cmp-val cmp-val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">In parte</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="cmp-val cmp-val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">No</span></span></td></tr>
+              <tr role="row"><th role="rowheader" scope="row">Lavora ogni giorno</th><td role="cell" data-col="Arturo" class="compare__cell compare__arturo"><span class="cmp-val cmp-val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Sì</span></span></td><td role="cell" data-col="AI generiche" class="compare__cell"><span class="cmp-val cmp-val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">No</span></span></td><td role="cell" data-col="Agenzia" class="compare__cell"><span class="cmp-val cmp-val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">Da contratto</span></span></td><td role="cell" data-col="Fai da te" class="compare__cell"><span class="cmp-val cmp-val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span><span class="cmp-val__word">No</span></span></td></tr>
             </tbody>
           </table>
         </div>
 
-
         <div class="cmp-acc" data-reveal>
             <details class="cmp-acc__item" name="confronto" open>
               <summary>
-                <span class="cmp-acc__need">Sceglie di cosa parlare per te</span>
+                <span class="cmp-acc__need">Sceglie di cosa parlare</span>
                 <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
                 <span class="cmp-acc__chevron" aria-hidden="true"></span>
               </summary>
               <ul class="cmp-acc__list">
                 <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
-                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+                <li><span class="cmp-acc__col">AI generiche</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>Se glielo chiedi</span></li>
                 <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
                 <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
               </ul>
@@ -940,22 +829,9 @@
               </summary>
               <ul class="cmp-acc__list">
                 <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
-                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
+                <li><span class="cmp-acc__col">AI generiche</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
                 <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
                 <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
-              </ul>
-            </details>
-            <details class="cmp-acc__item" name="confronto">
-              <summary>
-                <span class="cmp-acc__need">Conosce la tua voce (Profilo del brand)</span>
-                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
-                <span class="cmp-acc__chevron" aria-hidden="true"></span>
-              </summary>
-              <ul class="cmp-acc__list">
-                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
-                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
-                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
-                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
               </ul>
             </details>
             <details class="cmp-acc__item" name="confronto">
@@ -966,75 +842,87 @@
               </summary>
               <ul class="cmp-acc__list">
                 <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
-                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
+                <li><span class="cmp-acc__col">AI generiche</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
                 <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
                 <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
               </ul>
             </details>
             <details class="cmp-acc__item" name="confronto">
               <summary>
-                <span class="cmp-acc__need">Un testo diverso per ogni canale</span>
+                <span class="cmp-acc__need">Ti spieghi una volta sola</span>
                 <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
                 <span class="cmp-acc__chevron" aria-hidden="true"></span>
               </summary>
               <ul class="cmp-acc__list">
                 <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
-                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
-                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
-                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
-              </ul>
-            </details>
-            <details class="cmp-acc__item" name="confronto">
-              <summary>
-                <span class="cmp-acc__need">Scritto per Google e per le AI (GEO)</span>
-                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
-                <span class="cmp-acc__chevron" aria-hidden="true"></span>
-              </summary>
-              <ul class="cmp-acc__list">
-                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
-                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
-                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
-                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
-              </ul>
-            </details>
-            <details class="cmp-acc__item" name="confronto">
-              <summary>
-                <span class="cmp-acc__need">Lavora ogni giorno, anche quando sei occupato</span>
-                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
-                <span class="cmp-acc__chevron" aria-hidden="true"></span>
-              </summary>
-              <ul class="cmp-acc__list">
-                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
-                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
-                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
-                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
-              </ul>
-            </details>
-            <details class="cmp-acc__item" name="confronto">
-              <summary>
-                <span class="cmp-acc__need">Approvi tu, a mano o in automatico</span>
-                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
-                <span class="cmp-acc__chevron" aria-hidden="true"></span>
-              </summary>
-              <ul class="cmp-acc__list">
-                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
-                <li><span class="cmp-acc__col">AI generiche<small>ChatGPT, Gemini…</small></span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
-                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+                <li><span class="cmp-acc__col">AI generiche</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>Ogni volta</span></li>
+                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>Dopo varie revisioni</span></li>
                 <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+              </ul>
+            </details>
+            <details class="cmp-acc__item" name="confronto">
+              <summary>
+                <span class="cmp-acc__need">Un testo per ogni canale</span>
+                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
+                <span class="cmp-acc__chevron" aria-hidden="true"></span>
+              </summary>
+              <ul class="cmp-acc__list">
+                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">AI generiche</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>Su richiesta</span></li>
+                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>Se hai tempo</span></li>
+              </ul>
+            </details>
+            <details class="cmp-acc__item" name="confronto">
+              <summary>
+                <span class="cmp-acc__need">Scritto per Google e per le AI</span>
+                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
+                <span class="cmp-acc__chevron" aria-hidden="true"></span>
+              </summary>
+              <ul class="cmp-acc__list">
+                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">AI generiche</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>In parte</span></li>
+                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
+              </ul>
+            </details>
+            <details class="cmp-acc__item" name="confronto">
+              <summary>
+                <span class="cmp-acc__need">Lavora ogni giorno</span>
+                <span class="cmp-acc__peek" aria-hidden="true"><span class="mark mark--yes"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span></span>
+                <span class="cmp-acc__chevron" aria-hidden="true"></span>
+              </summary>
+              <ul class="cmp-acc__list">
+                <li class="is-arturo"><span class="cmp-acc__col">Arturo</span><span class="cmp-acc__val cmp-acc__val--yes"><span class="mark mark--yes" aria-hidden="true"><img src="/src/assets/icons/cmp-check.svg" alt="" width="16" height="16" /></span>Sì</span></li>
+                <li><span class="cmp-acc__col">AI generiche</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
+                <li><span class="cmp-acc__col">Agenzia</span><span class="cmp-acc__val cmp-acc__val--partial"><span class="mark mark--partial" aria-hidden="true"><img src="/src/assets/icons/cmp-minus.svg" alt="" width="16" height="16" /></span>Da contratto</span></li>
+                <li><span class="cmp-acc__col">Fai da te</span><span class="cmp-acc__val cmp-acc__val--no"><span class="mark mark--no" aria-hidden="true"><img src="/src/assets/icons/cmp-x.svg" alt="" width="16" height="16" /></span>No</span></li>
               </ul>
             </details>
         </div>
 
         <div class="compare__footer">
-          <ul class="legend">
-            <li><img src="/src/assets/icons/legend-check.svg" alt="" width="14" height="14" />Sì</li>
-            <li><img src="/src/assets/icons/legend-minus.svg" alt="" width="14" height="14" />In parte / su richiesta</li>
-            <li><img src="/src/assets/icons/legend-x.svg" alt="" width="14" height="14" />No</li>
-          </ul>
-          <button class="btn btn--primary" type="button" data-contact>Parla con un consulente</button>
+          <p class="fine-print">Confronto qualitativo per categorie di strumenti, non misurazioni.</p>
+          <a class="btn btn--primary" href="#contatti" data-contact>Parla con un consulente</a>
         </div>
-        <p class="fine-print">Confronto qualitativo per categorie di strumenti, non misurazioni.</p>
       </section>
+
+      <!-- ============================================================ RECENSIONI -->
+      <section class="reviews" aria-labelledby="reviews-title">
+        <header class="section-head" data-reveal>
+          <h2 class="section-title" id="reviews-title">Cosa dicono i clienti di Arturo.</h2>
+        </header>
+        <ul class="reviews__grid" data-carousel>
+          <li class="review is-placeholder" data-reveal><span class="ph-tag">Segnaposto</span><p class="review__quote">Recensione da raccogliere</p><p class="review__who">Nome · Ruolo, Azienda</p></li>
+          <li class="review is-placeholder" data-reveal><span class="ph-tag">Segnaposto</span><p class="review__quote">Recensione da raccogliere</p><p class="review__who">Nome · Ruolo, Azienda</p></li>
+          <li class="review is-placeholder" data-reveal><span class="ph-tag">Segnaposto</span><p class="review__quote">Recensione da raccogliere</p><p class="review__who">Nome · Ruolo, Azienda</p></li>
+          <li class="review is-placeholder" data-reveal><span class="ph-tag">Segnaposto</span><p class="review__quote">Recensione da raccogliere</p><p class="review__who">Nome · Ruolo, Azienda</p></li>
+          <li class="review is-placeholder" data-reveal><span class="ph-tag">Segnaposto</span><p class="review__quote">Recensione da raccogliere</p><p class="review__who">Nome · Ruolo, Azienda</p></li>
+          <li class="review is-placeholder" data-reveal><span class="ph-tag">Segnaposto</span><p class="review__quote">Recensione da raccogliere</p><p class="review__who">Nome · Ruolo, Azienda</p></li>
+        </ul>
+        <p class="ph-note">Recensioni da raccogliere: nessun testo, nome o voto inventato.</p>
+      </section>
+
 
       <!-- ============================================================ LOGHI -->
       <section class="logos" aria-labelledby="logos-title">
@@ -1047,47 +935,109 @@
           <li>READVICE</li>
           <li>EXREA</li>
         </ul>
+        <p class="ph-note">Loghi da sostituire con file ufficiali e autorizzati.</p>
       </section>
-
-      <!-- ============================================================ CTA FINALE -->
-      <section class="final-cta" aria-labelledby="final-title">
-        <div class="final-cta__glows" aria-hidden="true">
-          <img class="glow final-cta__glow final-cta__glow--1" src="/src/assets/glow/cta-1.svg" alt="" />
-          <img class="glow final-cta__glow final-cta__glow--2" src="/src/assets/glow/cta-2.svg" alt="" />
-          <img class="glow final-cta__glow final-cta__glow--3" src="/src/assets/glow/cta-3.svg" alt="" />
-        </div>
-        <div class="final-cta__mascot" aria-hidden="true">
-          <img src="/src/assets/brand/mascot-render.webp" alt="" width="720" height="720" loading="lazy" />
-        </div>
-        <div class="final-cta__content" data-reveal>
-          <h2 class="final-cta__title" id="final-title">Vuoi anche tu un agent?</h2>
-          <p class="final-cta__lead">Arturo lavora per te ogni giorno. Un consulente lo imposta sulla tua azienda, una volta sola.</p>
-          <div class="hero__actions">
-            <button class="btn btn--primary" type="button" data-contact>Parla con un consulente</button>
-            <a class="btn btn--secondary" href="#demo">Guarda la demo</a>
+      <!-- ============================================================ CONTATTI -->
+      <section class="contact" id="contatti" aria-labelledby="contact-title">
+        <div class="contact__card" data-reveal>
+          <div class="contact__intro">
+            <p class="eyebrow">Parla con un consulente</p>
+            <h2 class="section-title" id="contact-title">Raccontaci cosa fai. Poi ci pensiamo noi.</h2>
+            <p class="contact__lead">Un consulente ti spiega come Arturo può lavorare nel tuo settore e ti prepara un preventivo su misura.</p>
+            <div class="contact__price">
+              <p class="contact__amount"><span>A partire da</span> <strong>90 €</strong> <span>/mese</span></p>
+              <p class="contact__price-note">Setup con il consulente incluso. Poi il preventivo è su misura.</p>
+            </div>
+            <p class="contact__assure"><img src="/src/assets/icons/check-approved.svg" alt="" width="15" height="15" />Ti ricontatta una persona, non un bot.</p>
           </div>
-          <p class="final-cta__note">Si parte con una conversazione. Nessun impegno.</p>
+
+          <form class="contact__form" novalidate data-contact-form>
+            <p class="contact__plan" data-contact-plan-note hidden>Piano scelto: <strong data-contact-plan></strong></p>
+            <div class="field">
+              <label for="cf-name">Nome e cognome</label>
+              <input id="cf-name" name="name" type="text" autocomplete="name" placeholder="Mario Rossi" required aria-describedby="cf-name-error" />
+              <p class="field__error" id="cf-name-error" hidden>Scrivi il tuo nome.</p>
+            </div>
+            <div class="field">
+              <label for="cf-email">Email di lavoro</label>
+              <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="mario@azienda.it" required aria-describedby="cf-email-error" />
+              <p class="field__error" id="cf-email-error" hidden>Inserisci un indirizzo email valido.</p>
+            </div>
+            <div class="field">
+              <label for="cf-phone">Cellulare</label>
+              <input id="cf-phone" name="phone" type="tel" autocomplete="tel" placeholder="+39 ..." inputmode="tel" />
+            </div>
+            <div class="field">
+              <label for="cf-message">Messaggio</label>
+              <textarea id="cf-message" name="message" rows="3" placeholder="Cosa vorresti comunicare, e dove?"></textarea>
+            </div>
+            <input type="hidden" name="plan" value="" />
+            <p class="form-status" role="status" data-form-status hidden></p>
+            <button type="submit" class="btn btn--primary btn--block" data-submit>Richiedi un preventivo su misura</button>
+            <p class="contact__fine">Ti ricontattiamo noi. <span data-legal-link="privacy">Leggi l’informativa privacy.</span></p>
+            <p class="ph-note ph-note--inline" data-contact-unconfigured hidden>invio del modulo da collegare (endpoint o calendario).</p>
+          </form>
         </div>
       </section>
 
       <!-- ============================================================ FAQ -->
       <section class="faq" id="faq" aria-labelledby="faq-title">
-        <header class="section-head section-head--tight" data-reveal>
-          <h2 class="faq__title" id="faq-title">Domande frequenti</h2>
-          <p class="section-lead">Hai delle domande. Ecco le risposte.</p>
+        <header class="section-head" data-reveal>
+          <h2 class="faq__title" id="faq-title">Le domande che ci fanno più spesso.</h2>
         </header>
-        <div class="faq__grid">
-          <dl class="faq__col">
-            <div class="faq__item" data-reveal><dt>Cos’è Arturo?</dt><dd>Un agente AI che ogni giorno scansiona il tuo settore, sceglie gli argomenti migliori e scrive i contenuti per i tuoi canali. Prima, un consulente lo configura sulla tua azienda.</dd></div>
-            <div class="faq__item" data-reveal><dt>Chi è il consulente?</dt><dd>Un professionista del team con esperienza di comunicazione e contenuti. Non è un chatbot: mette a punto Arturo sul tuo modo di parlare.</dd></div>
-          </dl>
-          <dl class="faq__col">
-            <div class="faq__item" data-reveal><dt>Cos’è la GEO?</dt><dd>Generative Engine Optimization: scrivere contenuti pensati per essere letti, capiti e citati dalle AI, oltre che trovati su Google.</dd></div>
-            <div class="faq__item" data-reveal><dt>Posso controllare cosa esce?</dt><dd>Sì. Approvi tu ogni contenuto, oppure scegli l’approvazione automatica.</dd></div>
-          </dl>
+        <div class="faq__list">
+          <details class="faq__item" name="faq" open>
+            <summary><span>Cos’è esattamente Arturo?</span><span class="faq__chevron" aria-hidden="true"></span></summary>
+            <p>Un agente AI che ogni giorno scansiona il web e le fonti del tuo settore, sceglie gli argomenti migliori e scrive i contenuti per i tuoi canali. Prima, un consulente lo configura sulla tua azienda.</p>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary><span>Chi è il consulente?</span><span class="faq__chevron" aria-hidden="true"></span></summary>
+            <p>Un professionista del nostro team con esperienza reale di comunicazione e contenuti. Non è un chatbot: è chi mette a punto Arturo sul tuo modo di parlare.</p>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary><span>Cos’è la GEO?</span><span class="faq__chevron" aria-hidden="true"></span></summary>
+            <p>Generative Engine Optimization: scrivere contenuti pensati per essere letti, capiti e citati dalle AI, oltre che da Google.</p>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary><span>Posso controllare cosa esce?</span><span class="faq__chevron" aria-hidden="true"></span></summary>
+            <p>Sì. Approvi tu ogni contenuto, oppure scegli l’approvazione automatica.</p>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary><span>Su quali canali scrive?</span><span class="faq__chevron" aria-hidden="true"></span></summary>
+            <p>LinkedIn, blog, newsletter, Instagram, sito web e altri canali che concordiamo.</p>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary><span>Cosa succede se cambiano i miei prodotti o servizi?</span><span class="faq__chevron" aria-hidden="true"></span></summary>
+            <p>Lo dici al consulente, che aggiorna le impostazioni.</p>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary><span>Quanto costa?</span><span class="faq__chevron" aria-hidden="true"></span></summary>
+            <p>A partire da 90 € al mese, con il setup del consulente incluso. Il prezzo finale dipende dalle tue esigenze: lo definiamo insieme dopo la prima conversazione, con un preventivo su misura.</p>
+          </details>
+        </div>
+      </section>
+
+
+      <!-- ============================================================ CTA FINALE -->
+      <section class="final-cta" aria-labelledby="final-title">
+        <div class="final-cta__glows" aria-hidden="true">
+          <img class="glow final-cta__glow final-cta__glow--1" src="/src/assets/glow/cta-1.webp" alt="" />
+          <img class="glow final-cta__glow final-cta__glow--2" src="/src/assets/glow/cta-2.webp" alt="" />
+          <img class="glow final-cta__glow final-cta__glow--3" src="/src/assets/glow/cta-3.webp" alt="" />
+        </div>
+        <div class="final-cta__mascot" aria-hidden="true">
+          <img src="/src/assets/brand/mascot-render.webp" alt="" width="720" height="720" loading="lazy" />
+        </div>
+        <div class="final-cta__content" data-reveal>
+          <h2 class="final-cta__title" id="final-title">Il tuo prossimo contenuto è già un argomento.</h2>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#contatti" data-contact>Parla con un consulente</a>
+            <a class="btn btn--secondary" href="#demo">Prova la demo</a>
+          </div>
         </div>
       </section>
     </main>
+
 
     <!-- ============================================================ FOOTER -->
     <footer class="footer">
@@ -1095,22 +1045,21 @@
         <div class="footer__brand">
           <a class="footer__logo logo-host" href="#top" aria-label="Arturo, torna all'inizio">
             <span class="brand-icon" data-logo style="--size: 28px" aria-hidden="true"><img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" /></span>
-            <span>arturo</span>
+            <span>Arturo</span>
           </a>
-          <p>L’agente AI per i contenuti, impostato da un consulente.</p>
         </div>
         <nav class="footer__col" aria-labelledby="footer-product">
           <h2 id="footer-product">Prodotto</h2>
           <a href="#come-funziona">Come funziona</a>
-          <a href="#consulente">Il consulente</a>
+          <a href="#demo">Prova Arturo</a>
+          <a href="#confronto">Confronto</a>
           <a href="#piani">Piani</a>
-          <a href="#demo">Demo</a>
         </nav>
         <nav class="footer__col" aria-labelledby="footer-resources">
           <h2 id="footer-resources">Risorse</h2>
           <a href="#faq">Domande</a>
           <a href="#geo">GEO</a>
-          <button type="button" class="footer__link-btn" data-contact>Contatti</button>
+          <a href="#contatti" data-contact>Contatti</a>
         </nav>
         <div class="footer__col" role="group" aria-labelledby="footer-legal">
           <h2 id="footer-legal">Legale</h2>
@@ -1118,47 +1067,11 @@
           <span data-legal-link="cookie">Cookie policy</span>
         </div>
       </div>
-      <p class="footer__legal">Benefind Srl · Via Pratese, 199 – 50145 Firenze · P.IVA 06267240486</p>
+      <p class="footer__legal">Benefind Srl, Via Pratese, 199 - 50145 Firenze | P.IVA 06267240486</p>
     </footer>
 
-    <!-- ============================================================ CONTACT DIALOG -->
-    <dialog class="dialog" id="contact-dialog" aria-labelledby="contact-title" data-contact-dialog>
-      <form class="dialog__card" method="dialog" novalidate data-contact-form>
-        <div class="dialog__head">
-          <h2 class="dialog__title" id="contact-title">Parla con un consulente</h2>
-          <button type="button" class="dialog__close" data-dialog-close aria-label="Chiudi">
-            <img src="/src/assets/icons/legend-x.svg" alt="" width="16" height="16" />
-          </button>
-        </div>
-        <p class="dialog__lead">Si parte con una conversazione. Nessun impegno. <span data-contact-plan-note hidden>Piano: <strong data-contact-plan></strong></span></p>
-
-        <div class="field">
-          <label for="cf-name">Nome e cognome</label>
-          <input id="cf-name" name="name" type="text" autocomplete="name" required aria-describedby="cf-name-error" />
-          <p class="field__error" id="cf-name-error" hidden>Scrivi il tuo nome.</p>
-        </div>
-        <div class="field">
-          <label for="cf-email">Email di lavoro</label>
-          <input id="cf-email" name="email" type="email" autocomplete="email" required aria-describedby="cf-email-error" />
-          <p class="field__error" id="cf-email-error" hidden>Inserisci un indirizzo email valido.</p>
-        </div>
-        <div class="field">
-          <label for="cf-company">Azienda <span class="field__optional">(facoltativo)</span></label>
-          <input id="cf-company" name="company" type="text" autocomplete="organization" />
-        </div>
-        <div class="field">
-          <label for="cf-message">Di cosa vuoi parlare? <span class="field__optional">(facoltativo)</span></label>
-          <textarea id="cf-message" name="message" rows="3"></textarea>
-        </div>
-        <input type="hidden" name="plan" value="" />
-
-        <p class="form-status" role="status" data-form-status hidden></p>
-
-        <div class="dialog__actions">
-          <button type="button" class="btn btn--secondary" data-dialog-close>Annulla</button>
-          <button type="submit" class="btn btn--primary" data-submit>Invia richiesta</button>
-        </div>
-      </form>
-    </dialog>
+    <div class="sticky-cta" data-sticky-cta>
+      <a class="btn btn--primary btn--block" href="#contatti" data-contact>Parla con un consulente</a>
+    </div>
   </body>
 </html>

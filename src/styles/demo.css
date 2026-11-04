@@ -700,10 +700,7 @@
   opacity: 0.4;
 }
 
-/* The Figma bar has no send button: it only appears once there is a question. */
-.app-ask__input:placeholder-shown + .app-ask__send {
-  display: none;
-}
+
 
 /* ------------------------------------------------ Responsive */
 @media (max-width: 1023px) {

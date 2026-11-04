@@ -2,7 +2,7 @@ import { prefersReducedMotion } from './config';
 import { setLogoState, type LogoState } from './logo';
 
 type DraftStatus = 'pending' | 'approved';
-type ViewId = 'oggi' | 'radar' | 'approvare' | 'archivio' | 'profilo';
+type ViewId = 'oggi' | 'radar' | 'approvare' | 'profilo';
 
 interface Draft {
   id: string;
@@ -37,31 +37,9 @@ const initialDrafts = (): Draft[] => [
   },
 ];
 
-/** Canned answers: the prototype only uses sample data, it calls no AI. */
-const answerFor = (question: string): { text: string; action?: { label: string; view: ViewId } } => {
-  const q = question.toLowerCase();
-  if (/(radar|argoment|settiman|parl|tema|idea)/.test(q)) {
-    return {
-      text: 'Questa settimana ti propongo «Fotovoltaico per l’azienda» (84) e «Packaging sostenibile» (78). Li trovi nel radar.',
-      action: { label: 'Apri il radar', view: 'radar' },
-    };
-  }
-  if (/(bozz|approv|post|linkedin|instagram|newsletter)/.test(q)) {
-    return {
-      text: 'Le bozze di oggi sono pronte: LinkedIn, Instagram e Newsletter. Puoi approvarle o modificarle.',
-      action: { label: 'Rivedi le bozze', view: 'approvare' },
-    };
-  }
-  if (/(tono|voce|brand|profilo|parole)/.test(q)) {
-    return {
-      text: 'Scrivo con il tono del tuo Profilo del brand: diretto e semplice, senza «soluzioni a 360 gradi».',
-      action: { label: 'Vedi il profilo', view: 'profilo' },
-    };
-  }
-  return {
-    text: 'Bella domanda. Nel prodotto vero guardo il tuo settore e ti rispondo con argomenti e fonti. Qui è un esempio: prova a chiedermi «di cosa parliamo questa settimana?»',
-  };
-};
+/** The prototype answers with sample data (texts from the landing brief); it calls no AI. */
+const ANSWER = 'Ho trovato 3 argomenti che valgono. Il migliore ha un voto di 84.';
+const THINKING = 'Ti rispondo';
 
 export function initPrototype(): void {
   const app = document.querySelector<HTMLElement>('[data-app]');
@@ -77,8 +55,7 @@ export function initPrototype(): void {
   const pendingLabel = app.querySelector<HTMLElement>('[data-pending-label]')!;
   const pendingSub = app.querySelector<HTMLElement>('[data-pending-sub]')!;
   const pendingSummary = app.querySelector<HTMLElement>('[data-pending-summary]')!;
-  const archive = app.querySelector<HTMLElement>('[data-archive]')!;
-  const archiveEmpty = app.querySelector<HTMLElement>('[data-archive-empty]')!;
+  const answerTopics = app.querySelector<HTMLElement>('[data-answer-topics]');
   const message = app.querySelector<HTMLElement>('.app-message')!;
   const messageText = app.querySelector<HTMLElement>('[data-arturo-message]')!;
   const messageAction = app.querySelector<HTMLButtonElement>('[data-message-action]')!;
@@ -182,7 +159,6 @@ export function initPrototype(): void {
     }
 
     const pending = drafts.filter((d) => d.status === 'pending');
-    const approved = drafts.filter((d) => d.status === 'approved');
     pendingCount.textContent = String(pending.length);
     pendingLabel.textContent = pending.length === 1 ? '1 bozza' : `${pending.length} bozze`;
     pendingSub.textContent =
@@ -192,19 +168,6 @@ export function initPrototype(): void {
         ? 'Hai approvato tutte le bozze di oggi.'
         : `${pending.length === 1 ? '1 bozza' : `${pending.length} bozze`} su «Fotovoltaico per l’azienda»`;
 
-    archive.replaceChildren(
-      ...approved.map((draft) => {
-        const li = document.createElement('li');
-        li.className = 'app-card';
-        const label = document.createElement('small');
-        label.textContent = `${draft.channel} · approvata`;
-        const p = document.createElement('p');
-        p.textContent = draft.text;
-        li.append(label, p);
-        return li;
-      }),
-    );
-    archiveEmpty.hidden = approved.length > 0;
 
     // Keep keyboard focus on the equivalent control after re-rendering.
     if (focus) {
@@ -304,6 +267,14 @@ export function initPrototype(): void {
     typingFrame = requestAnimationFrame(step);
   };
 
+  // Suggested questions: fill the field and ask.
+  app.querySelectorAll<HTMLButtonElement>('[data-suggest]').forEach((chip) => {
+    chip.addEventListener('click', () => {
+      askInput.value = chip.textContent?.trim() ?? '';
+      askForm.requestSubmit();
+    });
+  });
+
   askForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const question = askInput.value.trim();
@@ -319,22 +290,19 @@ export function initPrototype(): void {
     message.classList.add('is-thinking');
     // aria-busy holds back announcements until the full answer is in place.
     message.setAttribute('aria-busy', 'true');
-    messageText.textContent = 'Ci penso';
+    messageText.textContent = THINKING;
+    if (answerTopics) answerTopics.hidden = true;
     messageAction.hidden = true;
     setMood('think');
 
     // Simulated latency so the "thinking" state is perceivable.
     thinkingTimer = window.setTimeout(() => {
-      const answer = answerFor(question);
       message.classList.remove('is-thinking');
       setMood('talk');
-      typeOut(answer.text, () => {
+      typeOut(ANSWER, () => {
         message.removeAttribute('aria-busy');
-        if (answer.action) {
-          messageAction.textContent = answer.action.label;
-          messageAction.dataset.viewTarget = answer.action.view;
-          messageAction.hidden = false;
-        }
+        // The three topics, each with its "Scrivi" action.
+        if (answerTopics) answerTopics.hidden = false;
         askSend.disabled = false;
         setMood('happy');
         moodTimer = window.setTimeout(() => setMood('rest'), 2400);

@@ -408,7 +408,6 @@
   }
 
   .tile:hover,
-  .fact:hover,
   .plan:not(.plan--featured):hover {
     border-color: rgba(255, 255, 255, 0.16);
   }

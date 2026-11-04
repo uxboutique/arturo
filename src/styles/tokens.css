@@ -28,7 +28,7 @@
   --text-muted: #a1a1aa;
   --text-label: #9a9aa0;
   --text-subtle: #8e8e93;
-  --text-faint: #636366;
+  --text-faint: #8e8e93; /* was #636366 (3.2:1): raised to AA 4.5:1+ */
   --text-on-light: #5f5a6e;
 
   /* Accents */

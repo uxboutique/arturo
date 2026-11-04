@@ -5,6 +5,23 @@ Landing page di **Arturo, AI Content Agent**, implementata dal frame Figma
 
 Stack: Vite + TypeScript + CSS (nessun framework UI). Font self-hosted via Fontsource (Inter, Sora, Nunito).
 
+Pagine:
+
+- `/` — landing (testi definitivi dal documento "Landing Arturo - testi", sezione 3)
+- `/app/` — il tool: demo interattiva a schermo intero (desktop: prototipo "Tool - Desktop · Brand C"; mobile: schermate "Tool - App · Brand C")
+
+La demo è in `partials/demo.html` ed è inclusa in entrambe le pagine (`<!--#include … -->`, plugin in `vite.config.ts`).
+
+## Segnaposto da completare
+
+Marcati in pagina con bordo tratteggiato giallo "Segnaposto":
+
+- invio del modulo contatti → `VITE_CONTACT_ENDPOINT` o `VITE_CONTACT_EMAIL`
+- informativa privacy e cookie policy → `VITE_PRIVACY_URL`, `VITE_COOKIE_URL`
+- recensioni dei clienti (6 card vuote)
+- loghi ufficiali di "Scelto da"
+- card consulente nella demo: "Ha aggiornato il tuo profilo de…"
+
 ## Comandi
 
 ```bash
@@ -21,7 +38,7 @@ Copia `.env.example` in `.env` e imposta:
 
 | Variabile | Uso |
 | --- | --- |
-| `VITE_CONTACT_ENDPOINT` | POST JSON del form "Parla con un consulente" |
+| `VITE_CONTACT_ENDPOINT` | POST JSON del form contatti (`name`, `email`, `phone`, `message`, `plan`) |
 | `VITE_CONTACT_EMAIL` | alternativa: apre il client di posta verso questo indirizzo |
 | `VITE_PRIVACY_URL`, `VITE_COOKIE_URL` | link legali nel footer (vuoti = testo semplice) |
 

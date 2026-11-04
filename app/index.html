@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#06101f" />
+    <title>Prova Arturo — demo interattiva</title>
+    <meta name="description" content="Prova Arturo: chiedi un argomento, guarda come ragiona, approva le bozze. Prototipo interattivo con dati d’esempio." />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:title" content="Prova Arturo — demo interattiva" />
+    <meta property="og:url" content="https://uxboutique.github.io/arturo/app/" />
+    <meta property="og:image" content="https://uxboutique.github.io/arturo/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      document.documentElement.classList.add('js');
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </head>
+  <body class="tool-page">
+    <a class="skip-link" href="#main">Vai al contenuto</a>
+
+    <header class="nav nav--tool" data-nav>
+      <div class="nav__inner">
+        <a class="nav__brand logo-host" href="../" aria-label="Arturo, torna alla landing">
+          <span class="brand-icon brand-icon--nav" data-logo aria-hidden="true">
+            <img src="/src/assets/brand/brand-icon.svg" alt="" width="55" height="57" />
+          </span>
+          <span class="nav__wordmark">arturo</span>
+        </a>
+        <a class="nav__back" href="../">← Torna alla landing</a>
+        <a class="btn btn--primary nav__cta" href="../#contatti">Parla con un consulente</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="demo demo--tool" id="demo" aria-labelledby="demo-title">
+        <header class="section-head">
+          <h1 class="section-title" id="demo-title">Prova Arturo</h1>
+          <p class="section-lead">Come un argomento diventa un contenuto pronto da approvare.</p>
+        </header>
+<!--#include partials/demo.html -->
+      </section>
+    </main>
+
+    <footer class="footer footer--tool">
+      <p class="footer__legal">Benefind Srl, Via Pratese, 199 - 50145 Firenze | P.IVA 06267240486</p>
+    </footer>
+  </body>
+</html>

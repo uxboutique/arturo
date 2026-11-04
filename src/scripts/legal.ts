@@ -9,7 +9,12 @@ export function initLegalLinks(): void {
 
   document.querySelectorAll<HTMLElement>('[data-legal-link]').forEach((el) => {
     const href = urls[el.dataset.legalLink ?? ''];
-    if (!href) return;
+    if (!href) {
+      // Placeholder until the page exists: visible, but not a dead link.
+      el.classList.add('is-missing-link');
+      el.title = 'Segnaposto: pagina da collegare';
+      return;
+    }
     const link = document.createElement('a');
     link.href = href;
     link.textContent = el.textContent;

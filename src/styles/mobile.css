@@ -147,9 +147,10 @@
     background: var(--sky);
   }
 
-  /* Facts: taller, centred number cards */
-  .facts__grid .fact {
-    min-height: 210px;
+  /* Steps and reviews: cards sized for one-at-a-time swiping */
+  .steps__grid .step,
+  .reviews__grid .review {
+    min-height: 200px;
     padding: 24px 22px;
   }
 }

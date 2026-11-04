@@ -1190,83 +1190,6 @@ button.profile__row {
   }
 }
 
-/* ============================================================ PENSATO PER TE */
-.facts {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding-top: 120px;
-}
-
-.facts__grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.fact {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-height: 240px;
-  padding: 27px 25px;
-  border: 1px solid var(--line-2);
-  border-radius: var(--r-card);
-  background: var(--card-gradient);
-}
-
-.fact__label {
-  color: var(--text-subtle);
-  font-size: 13px;
-  font-weight: 500;
-}
-
-.fact__value {
-  font-size: 56px;
-  font-weight: 600;
-  line-height: 1.21;
-  letter-spacing: -0.04em;
-  white-space: nowrap;
-}
-
-.fact__text {
-  max-width: 230px;
-  color: var(--text-muted);
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-@media (max-width: 1023px) {
-  .facts__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .fact {
-    min-height: 200px;
-  }
-}
-
-@media (max-width: 520px) {
-  .facts {
-    padding-top: 88px;
-    gap: 32px;
-  }
-
-  .facts__grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 12px;
-  }
-
-  .fact {
-    min-height: 0;
-    padding: 22px;
-  }
-
-  .fact__value {
-    font-size: 48px;
-  }
-}
-
 /* ============================================================ PIANI */
 .plans {
   display: flex;
@@ -1563,21 +1486,6 @@ tbody tr:last-child .compare__arturo {
   gap: 24px;
 }
 
-.legend {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 24px;
-}
-
-.legend li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-muted);
-  font-size: 13px;
-  font-weight: 500;
-}
-
 @media (max-width: 1023px) {
   .compare__table thead .compare__need {
     width: 34%;
@@ -1711,19 +1619,6 @@ tbody tr:last-child .compare__arturo {
   line-height: 1.08;
   letter-spacing: -0.03em;
   text-shadow: 0 2px 24px rgba(6, 16, 31, 0.6);
-}
-
-.final-cta__lead {
-  max-width: 840px;
-  color: var(--text-muted);
-  font-size: clamp(16px, 0.5vw + 12px, 19px);
-  text-wrap: balance;
-}
-
-.final-cta__note {
-  color: var(--text-faint);
-  font-size: 13px;
-  font-weight: 500;
 }
 
 @media (max-width: 640px) {
